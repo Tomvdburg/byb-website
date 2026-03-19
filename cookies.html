@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,76 +17,116 @@
 <body>
 
 <nav class="nav">
-  <a href="index.html" class="nav-logo">
-    <div class="nav-logo-box">BEAT<br>YOUR<br>BEST</div>
-    <span class="nav-logo-text">Beat Your Best</span>
-  </a>
-  <div class="nav-links">
-    <a href="how-it-works.html">Hoe het werkt</a>
-    <a href="how-it-works.html#analyses">Analyses</a>
-    <a href="pricing.html">Abonnementen</a>
-    <a href="about.html">Over ons</a>
+  <a href="index.html" class="nav-logo"><img src="assets/images/logo.png" alt="Beat your Best"></a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+  <div class="nav-links" id="nav-links">
+    <a href="how-it-works.html" data-nl="Hoe het werkt" data-en="How it works">Hoe het werkt</a>
+    <a href="how-it-works.html#analyses" data-nl="Analyses" data-en="Analyses">Analyses</a>
+    <a href="pricing.html" data-nl="Abonnementen" data-en="Pricing">Abonnementen</a>
+    <a href="about.html" data-nl="Over ons" data-en="About us">Over ons</a>
   </div>
-  <a href="https://my.beatyourbest.org" class="btn-portal">Naar het portaal →</a>
+  <div class="nav-controls">
+    <button class="nav-toggle-btn" id="lang-toggle"><i class="fas fa-globe" style="margin-right:4px;font-size:12px;"></i>EN</button>
+    <button class="nav-toggle-btn" id="theme-toggle" aria-label="Thema wisselen"><i class="fas fa-moon" style="font-size:13px;"></i></button>
+    <a href="https://my.beatyourbest.org" class="btn-portal" data-nl="Naar het portaal →" data-en="Go to portal →">Naar het portaal →</a>
+  </div>
 </nav>
 
 <div class="page-header">
-  <div class="sec-pill">Juridisch</div>
-  <h1>Cookiebeleid</h1>
-  <p>Hoe Beat Your Best cookies gebruikt op deze website en in het portaal.</p>
+  <div class="sec-pill" data-nl="Juridisch" data-en="Legal">Juridisch</div>
+  <h1 data-nl="Cookiebeleid" data-en="Cookie Policy">Cookiebeleid</h1>
+  <p data-nl="Hoe Beat Your Best cookies gebruikt op deze website en in het portaal." data-en="How Beat Your Best uses cookies on this website and in the portal.">Hoe Beat Your Best cookies gebruikt op deze website en in het portaal.</p>
 </div>
 
-<!-- AANPASSEN: kopieer de cookietekst uit het portaal hieronder -->
-
 <div class="prose">
-  <p class="prose-updated">Laatst bijgewerkt: <!-- DATUM --> maart 2026</p>
+  <p class="prose-updated" data-nl="Laatst bijgewerkt: 19 maart 2026" data-en="Last updated: 19 March 2026">Laatst bijgewerkt: 19 maart 2026</p>
 
-  <h2>Wat zijn cookies</h2>
-  <p>Cookies zijn kleine tekstbestanden die door een website op je computer of mobiel apparaat worden opgeslagen wanneer je de site bezoekt. Ze worden veel gebruikt om websites goed te laten werken en om informatie te verstrekken aan de eigenaren van de site.</p>
+  <h2 data-nl="Wat zijn cookies" data-en="What are cookies">Wat zijn cookies</h2>
+  <p data-nl="Cookies zijn kleine tekstbestanden die door een website op je computer of mobiel apparaat worden opgeslagen wanneer je de site bezoekt. Ze worden gebruikt om websites goed te laten werken, de beveiliging te waarborgen en je voorkeuren te onthouden." data-en="Cookies are small text files that are stored on your computer or mobile device by a website when you visit the site. They are used to make websites function properly, ensure security and remember your preferences.">Cookies zijn kleine tekstbestanden die door een website op je computer of mobiel apparaat worden opgeslagen wanneer je de site bezoekt. Ze worden gebruikt om websites goed te laten werken, de beveiliging te waarborgen en je voorkeuren te onthouden.</p>
 
-  <h2>Welke cookies gebruiken wij</h2>
+  <h2 data-nl="Welke cookies gebruiken wij" data-en="Which cookies do we use">Welke cookies gebruiken wij</h2>
+  <p data-nl="Beat Your Best gebruikt uitsluitend noodzakelijke en functionele cookies. Wij plaatsen geen tracking-, analytische of advertentiecookies." data-en="Beat Your Best only uses necessary and functional cookies. We do not place tracking, analytics or advertising cookies.">Beat Your Best gebruikt uitsluitend noodzakelijke en functionele cookies. Wij plaatsen geen tracking-, analytische of advertentiecookies.</p>
 
-  <h3>Noodzakelijke cookies</h3>
-  <p><!-- AANPASSEN: kopieer uit portaal --></p>
+  <h3 data-nl="Noodzakelijke cookies" data-en="Necessary cookies">Noodzakelijke cookies</h3>
+  <p data-nl="Deze cookies zijn essentieel voor de werking van het portaal. Zonder deze cookies kan het platform niet functioneren. Je hoeft hiervoor geen toestemming te geven." data-en="These cookies are essential for the operation of the portal. Without these cookies, the platform cannot function. You do not need to give consent for these.">Deze cookies zijn essentieel voor de werking van het portaal. Zonder deze cookies kan het platform niet functioneren. Je hoeft hiervoor geen toestemming te geven.</p>
   <ul>
-    <li><strong>Sessie-cookie:</strong> Houdt je ingelogd tijdens je bezoek aan het portaal</li>
-    <li><strong>CSRF-token:</strong> Beveiligt formulieren tegen ongewenste verzoeken</li>
+    <li>
+      <strong data-nl="Sessie-cookie" data-en="Session cookie">Sessie-cookie</strong><br>
+      <span data-nl="Houdt je ingelogd tijdens je bezoek aan het portaal. Wordt verwijderd wanneer je de browser sluit of uitlogt." data-en="Keeps you logged in during your visit to the portal. Deleted when you close the browser or log out.">Houdt je ingelogd tijdens je bezoek aan het portaal. Wordt verwijderd wanneer je de browser sluit of uitlogt.</span><br>
+      <em data-nl="Type: sessie-cookie · Duur: browsersessie · Partij: Beat Your Best" data-en="Type: session cookie · Duration: browser session · Party: Beat Your Best">Type: sessie-cookie · Duur: browsersessie · Partij: Beat Your Best</em>
+    </li>
+    <li>
+      <strong data-nl="CSRF-token" data-en="CSRF token">CSRF-token</strong><br>
+      <span data-nl="Beveiligt formulieren tegen Cross-Site Request Forgery (ongewenste verzoeken van andere websites). Dit is een standaard beveiligingsmaatregel." data-en="Protects forms against Cross-Site Request Forgery (unwanted requests from other websites). This is a standard security measure.">Beveiligt formulieren tegen Cross-Site Request Forgery (ongewenste verzoeken van andere websites). Dit is een standaard beveiligingsmaatregel.</span><br>
+      <em data-nl="Type: sessie-cookie · Duur: browsersessie · Partij: Beat Your Best" data-en="Type: session cookie · Duration: browser session · Party: Beat Your Best">Type: sessie-cookie · Duur: browsersessie · Partij: Beat Your Best</em>
+    </li>
   </ul>
 
-  <h3>Functionele cookies</h3>
-  <p><!-- AANPASSEN: kopieer uit portaal --></p>
+  <h3 data-nl="Functionele cookies en lokale opslag" data-en="Functional cookies and local storage">Functionele cookies en lokale opslag</h3>
+  <p data-nl="Deze cookies en lokale opslagwaarden onthouden je voorkeuren zodat je een betere ervaring hebt bij terugkeer." data-en="These cookies and local storage values remember your preferences so you have a better experience when you return.">Deze cookies en lokale opslagwaarden onthouden je voorkeuren zodat je een betere ervaring hebt bij terugkeer.</p>
   <ul>
-    <li><strong>Voorkeursinstellingen:</strong> Onthoudt je taalvoorkeur en weergave-instellingen</li>
+    <li>
+      <strong data-nl="Taalvoorkeur" data-en="Language preference">Taalvoorkeur</strong><br>
+      <span data-nl="Onthoudt of je de site in het Nederlands of Engels wilt zien." data-en="Remembers whether you want to view the site in Dutch or English.">Onthoudt of je de site in het Nederlands of Engels wilt zien.</span><br>
+      <em data-nl="Type: localStorage · Duur: permanent (tot handmatig verwijderd) · Partij: Beat Your Best" data-en="Type: localStorage · Duration: permanent (until manually removed) · Party: Beat Your Best">Type: localStorage · Duur: permanent (tot handmatig verwijderd) · Partij: Beat Your Best</em>
+    </li>
+    <li>
+      <strong data-nl="Themavoorkeur (licht/donker)" data-en="Theme preference (light/dark)">Themavoorkeur (licht/donker)</strong><br>
+      <span data-nl="Onthoudt of je de lichte of donkere weergave hebt gekozen." data-en="Remembers whether you have chosen the light or dark display.">Onthoudt of je de lichte of donkere weergave hebt gekozen.</span><br>
+      <em data-nl="Type: localStorage · Duur: permanent (tot handmatig verwijderd) · Partij: Beat Your Best" data-en="Type: localStorage · Duration: permanent (until manually removed) · Party: Beat Your Best">Type: localStorage · Duur: permanent (tot handmatig verwijderd) · Partij: Beat Your Best</em>
+    </li>
   </ul>
 
-  <h3>Analytische cookies</h3>
-  <p><!-- AANPASSEN: kopieer uit portaal. Vermeld hier of je Google Analytics of iets anders gebruikt --></p>
+  <h3 data-nl="Analytische cookies" data-en="Analytics cookies">Analytische cookies</h3>
+  <p data-nl="Beat Your Best gebruikt momenteel geen analytische cookies. Wij gebruiken geen Google Analytics of vergelijkbare trackingdiensten." data-en="Beat Your Best currently does not use any analytics cookies. We do not use Google Analytics or similar tracking services.">Beat Your Best gebruikt momenteel geen analytische cookies. Wij gebruiken geen Google Analytics of vergelijkbare trackingdiensten.</p>
 
-  <h2>Cookies van derden</h2>
-  <p><!-- AANPASSEN: kopieer uit portaal. Denk aan Stripe (betalingen), Google OAuth, Strava OAuth --></p>
+  <h3 data-nl="Advertentiecookies" data-en="Advertising cookies">Advertentiecookies</h3>
+  <p data-nl="Beat Your Best plaatst geen advertentie- of trackingcookies. Wij volgen je niet over websites heen en delen geen gegevens met advertentienetwerken." data-en="Beat Your Best does not place advertising or tracking cookies. We do not track you across websites and do not share data with advertising networks.">Beat Your Best plaatst geen advertentie- of trackingcookies. Wij volgen je niet over websites heen en delen geen gegevens met advertentienetwerken.</p>
+
+  <h2 data-nl="Cookies van derden" data-en="Third-party cookies">Cookies van derden</h2>
+  <p data-nl="De volgende externe diensten kunnen cookies plaatsen wanneer je specifieke functies van het platform gebruikt:" data-en="The following external services may place cookies when you use specific features of the platform:">De volgende externe diensten kunnen cookies plaatsen wanneer je specifieke functies van het platform gebruikt:</p>
   <ul>
-    <li><strong>Stripe:</strong> Voor het verwerken van betalingen</li>
-    <li><strong>Google OAuth:</strong> Wanneer je inlogt met Google</li>
-    <li><strong>Strava OAuth:</strong> Wanneer je inlogt met Strava</li>
+    <li>
+      <strong>Stripe</strong> <span data-nl="(betalingen)" data-en="(payments)">(betalingen)</span><br>
+      <span data-nl="Wanneer je een betaling doet of je abonnement beheert, kan Stripe cookies plaatsen voor het verwerken van de betaling en het voorkomen van fraude. Deze cookies zijn noodzakelijk voor het betalingsproces." data-en="When you make a payment or manage your subscription, Stripe may place cookies for processing the payment and preventing fraud. These cookies are necessary for the payment process.">Wanneer je een betaling doet of je abonnement beheert, kan Stripe cookies plaatsen voor het verwerken van de betaling en het voorkomen van fraude. Deze cookies zijn noodzakelijk voor het betalingsproces.</span><br>
+      <em data-nl="Meer informatie:" data-en="More information:">Meer informatie:</em> <a href="https://stripe.com/privacy" target="_blank" rel="noopener">stripe.com/privacy</a>
+    </li>
+    <li>
+      <strong>Google OAuth</strong> <span data-nl="(inloggen)" data-en="(login)">(inloggen)</span><br>
+      <span data-nl="Wanneer je inlogt via Google, kan Google cookies plaatsen voor het authenticatieproces. Dit gebeurt alleen als je ervoor kiest om via Google in te loggen." data-en="When you log in via Google, Google may place cookies for the authentication process. This only happens if you choose to log in via Google.">Wanneer je inlogt via Google, kan Google cookies plaatsen voor het authenticatieproces. Dit gebeurt alleen als je ervoor kiest om via Google in te loggen.</span><br>
+      <em data-nl="Meer informatie:" data-en="More information:">Meer informatie:</em> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>
+    </li>
   </ul>
 
-  <h2>Cookies beheren</h2>
-  <p>Je kunt cookies beheren via de instellingen van je browser. Houd er rekening mee dat het uitschakelen van bepaalde cookies invloed kan hebben op de werking van het platform.</p>
+  <h2 data-nl="Cookies beheren" data-en="Managing cookies">Cookies beheren</h2>
+  <p data-nl="Je kunt cookies beheren of verwijderen via de instellingen van je browser. Hieronder vind je links naar de instructies van de meestgebruikte browsers:" data-en="You can manage or delete cookies via your browser settings. Below you will find links to the instructions for the most commonly used browsers:">Je kunt cookies beheren of verwijderen via de instellingen van je browser. Hieronder vind je links naar de instructies van de meestgebruikte browsers:</p>
+  <ul>
+    <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+    <li><a href="https://support.mozilla.org/nl/kb/cookies-verwijderen-gegevens-wissen" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+    <li><a href="https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac" target="_blank" rel="noopener">Safari</a></li>
+    <li><a href="https://support.microsoft.com/nl-nl/microsoft-edge/cookies-verwijderen-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener">Microsoft Edge</a></li>
+  </ul>
+  <p data-nl="Let op: het uitschakelen van noodzakelijke cookies kan ertoe leiden dat het portaal niet correct functioneert. Je kunt dan mogelijk niet inloggen of formulieren verzenden." data-en="Please note: disabling necessary cookies may cause the portal to not function correctly. You may not be able to log in or submit forms.">Let op: het uitschakelen van noodzakelijke cookies kan ertoe leiden dat het portaal niet correct functioneert. Je kunt dan mogelijk niet inloggen of formulieren verzenden.</p>
 
-  <h2>Contact</h2>
-  <p>Vragen over ons cookiebeleid? Stuur een e-mail naar <a href="mailto:info@beatyourbest.org">info@beatyourbest.org</a>.</p>
+  <h2 data-nl="Contact" data-en="Contact">Contact</h2>
+  <p data-nl="Vragen over ons cookiebeleid? Neem contact met ons op:" data-en="Questions about our cookie policy? Contact us:">Vragen over ons cookiebeleid? Neem contact met ons op:</p>
+  <ul>
+    <li><strong>E-mail:</strong> <a href="mailto:info@beatyourbest.org">info@beatyourbest.org</a></li>
+    <li><strong>Website:</strong> <a href="https://beatyourbest.org">beatyourbest.org</a></li>
+  </ul>
 </div>
 
 <footer class="footer">
-  <div class="footer-logo">© 2026 Beat Your Best · Made in the Netherlands</div>
+  <div class="footer-logo">© 2026 Beat your Best · Made in the Netherlands</div>
   <div class="footer-links">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Voorwaarden</a>
-    <a href="cookies.html">Cookies</a>
-    <a href="about.html#contact">Contact</a>
-    <a href="https://my.beatyourbest.org">Portaal</a>
+    <a href="privacy.html" data-nl="Privacy" data-en="Privacy">Privacy</a>
+    <a href="terms.html" data-nl="Voorwaarden" data-en="Terms">Voorwaarden</a>
+    <a href="cookies.html" data-nl="Cookies" data-en="Cookies">Cookies</a>
+    <a href="about.html#contact" data-nl="Contact" data-en="Contact">Contact</a>
+    <a href="https://my.beatyourbest.org">my.beatyourbest.org</a>
   </div>
 </footer>
 
+<script src="main.js"></script>
 </body>
 </html>

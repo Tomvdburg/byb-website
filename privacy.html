@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,80 +17,152 @@
 <body>
 
 <nav class="nav">
-  <a href="index.html" class="nav-logo">
-    <div class="nav-logo-box">BEAT<br>YOUR<br>BEST</div>
-    <span class="nav-logo-text">Beat Your Best</span>
-  </a>
-  <div class="nav-links">
-    <a href="how-it-works.html">Hoe het werkt</a>
-    <a href="how-it-works.html#analyses">Analyses</a>
-    <a href="pricing.html">Abonnementen</a>
-    <a href="about.html">Over ons</a>
+  <a href="index.html" class="nav-logo"><img src="assets/images/logo.png" alt="Beat your Best"></a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+  <div class="nav-links" id="nav-links">
+    <a href="how-it-works.html" data-nl="Hoe het werkt" data-en="How it works">Hoe het werkt</a>
+    <a href="how-it-works.html#analyses" data-nl="Analyses" data-en="Analyses">Analyses</a>
+    <a href="pricing.html" data-nl="Abonnementen" data-en="Pricing">Abonnementen</a>
+    <a href="about.html" data-nl="Over ons" data-en="About us">Over ons</a>
   </div>
-  <a href="https://my.beatyourbest.org" class="btn-portal">Naar het portaal →</a>
+  <div class="nav-controls">
+    <button class="nav-toggle-btn" id="lang-toggle"><i class="fas fa-globe" style="margin-right:4px;font-size:12px;"></i>EN</button>
+    <button class="nav-toggle-btn" id="theme-toggle" aria-label="Thema wisselen"><i class="fas fa-moon" style="font-size:13px;"></i></button>
+    <a href="https://my.beatyourbest.org" class="btn-portal" data-nl="Naar het portaal →" data-en="Go to portal →">Naar het portaal →</a>
+  </div>
 </nav>
 
 <div class="page-header">
-  <div class="sec-pill">Juridisch</div>
-  <h1>Privacybeleid</h1>
-  <p>Hoe Beat Your Best omgaat met jouw persoonsgegevens.</p>
+  <div class="sec-pill" data-nl="Juridisch" data-en="Legal">Juridisch</div>
+  <h1 data-nl="Privacybeleid" data-en="Privacy Policy">Privacybeleid</h1>
+  <p data-nl="Hoe Beat Your Best omgaat met jouw persoonsgegevens." data-en="How Beat Your Best handles your personal data.">Hoe Beat Your Best omgaat met jouw persoonsgegevens.</p>
 </div>
 
-<!-- AANPASSEN: kopieer de volledige privacytekst uit het portaal hieronder -->
-<!-- Gebruik de .prose klasse voor opmaak: h2, h3, p, ul li -->
-
 <div class="prose">
-  <p class="prose-updated">Laatst bijgewerkt: <!-- DATUM --> maart 2026</p>
+  <p class="prose-updated" data-nl="Laatst bijgewerkt: 19 maart 2026" data-en="Last updated: 19 March 2026">Laatst bijgewerkt: 19 maart 2026</p>
 
-  <h2>1. Wie zijn wij</h2>
-  <p><!-- AANPASSEN: volledige bedrijfsnaam, adres, KvK-nummer, contactgegevens --><br>
-  Beat Your Best · info@beatyourbest.org</p>
-
-  <h2>2. Welke gegevens verzamelen wij</h2>
-  <p><!-- AANPASSEN: kopieer uit portaal --></p>
+  <h2 data-nl="1. Wie zijn wij" data-en="1. Who we are">1. Wie zijn wij</h2>
+  <p data-nl="Beat Your Best is een roeiprestatie-analyseplatform gevestigd in Nederland. Wij bieden atleten en coaches inzicht in hun roeiprestaties op basis van data van RP3- en Concept2-ergometers." data-en="Beat Your Best is a rowing performance analysis platform based in the Netherlands. We provide athletes and coaches with insight into their rowing performance based on data from RP3 and Concept2 ergometers.">Beat Your Best is een roeiprestatie-analyseplatform gevestigd in Nederland. Wij bieden atleten en coaches inzicht in hun roeiprestaties op basis van data van RP3- en Concept2-ergometers.</p>
   <ul>
-    <li>Accountgegevens (naam, e-mailadres)</li>
-    <li>Workout data van RP3 en Concept2 (via OAuth-koppeling)</li>
-    <li>Analyseresultaten en rapporten</li>
-    <li>Betalingsgegevens (verwerkt via Stripe)</li>
-    <li>Technische gegevens (IP-adres, browsertype, cookies)</li>
+    <li><strong data-nl="Website:" data-en="Website:">Website:</strong> <a href="https://beatyourbest.org">beatyourbest.org</a></li>
+    <li><strong>Portaal:</strong> <a href="https://my.beatyourbest.org">my.beatyourbest.org</a></li>
+    <li><strong>E-mail:</strong> <a href="mailto:info@beatyourbest.org">info@beatyourbest.org</a></li>
   </ul>
 
-  <h2>3. Waarom verzamelen wij deze gegevens</h2>
-  <p><!-- AANPASSEN: kopieer uit portaal --></p>
+  <h2 data-nl="2. Welke gegevens verzamelen wij" data-en="2. What data we collect">2. Welke gegevens verzamelen wij</h2>
+  <p data-nl="Wij verzamelen en verwerken de volgende categorieen persoonsgegevens:" data-en="We collect and process the following categories of personal data:">Wij verzamelen en verwerken de volgende categorieen persoonsgegevens:</p>
+
+  <h3 data-nl="Accountgegevens" data-en="Account data">Accountgegevens</h3>
   <ul>
-    <li>Om het platform te leveren en te verbeteren</li>
-    <li>Om analyses en rapporten te genereren</li>
-    <li>Om betalingen te verwerken</li>
-    <li>Om contact met je op te nemen over je account</li>
+    <li><span data-nl="Naam, e-mailadres en wachtwoord (versleuteld opgeslagen)" data-en="Name, email address and password (stored encrypted)">Naam, e-mailadres en wachtwoord (versleuteld opgeslagen)</span></li>
+    <li><span data-nl="Profielinformatie (bijv. geboortedatum, gewicht, roeiprofiel)" data-en="Profile information (e.g. date of birth, weight, rowing profile)">Profielinformatie (bijv. geboortedatum, gewicht, roeiprofiel)</span></li>
+    <li><span data-nl="Google-account ID bij gebruik van social login (Google OAuth)" data-en="Google account ID when using social login (Google OAuth)">Google-account ID bij gebruik van social login (Google OAuth)</span></li>
   </ul>
 
-  <h2>4. Hoe lang bewaren wij jouw gegevens</h2>
-  <p><!-- AANPASSEN: kopieer uit portaal --></p>
+  <h3 data-nl="Workout data" data-en="Workout data">Workout data</h3>
+  <ul>
+    <li><span data-nl="Roeiprestatie-gegevens geimporteerd van RP3 via de RP3 OAuth API" data-en="Rowing performance data imported from RP3 via the RP3 OAuth API">Roeiprestatie-gegevens geimporteerd van RP3 via de RP3 OAuth API</span></li>
+    <li><span data-nl="Roeiprestatie-gegevens geimporteerd van Concept2 via de Concept2 OAuth API (Logbook)" data-en="Rowing performance data imported from Concept2 via the Concept2 OAuth API (Logbook)">Roeiprestatie-gegevens geimporteerd van Concept2 via de Concept2 OAuth API (Logbook)</span></li>
+    <li><span data-nl="Slaggegevens, krachtsprofielen, split-tijden en andere ergometerdata" data-en="Stroke data, force profiles, split times and other ergometer data">Slaggegevens, krachtsprofielen, split-tijden en andere ergometerdata</span></li>
+  </ul>
 
-  <h2>5. Delen wij jouw gegevens met derden</h2>
-  <p><!-- AANPASSEN: kopieer uit portaal --></p>
+  <h3 data-nl="Analyseresultaten" data-en="Analysis results">Analyseresultaten</h3>
+  <ul>
+    <li><span data-nl="Gegenereerde rapporten (Steady State, Interval, Progressie)" data-en="Generated reports (Steady State, Interval, Progression)">Gegenereerde rapporten (Steady State, Interval, Progressie)</span></li>
+    <li><span data-nl="Coaching-inzichten en aanbevelingen" data-en="Coaching insights and recommendations">Coaching-inzichten en aanbevelingen</span></li>
+  </ul>
 
-  <h2>6. Jouw rechten</h2>
-  <p>Je hebt het recht om je gegevens in te zien, te corrigeren of te laten verwijderen. Neem hiervoor contact op via <a href="mailto:info@beatyourbest.org">info@beatyourbest.org</a>.</p>
+  <h3 data-nl="Betalingsgegevens" data-en="Payment data">Betalingsgegevens</h3>
+  <ul>
+    <li><span data-nl="Abonnementstype en status" data-en="Subscription type and status">Abonnementstype en status</span></li>
+    <li><span data-nl="Betalingsgegevens worden verwerkt en opgeslagen door Stripe — Beat Your Best slaat geen creditcard- of bankgegevens op" data-en="Payment details are processed and stored by Stripe — Beat Your Best does not store credit card or bank details">Betalingsgegevens worden verwerkt en opgeslagen door Stripe — Beat Your Best slaat geen creditcard- of bankgegevens op</span></li>
+  </ul>
 
-  <h2>7. Cookies</h2>
-  <p>Zie ons <a href="cookies.html">cookiebeleid</a> voor meer informatie over het gebruik van cookies.</p>
+  <h3 data-nl="Technische gegevens" data-en="Technical data">Technische gegevens</h3>
+  <ul>
+    <li><span data-nl="IP-adres, browsertype en besturingssysteem" data-en="IP address, browser type and operating system">IP-adres, browsertype en besturingssysteem</span></li>
+    <li><span data-nl="Sessie-informatie en taalvoorkeur" data-en="Session information and language preference">Sessie-informatie en taalvoorkeur</span></li>
+  </ul>
 
-  <h2>8. Contact</h2>
-  <p>Vragen over dit privacybeleid? Stuur een e-mail naar <a href="mailto:info@beatyourbest.org">info@beatyourbest.org</a>.</p>
+  <h2 data-nl="3. Grondslag voor verwerking" data-en="3. Legal basis for processing">3. Grondslag voor verwerking</h2>
+  <p data-nl="Wij verwerken je gegevens op basis van de volgende grondslagen uit de AVG/GDPR:" data-en="We process your data based on the following legal bases under the GDPR:">Wij verwerken je gegevens op basis van de volgende grondslagen uit de AVG/GDPR:</p>
+  <ul>
+    <li><strong data-nl="Uitvoering van de overeenkomst (Art. 6 lid 1 sub b):" data-en="Performance of the contract (Art. 6(1)(b)):">Uitvoering van de overeenkomst (Art. 6 lid 1 sub b):</strong> <span data-nl="het aanmaken van je account, het leveren van analyses en het verwerken van betalingen." data-en="creating your account, providing analyses and processing payments.">het aanmaken van je account, het leveren van analyses en het verwerken van betalingen.</span></li>
+    <li><strong data-nl="Gerechtvaardigd belang (Art. 6 lid 1 sub f):" data-en="Legitimate interest (Art. 6(1)(f)):">Gerechtvaardigd belang (Art. 6 lid 1 sub f):</strong> <span data-nl="het verbeteren van het Platform, het waarborgen van de beveiliging en het genereren van geanonimiseerde statistieken." data-en="improving the Platform, ensuring security and generating anonymised statistics.">het verbeteren van het Platform, het waarborgen van de beveiliging en het genereren van geanonimiseerde statistieken.</span></li>
+    <li><strong data-nl="Toestemming (Art. 6 lid 1 sub a):" data-en="Consent (Art. 6(1)(a)):">Toestemming (Art. 6 lid 1 sub a):</strong> <span data-nl="het koppelen van je account aan RP3, Concept2 of Google (via OAuth). Je kunt deze toestemming op elk moment intrekken." data-en="linking your account to RP3, Concept2 or Google (via OAuth). You can withdraw this consent at any time.">het koppelen van je account aan RP3, Concept2 of Google (via OAuth). Je kunt deze toestemming op elk moment intrekken.</span></li>
+  </ul>
+
+  <h2 data-nl="4. Bewaartermijnen" data-en="4. Retention periods">4. Bewaartermijnen</h2>
+  <p data-nl="Wij bewaren je gegevens niet langer dan noodzakelijk:" data-en="We do not retain your data longer than necessary:">Wij bewaren je gegevens niet langer dan noodzakelijk:</p>
+  <ul>
+    <li><strong data-nl="Accountgegevens:" data-en="Account data:">Accountgegevens:</strong> <span data-nl="zolang je account actief is. Na verwijdering van je account worden je gegevens binnen 30 dagen permanent verwijderd." data-en="as long as your account is active. After deletion of your account, your data is permanently removed within 30 days.">zolang je account actief is. Na verwijdering van je account worden je gegevens binnen 30 dagen permanent verwijderd.</span></li>
+    <li><strong data-nl="Workout data en analyseresultaten:" data-en="Workout data and analysis results:">Workout data en analyseresultaten:</strong> <span data-nl="zolang je account actief is. Worden verwijderd bij accountverwijdering." data-en="as long as your account is active. Deleted upon account deletion.">zolang je account actief is. Worden verwijderd bij accountverwijdering.</span></li>
+    <li><strong data-nl="Betalingsgegevens:" data-en="Payment data:">Betalingsgegevens:</strong> <span data-nl="bewaard door Stripe conform hun bewaarbeleid en wettelijke verplichtingen (fiscale bewaarplicht van 7 jaar)." data-en="retained by Stripe in accordance with their retention policy and legal obligations (fiscal retention period of 7 years).">bewaard door Stripe conform hun bewaarbeleid en wettelijke verplichtingen (fiscale bewaarplicht van 7 jaar).</span></li>
+    <li><strong data-nl="Technische gegevens:" data-en="Technical data:">Technische gegevens:</strong> <span data-nl="maximaal 12 maanden." data-en="maximum 12 months.">maximaal 12 maanden.</span></li>
+  </ul>
+
+  <h2 data-nl="5. Delen met derden" data-en="5. Sharing with third parties">5. Delen met derden</h2>
+  <p data-nl="Wij verkopen je gegevens nooit aan derden. Wij delen gegevens uitsluitend met de volgende partijen, voor zover noodzakelijk voor het leveren van onze dienst:" data-en="We never sell your data to third parties. We share data only with the following parties, insofar as necessary for providing our service:">Wij verkopen je gegevens nooit aan derden. Wij delen gegevens uitsluitend met de volgende partijen, voor zover noodzakelijk voor het leveren van onze dienst:</p>
+  <ul>
+    <li><strong>Stripe</strong> <span data-nl="(betalingsverwerking) — verwerkt betalingen conform PCI-DSS. Stripe opereert binnen de EU/EER." data-en="(payment processing) — processes payments in accordance with PCI-DSS. Stripe operates within the EU/EEA.">— verwerkt betalingen conform PCI-DSS. Stripe opereert binnen de EU/EER.</span></li>
+    <li><strong>Amazon Web Services (AWS)</strong> <span data-nl="(hosting en opslag) — onze servers en database draaien in een AWS-datacenter in de EU-regio (eu-west-1, Ierland)." data-en="(hosting and storage) — our servers and database run in an AWS data centre in the EU region (eu-west-1, Ireland).">— onze servers en database draaien in een AWS-datacenter in de EU-regio (eu-west-1, Ierland).</span></li>
+    <li><strong>RP3 (Row Perfect 3)</strong> <span data-nl="(workout data) — wij ontvangen workout data via de RP3 OAuth API wanneer je je RP3-account koppelt." data-en="(workout data) — we receive workout data via the RP3 OAuth API when you connect your RP3 account.">— wij ontvangen workout data via de RP3 OAuth API wanneer je je RP3-account koppelt.</span></li>
+    <li><strong>Concept2</strong> <span data-nl="(workout data) — wij ontvangen workout data via de Concept2 OAuth API (Logbook) wanneer je je Concept2-account koppelt." data-en="(workout data) — we receive workout data via the Concept2 OAuth API (Logbook) when you connect your Concept2 account.">— wij ontvangen workout data via de Concept2 OAuth API (Logbook) wanneer je je Concept2-account koppelt.</span></li>
+    <li><strong>Google</strong> <span data-nl="(authenticatie) — bij gebruik van Google OAuth voor inloggen. Wij ontvangen uitsluitend je naam en e-mailadres." data-en="(authentication) — when using Google OAuth for login. We only receive your name and email address.">— bij gebruik van Google OAuth voor inloggen. Wij ontvangen uitsluitend je naam en e-mailadres.</span></li>
+  </ul>
+  <p data-nl="Al deze partijen opereren binnen de EU/EER of onder een adequaatheidsbesluit. Er vindt geen doorgifte van persoonsgegevens plaats naar landen buiten de EU/EER zonder passende waarborgen." data-en="All these parties operate within the EU/EEA or under an adequacy decision. No transfer of personal data takes place to countries outside the EU/EEA without appropriate safeguards.">Al deze partijen opereren binnen de EU/EER of onder een adequaatheidsbesluit. Er vindt geen doorgifte van persoonsgegevens plaats naar landen buiten de EU/EER zonder passende waarborgen.</p>
+
+  <h2 data-nl="6. Beveiliging" data-en="6. Security">6. Beveiliging</h2>
+  <p data-nl="Wij nemen passende technische en organisatorische maatregelen om je gegevens te beschermen:" data-en="We take appropriate technical and organisational measures to protect your data:">Wij nemen passende technische en organisatorische maatregelen om je gegevens te beschermen:</p>
+  <ul>
+    <li><span data-nl="Alle verbindingen zijn versleuteld via HTTPS/TLS" data-en="All connections are encrypted via HTTPS/TLS">Alle verbindingen zijn versleuteld via HTTPS/TLS</span></li>
+    <li><span data-nl="Wachtwoorden worden gehasht opgeslagen (nooit in plain text)" data-en="Passwords are stored hashed (never in plain text)">Wachtwoorden worden gehasht opgeslagen (nooit in plain text)</span></li>
+    <li><span data-nl="De PostgreSQL-database draait in een beveiligde AWS-omgeving in de EU" data-en="The PostgreSQL database runs in a secured AWS environment in the EU">De PostgreSQL-database draait in een beveiligde AWS-omgeving in de EU</span></li>
+    <li><span data-nl="Toegang tot productiedata is beperkt tot geautoriseerd personeel" data-en="Access to production data is limited to authorised personnel">Toegang tot productiedata is beperkt tot geautoriseerd personeel</span></li>
+    <li><span data-nl="CSRF-bescherming op alle formulieren" data-en="CSRF protection on all forms">CSRF-bescherming op alle formulieren</span></li>
+  </ul>
+
+  <h2 data-nl="7. Jouw rechten" data-en="7. Your rights">7. Jouw rechten</h2>
+  <p data-nl="Op grond van de AVG/GDPR heb je de volgende rechten:" data-en="Under the GDPR, you have the following rights:">Op grond van de AVG/GDPR heb je de volgende rechten:</p>
+  <ul>
+    <li><strong data-nl="Recht op inzage:" data-en="Right of access:">Recht op inzage:</strong> <span data-nl="je kunt opvragen welke gegevens wij van je verwerken." data-en="you can request which data we process about you.">je kunt opvragen welke gegevens wij van je verwerken.</span></li>
+    <li><strong data-nl="Recht op correctie:" data-en="Right to rectification:">Recht op correctie:</strong> <span data-nl="je kunt onjuiste gegevens laten aanpassen." data-en="you can have incorrect data corrected.">je kunt onjuiste gegevens laten aanpassen.</span></li>
+    <li><strong data-nl="Recht op verwijdering:" data-en="Right to erasure:">Recht op verwijdering:</strong> <span data-nl="je kunt je account en alle bijbehorende data laten verwijderen via de accountinstellingen of door contact op te nemen." data-en="you can have your account and all associated data deleted via account settings or by contacting us.">je kunt je account en alle bijbehorende data laten verwijderen via de accountinstellingen of door contact op te nemen.</span></li>
+    <li><strong data-nl="Recht op dataportabiliteit:" data-en="Right to data portability:">Recht op dataportabiliteit:</strong> <span data-nl="je kunt een kopie van je gegevens opvragen in een gangbaar formaat." data-en="you can request a copy of your data in a commonly used format.">je kunt een kopie van je gegevens opvragen in een gangbaar formaat.</span></li>
+    <li><strong data-nl="Recht op bezwaar:" data-en="Right to object:">Recht op bezwaar:</strong> <span data-nl="je kunt bezwaar maken tegen verwerking op basis van gerechtvaardigd belang." data-en="you can object to processing based on legitimate interest.">je kunt bezwaar maken tegen verwerking op basis van gerechtvaardigd belang.</span></li>
+    <li><strong data-nl="Recht op beperking:" data-en="Right to restriction:">Recht op beperking:</strong> <span data-nl="je kunt vragen om beperking van de verwerking van je gegevens." data-en="you can request restriction of the processing of your data.">je kunt vragen om beperking van de verwerking van je gegevens.</span></li>
+  </ul>
+  <p data-nl="Om gebruik te maken van je rechten, stuur een e-mail naar " data-en="To exercise your rights, send an email to ">Om gebruik te maken van je rechten, stuur een e-mail naar <a href="mailto:info@beatyourbest.org">info@beatyourbest.org</a>. <span data-nl="Wij reageren binnen 30 dagen op je verzoek." data-en="We will respond to your request within 30 days.">Wij reageren binnen 30 dagen op je verzoek.</span></p>
+
+  <h2 data-nl="8. Cookies" data-en="8. Cookies">8. Cookies</h2>
+  <p data-nl="Wij gebruiken uitsluitend noodzakelijke en functionele cookies. Wij plaatsen geen tracking- of advertentiecookies. Voor volledige informatie, zie ons " data-en="We only use necessary and functional cookies. We do not place tracking or advertising cookies. For full information, see our ">Wij gebruiken uitsluitend noodzakelijke en functionele cookies. Wij plaatsen geen tracking- of advertentiecookies. Voor volledige informatie, zie ons <a href="cookies.html" data-nl="cookiebeleid" data-en="cookie policy">cookiebeleid</a>.</p>
+
+  <h2 data-nl="9. Wijzigingen" data-en="9. Changes">9. Wijzigingen</h2>
+  <p data-nl="Beat Your Best behoudt zich het recht voor dit privacybeleid te wijzigen. Wijzigingen worden bekendgemaakt via het Platform. De datum 'laatst bijgewerkt' bovenaan dit document wordt bij elke wijziging aangepast. Wij raden je aan dit privacybeleid regelmatig te raadplegen." data-en="Beat Your Best reserves the right to modify this privacy policy. Changes will be announced via the Platform. The 'last updated' date at the top of this document is adjusted with each change. We recommend that you consult this privacy policy regularly.">Beat Your Best behoudt zich het recht voor dit privacybeleid te wijzigen. Wijzigingen worden bekendgemaakt via het Platform. De datum 'laatst bijgewerkt' bovenaan dit document wordt bij elke wijziging aangepast. Wij raden je aan dit privacybeleid regelmatig te raadplegen.</p>
+
+  <h2 data-nl="10. Contact en toezichthouder" data-en="10. Contact and supervisory authority">10. Contact en toezichthouder</h2>
+  <p data-nl="Vragen over dit privacybeleid of over de verwerking van je persoonsgegevens? Neem contact met ons op:" data-en="Questions about this privacy policy or about the processing of your personal data? Contact us:">Vragen over dit privacybeleid of over de verwerking van je persoonsgegevens? Neem contact met ons op:</p>
+  <ul>
+    <li><strong>E-mail:</strong> <a href="mailto:info@beatyourbest.org">info@beatyourbest.org</a></li>
+    <li><strong>Website:</strong> <a href="https://beatyourbest.org">beatyourbest.org</a></li>
+  </ul>
+  <p data-nl="Als je een klacht hebt over de verwerking van je persoonsgegevens, kun je deze indienen bij de Autoriteit Persoonsgegevens:" data-en="If you have a complaint about the processing of your personal data, you can file it with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens):">Als je een klacht hebt over de verwerking van je persoonsgegevens, kun je deze indienen bij de Autoriteit Persoonsgegevens:</p>
+  <ul>
+    <li><strong>Website:</strong> <a href="https://autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">autoriteitpersoonsgegevens.nl</a></li>
+  </ul>
 </div>
 
 <footer class="footer">
-  <div class="footer-logo">© 2026 Beat Your Best · Made in the Netherlands</div>
+  <div class="footer-logo">© 2026 Beat your Best · Made in the Netherlands</div>
   <div class="footer-links">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Voorwaarden</a>
-    <a href="cookies.html">Cookies</a>
-    <a href="about.html#contact">Contact</a>
-    <a href="https://my.beatyourbest.org">Portaal</a>
+    <a href="privacy.html" data-nl="Privacy" data-en="Privacy">Privacy</a>
+    <a href="terms.html" data-nl="Voorwaarden" data-en="Terms">Voorwaarden</a>
+    <a href="cookies.html" data-nl="Cookies" data-en="Cookies">Cookies</a>
+    <a href="about.html#contact" data-nl="Contact" data-en="Contact">Contact</a>
+    <a href="https://my.beatyourbest.org">my.beatyourbest.org</a>
   </div>
 </footer>
 
+<script src="main.js"></script>
 </body>
 </html>

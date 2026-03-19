@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,76 +17,116 @@
 <body>
 
 <nav class="nav">
-  <a href="index.html" class="nav-logo">
-    <div class="nav-logo-box">BEAT<br>YOUR<br>BEST</div>
-    <span class="nav-logo-text">Beat Your Best</span>
-  </a>
-  <div class="nav-links">
-    <a href="how-it-works.html">Hoe het werkt</a>
-    <a href="how-it-works.html#analyses">Analyses</a>
-    <a href="pricing.html">Abonnementen</a>
-    <a href="about.html">Over ons</a>
+  <a href="index.html" class="nav-logo"><img src="assets/images/logo.png" alt="Beat your Best"></a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+  <div class="nav-links" id="nav-links">
+    <a href="how-it-works.html" data-nl="Hoe het werkt" data-en="How it works">Hoe het werkt</a>
+    <a href="how-it-works.html#analyses" data-nl="Analyses" data-en="Analyses">Analyses</a>
+    <a href="pricing.html" data-nl="Abonnementen" data-en="Pricing">Abonnementen</a>
+    <a href="about.html" data-nl="Over ons" data-en="About us">Over ons</a>
   </div>
-  <a href="https://my.beatyourbest.org" class="btn-portal">Naar het portaal →</a>
+  <div class="nav-controls">
+    <button class="nav-toggle-btn" id="lang-toggle"><i class="fas fa-globe" style="margin-right:4px;font-size:12px;"></i>EN</button>
+    <button class="nav-toggle-btn" id="theme-toggle" aria-label="Thema wisselen"><i class="fas fa-moon" style="font-size:13px;"></i></button>
+    <a href="https://my.beatyourbest.org" class="btn-portal" data-nl="Naar het portaal →" data-en="Go to portal →">Naar het portaal →</a>
+  </div>
 </nav>
 
 <div class="page-header">
-  <div class="sec-pill">Juridisch</div>
-  <h1>Algemene Voorwaarden</h1>
-  <p>De voorwaarden die gelden voor gebruik van Beat Your Best.</p>
+  <div class="sec-pill" data-nl="Juridisch" data-en="Legal">Juridisch</div>
+  <h1 data-nl="Algemene Voorwaarden" data-en="Terms of Service">Algemene Voorwaarden</h1>
+  <p data-nl="De voorwaarden die gelden voor gebruik van Beat Your Best." data-en="The terms that apply to using Beat Your Best.">De voorwaarden die gelden voor gebruik van Beat Your Best.</p>
 </div>
 
-<!-- AANPASSEN: kopieer de volledige voorwaardentekst uit het portaal hieronder -->
-
 <div class="prose">
-  <p class="prose-updated">Laatst bijgewerkt: <!-- DATUM --> maart 2026</p>
+  <p class="prose-updated" data-nl="Laatst bijgewerkt: 19 maart 2026" data-en="Last updated: 19 March 2026">Laatst bijgewerkt: 19 maart 2026</p>
 
-  <h2>1. Definities</h2>
-  <p><!-- AANPASSEN: kopieer uit portaal --></p>
+  <h2 data-nl="1. Definities" data-en="1. Definitions">1. Definities</h2>
+  <p data-nl="In deze algemene voorwaarden wordt verstaan onder:" data-en="In these terms of service, the following definitions apply:">In deze algemene voorwaarden wordt verstaan onder:</p>
   <ul>
-    <li><strong>Platform:</strong> de website en applicatie van Beat Your Best</li>
-    <li><strong>Gebruiker:</strong> de persoon die een account aanmaakt op het platform</li>
-    <li><strong>Abonnement:</strong> de betaalde toegang tot het platform</li>
+    <li><strong data-nl="Platform:" data-en="Platform:">Platform:</strong> <span data-nl="de website beatyourbest.org, het portaal my.beatyourbest.org en alle bijbehorende diensten, beheerd door Beat Your Best." data-en="the website beatyourbest.org, the portal my.beatyourbest.org and all associated services, operated by Beat Your Best.">de website beatyourbest.org, het portaal my.beatyourbest.org en alle bijbehorende diensten, beheerd door Beat Your Best.</span></li>
+    <li><strong data-nl="Gebruiker:" data-en="User:">Gebruiker:</strong> <span data-nl="iedere natuurlijke persoon die een account aanmaakt op het Platform." data-en="any natural person who creates an account on the Platform.">iedere natuurlijke persoon die een account aanmaakt op het Platform.</span></li>
+    <li><strong data-nl="Abonnement:" data-en="Subscription:">Abonnement:</strong> <span data-nl="de betaalde toegang tot de diensten van het Platform, inclusief de gratis proefperiode." data-en="the paid access to the services of the Platform, including the free trial period.">de betaalde toegang tot de diensten van het Platform, inclusief de gratis proefperiode.</span></li>
+    <li><strong data-nl="Workout data:" data-en="Workout data:">Workout data:</strong> <span data-nl="roeiprestatie-gegevens afkomstig van RP3 of Concept2 ergometers, die door de Gebruiker via het Platform worden geimporteerd." data-en="rowing performance data from RP3 or Concept2 ergometers, imported by the User via the Platform.">roeiprestatie-gegevens afkomstig van RP3 of Concept2 ergometers, die door de Gebruiker via het Platform worden geimporteerd.</span></li>
+    <li><strong data-nl="Analyse:" data-en="Analysis:">Analyse:</strong> <span data-nl="de door het Platform gegenereerde rapporten en inzichten op basis van de Workout data." data-en="the reports and insights generated by the Platform based on the Workout data.">de door het Platform gegenereerde rapporten en inzichten op basis van de Workout data.</span></li>
+    <li><strong data-nl="Beat Your Best / BYB:" data-en="Beat Your Best / BYB:">Beat Your Best / BYB:</strong> <span data-nl="de onderneming gevestigd te Nederland, bereikbaar via info@beatyourbest.org." data-en="the company based in the Netherlands, reachable at info@beatyourbest.org.">de onderneming gevestigd te Nederland, bereikbaar via info@beatyourbest.org.</span></li>
   </ul>
 
-  <h2>2. Toepasselijkheid</h2>
-  <p><!-- AANPASSEN: kopieer uit portaal --></p>
+  <h2 data-nl="2. Toepasselijkheid" data-en="2. Applicability">2. Toepasselijkheid</h2>
+  <p data-nl="Deze algemene voorwaarden zijn van toepassing op ieder gebruik van het Platform en op alle overeenkomsten tussen Beat Your Best en de Gebruiker. Door een account aan te maken of het Platform te gebruiken, ga je akkoord met deze voorwaarden." data-en="These terms of service apply to all use of the Platform and to all agreements between Beat Your Best and the User. By creating an account or using the Platform, you agree to these terms.">Deze algemene voorwaarden zijn van toepassing op ieder gebruik van het Platform en op alle overeenkomsten tussen Beat Your Best en de Gebruiker. Door een account aan te maken of het Platform te gebruiken, ga je akkoord met deze voorwaarden.</p>
+  <p data-nl="Beat Your Best behoudt zich het recht voor deze voorwaarden te wijzigen. Wijzigingen worden via het Platform of per e-mail bekendgemaakt. Voortgezet gebruik van het Platform na een wijziging geldt als acceptatie van de gewijzigde voorwaarden." data-en="Beat Your Best reserves the right to modify these terms. Changes will be communicated via the Platform or by email. Continued use of the Platform after a modification constitutes acceptance of the modified terms.">Beat Your Best behoudt zich het recht voor deze voorwaarden te wijzigen. Wijzigingen worden via het Platform of per e-mail bekendgemaakt. Voortgezet gebruik van het Platform na een wijziging geldt als acceptatie van de gewijzigde voorwaarden.</p>
 
-  <h2>3. Account en registratie</h2>
-  <p><!-- AANPASSEN: kopieer uit portaal --></p>
+  <h2 data-nl="3. Account en registratie" data-en="3. Account and registration">3. Account en registratie</h2>
+  <p data-nl="Om gebruik te maken van het Platform dien je een account aan te maken. Dit kan via een e-mailadres en wachtwoord, of via Google OAuth (social login). Je bent verantwoordelijk voor het geheimhouden van je inloggegevens en voor alle activiteiten die onder jouw account plaatsvinden." data-en="To use the Platform, you must create an account. This can be done via an email address and password, or via Google OAuth (social login). You are responsible for keeping your login credentials confidential and for all activities that take place under your account.">Om gebruik te maken van het Platform dien je een account aan te maken. Dit kan via een e-mailadres en wachtwoord, of via Google OAuth (social login). Je bent verantwoordelijk voor het geheimhouden van je inloggegevens en voor alle activiteiten die onder jouw account plaatsvinden.</p>
+  <p data-nl="Je garandeert dat de gegevens die je bij registratie verstrekt juist en volledig zijn. Beat Your Best mag een account opschorten of verwijderen bij vermoeden van misbruik of bij het verstrekken van onjuiste gegevens." data-en="You guarantee that the information you provide during registration is accurate and complete. Beat Your Best may suspend or delete an account if misuse is suspected or if incorrect information has been provided.">Je garandeert dat de gegevens die je bij registratie verstrekt juist en volledig zijn. Beat Your Best mag een account opschorten of verwijderen bij vermoeden van misbruik of bij het verstrekken van onjuiste gegevens.</p>
 
-  <h2>4. Abonnementen en betalingen</h2>
-  <p><!-- AANPASSEN: kopieer uit portaal --></p>
+  <h2 data-nl="4. Abonnementen en betalingen" data-en="4. Subscriptions and payments">4. Abonnementen en betalingen</h2>
+  <p data-nl="Het Platform biedt de volgende abonnementsvormen:" data-en="The Platform offers the following subscription plans:">Het Platform biedt de volgende abonnementsvormen:</p>
+  <ul>
+    <li><strong>Zelf Coach:</strong> <span data-nl="€ 3,99 per maand" data-en="€3.99 per month">€ 3,99 per maand</span></li>
+    <li><strong>Crew Coach:</strong> <span data-nl="€ 14,99 per maand" data-en="€14.99 per month">€ 14,99 per maand</span></li>
+    <li><strong>Crew Coach Plus:</strong> <span data-nl="€ 24,99 per maand" data-en="€24.99 per month">€ 24,99 per maand</span></li>
+    <li><strong>Club:</strong> <span data-nl="prijs op aanvraag" data-en="price on request">prijs op aanvraag</span></li>
+  </ul>
+  <p data-nl="Bij registratie ontvang je een gratis proefperiode van 1 maand. Tijdens de proefperiode heb je volledige toegang tot de functies van het gekozen abonnement. Na afloop van de proefperiode wordt het abonnement automatisch omgezet naar een betaald abonnement, tenzij je voor het einde van de proefperiode opzegt." data-en="Upon registration, you receive a free trial period of 1 month. During the trial period, you have full access to the features of the chosen subscription. After the trial period ends, the subscription is automatically converted to a paid subscription, unless you cancel before the end of the trial period.">Bij registratie ontvang je een gratis proefperiode van 1 maand. Tijdens de proefperiode heb je volledige toegang tot de functies van het gekozen abonnement. Na afloop van de proefperiode wordt het abonnement automatisch omgezet naar een betaald abonnement, tenzij je voor het einde van de proefperiode opzegt.</p>
+  <p data-nl="Betalingen worden verwerkt via Stripe. Beat Your Best slaat geen creditcard- of bankgegevens op; deze worden uitsluitend door Stripe verwerkt en opgeslagen conform hun beveiligingsstandaarden (PCI-DSS)." data-en="Payments are processed via Stripe. Beat Your Best does not store credit card or bank details; these are exclusively processed and stored by Stripe in accordance with their security standards (PCI-DSS).">Betalingen worden verwerkt via Stripe. Beat Your Best slaat geen creditcard- of bankgegevens op; deze worden uitsluitend door Stripe verwerkt en opgeslagen conform hun beveiligingsstandaarden (PCI-DSS).</p>
+  <p data-nl="Abonnementen worden maandelijks automatisch verlengd. Je kunt je abonnement op elk moment opzeggen via het portaal. Na opzegging behoud je toegang tot het einde van de lopende betaalperiode." data-en="Subscriptions are automatically renewed monthly. You can cancel your subscription at any time via the portal. After cancellation, you retain access until the end of the current billing period.">Abonnementen worden maandelijks automatisch verlengd. Je kunt je abonnement op elk moment opzeggen via het portaal. Na opzegging behoud je toegang tot het einde van de lopende betaalperiode.</p>
 
-  <h2>5. Gebruik van het platform</h2>
-  <p><!-- AANPASSEN: kopieer uit portaal --></p>
+  <h2 data-nl="5. Gebruik van het platform" data-en="5. Use of the platform">5. Gebruik van het platform</h2>
+  <p data-nl="Het Platform is bedoeld voor het analyseren van roeiprestaties op basis van data van RP3- en Concept2-ergometers. De Gebruiker verbindt zich ertoe het Platform uitsluitend te gebruiken voor dit doel en in overeenstemming met deze voorwaarden en de geldende wet- en regelgeving." data-en="The Platform is intended for analysing rowing performance based on data from RP3 and Concept2 ergometers. The User agrees to use the Platform solely for this purpose and in accordance with these terms and applicable laws and regulations.">Het Platform is bedoeld voor het analyseren van roeiprestaties op basis van data van RP3- en Concept2-ergometers. De Gebruiker verbindt zich ertoe het Platform uitsluitend te gebruiken voor dit doel en in overeenstemming met deze voorwaarden en de geldende wet- en regelgeving.</p>
+  <p data-nl="Het is niet toegestaan om:" data-en="It is not permitted to:">Het is niet toegestaan om:</p>
+  <ul>
+    <li><span data-nl="het Platform te gebruiken op een manier die schade kan toebrengen aan Beat Your Best of derden;" data-en="use the Platform in a way that may cause damage to Beat Your Best or third parties;">het Platform te gebruiken op een manier die schade kan toebrengen aan Beat Your Best of derden;</span></li>
+    <li><span data-nl="de beveiliging van het Platform te omzeilen of te verstoren;" data-en="circumvent or disrupt the security of the Platform;">de beveiliging van het Platform te omzeilen of te verstoren;</span></li>
+    <li><span data-nl="geautomatiseerde systemen (bots, scrapers) in te zetten om data van het Platform te verzamelen;" data-en="use automated systems (bots, scrapers) to collect data from the Platform;">geautomatiseerde systemen (bots, scrapers) in te zetten om data van het Platform te verzamelen;</span></li>
+    <li><span data-nl="inloggegevens van andere Gebruikers te gebruiken of te delen." data-en="use or share login credentials of other Users.">inloggegevens van andere Gebruikers te gebruiken of te delen.</span></li>
+  </ul>
 
-  <h2>6. Intellectueel eigendom</h2>
-  <p><!-- AANPASSEN: kopieer uit portaal --></p>
+  <h2 data-nl="6. Intellectueel eigendom" data-en="6. Intellectual property">6. Intellectueel eigendom</h2>
+  <p data-nl="Alle intellectuele eigendomsrechten op het Platform, waaronder software, ontwerp, teksten, analyse-algoritmes en rapportsjablonen, berusten bij Beat Your Best. De Gebruiker verkrijgt uitsluitend een beperkt, persoonlijk en niet-overdraagbaar gebruiksrecht voor de duur van het abonnement." data-en="All intellectual property rights to the Platform, including software, design, texts, analysis algorithms and report templates, belong to Beat Your Best. The User only obtains a limited, personal and non-transferable right of use for the duration of the subscription.">Alle intellectuele eigendomsrechten op het Platform, waaronder software, ontwerp, teksten, analyse-algoritmes en rapportsjablonen, berusten bij Beat Your Best. De Gebruiker verkrijgt uitsluitend een beperkt, persoonlijk en niet-overdraagbaar gebruiksrecht voor de duur van het abonnement.</p>
+  <p data-nl="De workout data die de Gebruiker importeert blijft eigendom van de Gebruiker. Beat Your Best gebruikt deze data uitsluitend voor het leveren van de dienst (analyses en rapporten). Geanonimiseerde en geaggregeerde data mag door Beat Your Best worden gebruikt voor de verbetering van het Platform." data-en="The workout data imported by the User remains the property of the User. Beat Your Best uses this data solely for providing the service (analyses and reports). Anonymised and aggregated data may be used by Beat Your Best for improving the Platform.">De workout data die de Gebruiker importeert blijft eigendom van de Gebruiker. Beat Your Best gebruikt deze data uitsluitend voor het leveren van de dienst (analyses en rapporten). Geanonimiseerde en geaggregeerde data mag door Beat Your Best worden gebruikt voor de verbetering van het Platform.</p>
 
-  <h2>7. Aansprakelijkheid</h2>
-  <p><!-- AANPASSEN: kopieer uit portaal --></p>
+  <h2 data-nl="7. Aansprakelijkheid" data-en="7. Liability">7. Aansprakelijkheid</h2>
+  <p data-nl="Beat Your Best spant zich in om het Platform beschikbaar en werkend te houden, maar garandeert geen ononderbroken of foutloze werking. De analyses en rapporten die het Platform genereert zijn informatief van aard en vormen geen medisch, sportmedisch of professioneel trainingsadvies." data-en="Beat Your Best makes every effort to keep the Platform available and operational, but does not guarantee uninterrupted or error-free operation. The analyses and reports generated by the Platform are informational in nature and do not constitute medical, sports-medical or professional training advice.">Beat Your Best spant zich in om het Platform beschikbaar en werkend te houden, maar garandeert geen ononderbroken of foutloze werking. De analyses en rapporten die het Platform genereert zijn informatief van aard en vormen geen medisch, sportmedisch of professioneel trainingsadvies.</p>
+  <p data-nl="Beat Your Best is niet aansprakelijk voor:" data-en="Beat Your Best is not liable for:">Beat Your Best is niet aansprakelijk voor:</p>
+  <ul>
+    <li><span data-nl="schade als gevolg van het gebruik van analyses of rapporten van het Platform;" data-en="damage resulting from the use of analyses or reports from the Platform;">schade als gevolg van het gebruik van analyses of rapporten van het Platform;</span></li>
+    <li><span data-nl="tijdelijke onbeschikbaarheid van het Platform door onderhoud, storingen of overmacht;" data-en="temporary unavailability of the Platform due to maintenance, malfunctions or force majeure;">tijdelijke onbeschikbaarheid van het Platform door onderhoud, storingen of overmacht;</span></li>
+    <li><span data-nl="verlies of beschadiging van data, tenzij dit te wijten is aan opzet of grove nalatigheid van Beat Your Best;" data-en="loss or corruption of data, unless attributable to intent or gross negligence by Beat Your Best;">verlies of beschadiging van data, tenzij dit te wijten is aan opzet of grove nalatigheid van Beat Your Best;</span></li>
+    <li><span data-nl="onnauwkeurigheden in workout data afkomstig van RP3 of Concept2." data-en="inaccuracies in workout data originating from RP3 or Concept2.">onnauwkeurigheden in workout data afkomstig van RP3 of Concept2.</span></li>
+  </ul>
+  <p data-nl="Indien Beat Your Best aansprakelijk wordt gehouden, is de aansprakelijkheid beperkt tot het bedrag dat de Gebruiker in de afgelopen 12 maanden aan abonnementsgeld heeft betaald." data-en="If Beat Your Best is held liable, the liability is limited to the amount the User has paid in subscription fees in the past 12 months.">Indien Beat Your Best aansprakelijk wordt gehouden, is de aansprakelijkheid beperkt tot het bedrag dat de Gebruiker in de afgelopen 12 maanden aan abonnementsgeld heeft betaald.</p>
 
-  <h2>8. Opzegging</h2>
-  <p><!-- AANPASSEN: kopieer uit portaal --></p>
+  <h2 data-nl="8. Privacy" data-en="8. Privacy">8. Privacy</h2>
+  <p data-nl="Beat Your Best verwerkt persoonsgegevens in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG/GDPR). Voor volledige informatie over hoe wij omgaan met je gegevens, zie ons " data-en="Beat Your Best processes personal data in accordance with the General Data Protection Regulation (GDPR). For full information on how we handle your data, see our ">Beat Your Best verwerkt persoonsgegevens in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG/GDPR). Voor volledige informatie over hoe wij omgaan met je gegevens, zie ons <a href="privacy.html" data-nl="privacybeleid" data-en="privacy policy">privacybeleid</a>.</p>
 
-  <h2>9. Toepasselijk recht</h2>
-  <p>Op deze voorwaarden is Nederlands recht van toepassing.</p>
+  <h2 data-nl="9. Opzegging" data-en="9. Cancellation">9. Opzegging</h2>
+  <p data-nl="Je kunt je abonnement op elk moment opzeggen via het portaal op my.beatyourbest.org. Na opzegging behoud je toegang tot het einde van de lopende betaalperiode. Na afloop van de betaalperiode wordt je account omgezet naar een gratis account met beperkte functionaliteit." data-en="You can cancel your subscription at any time via the portal at my.beatyourbest.org. After cancellation, you retain access until the end of the current billing period. After the billing period ends, your account is converted to a free account with limited functionality.">Je kunt je abonnement op elk moment opzeggen via het portaal op my.beatyourbest.org. Na opzegging behoud je toegang tot het einde van de lopende betaalperiode. Na afloop van de betaalperiode wordt je account omgezet naar een gratis account met beperkte functionaliteit.</p>
+  <p data-nl="Je kunt je account en alle bijbehorende data volledig laten verwijderen. Dit kan via de accountinstellingen in het portaal of door een verzoek te sturen naar info@beatyourbest.org. Na verwijdering worden al je persoonsgegevens, workout data en analyseresultaten permanent verwijderd conform ons privacybeleid." data-en="You can have your account and all associated data completely deleted. This can be done via the account settings in the portal or by sending a request to info@beatyourbest.org. After deletion, all your personal data, workout data and analysis results are permanently removed in accordance with our privacy policy.">Je kunt je account en alle bijbehorende data volledig laten verwijderen. Dit kan via de accountinstellingen in het portaal of door een verzoek te sturen naar info@beatyourbest.org. Na verwijdering worden al je persoonsgegevens, workout data en analyseresultaten permanent verwijderd conform ons privacybeleid.</p>
 
-  <h2>10. Contact</h2>
-  <p>Vragen over deze voorwaarden? Stuur een e-mail naar <a href="mailto:info@beatyourbest.org">info@beatyourbest.org</a>.</p>
+  <h2 data-nl="10. Toepasselijk recht" data-en="10. Applicable law">10. Toepasselijk recht</h2>
+  <p data-nl="Op deze voorwaarden en alle overeenkomsten tussen Beat Your Best en de Gebruiker is Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechter in Nederland." data-en="These terms and all agreements between Beat Your Best and the User are governed by Dutch law. Disputes shall be submitted to the competent court in the Netherlands.">Op deze voorwaarden en alle overeenkomsten tussen Beat Your Best en de Gebruiker is Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechter in Nederland.</p>
+
+  <h2 data-nl="11. Contact" data-en="11. Contact">11. Contact</h2>
+  <p data-nl="Vragen over deze voorwaarden? Neem contact met ons op:" data-en="Questions about these terms? Contact us:">Vragen over deze voorwaarden? Neem contact met ons op:</p>
+  <ul>
+    <li><strong>E-mail:</strong> <a href="mailto:info@beatyourbest.org">info@beatyourbest.org</a></li>
+    <li><strong>Website:</strong> <a href="https://beatyourbest.org">beatyourbest.org</a></li>
+    <li><strong>Portaal:</strong> <a href="https://my.beatyourbest.org">my.beatyourbest.org</a></li>
+  </ul>
 </div>
 
 <footer class="footer">
-  <div class="footer-logo">© 2026 Beat Your Best · Made in the Netherlands</div>
+  <div class="footer-logo">© 2026 Beat your Best · Made in the Netherlands</div>
   <div class="footer-links">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Voorwaarden</a>
-    <a href="cookies.html">Cookies</a>
-    <a href="about.html#contact">Contact</a>
-    <a href="https://my.beatyourbest.org">Portaal</a>
+    <a href="privacy.html" data-nl="Privacy" data-en="Privacy">Privacy</a>
+    <a href="terms.html" data-nl="Voorwaarden" data-en="Terms">Voorwaarden</a>
+    <a href="cookies.html" data-nl="Cookies" data-en="Cookies">Cookies</a>
+    <a href="about.html#contact" data-nl="Contact" data-en="Contact">Contact</a>
+    <a href="https://my.beatyourbest.org">my.beatyourbest.org</a>
   </div>
 </footer>
 
+<script src="main.js"></script>
 </body>
 </html>
