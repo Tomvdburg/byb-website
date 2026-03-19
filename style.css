@@ -271,6 +271,7 @@ img{max-width:100%;display:block}
 .team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:800px;margin:0 auto}
 .team-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:32px}
 .team-avatar{width:56px;height:56px;background:var(--accent-bg);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:var(--accent);margin-bottom:16px}
+.team-avatar-img{width:56px;height:56px;border-radius:14px;object-fit:cover;margin-bottom:16px}
 .team-name{font-size:20px;font-weight:700;color:var(--text-h);margin-bottom:4px}
 .team-role{font-size:13px;color:var(--accent);font-weight:600;margin-bottom:14px}
 .team-bio{font-size:14px;color:var(--text-body);line-height:1.65}
