@@ -50,16 +50,9 @@
   </div>
 
   <div class="hero-mockups">
-    <div class="mockup-card">
-      <div class="mockup-bar">
-        <div class="mockup-dot"></div><div class="mockup-dot"></div><div class="mockup-dot"></div>
-        <span class="mockup-url">my.beatyourbest.org</span>
-      </div>
-      <div class="mockup-body" style="padding:16px;">
-        <!-- Header bar -->
-        <div style="background:linear-gradient(135deg,#2c9e8f,#1a7a6d);border-radius:8px;padding:8px 14px;margin-bottom:14px;display:flex;align-items:center;gap:8px;">
-          <span style="font-size:11px;color:white;font-weight:700;">☰ Concrete Aandachtspunten</span>
-        </div>
+    <div class="visual-card">
+      <div class="vc-header" data-nl="Coaching — Aandachtspunten" data-en="Coaching — Action Points">Coaching — Aandachtspunten</div>
+      <div style="padding:16px;">
         <!-- Card 1: Hoge prioriteit -->
         <div style="background:var(--bg-card);border:1px solid #fecaca;border-left:3px solid #ef4444;border-radius:8px;padding:12px 14px;margin-bottom:10px;">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
@@ -160,18 +153,71 @@
       </ul>
     </div>
     <div class="visual-card">
-      <div class="vc-header" data-nl="Crew ranking — 8+ selectie" data-en="Crew ranking — 8+ selection">Crew ranking — 8+ selectie</div>
-      <div class="crew-grid">
-        <div class="crew-seat crew-seat-top"><div class="crew-rank">1</div><div class="crew-rank-name">Lars B.</div><div class="crew-rank-val">IOF 94</div><div class="crew-rank-pos" data-nl="Slag" data-en="Stroke">Slag</div></div>
-        <div class="crew-seat crew-seat-top"><div class="crew-rank">2</div><div class="crew-rank-name">Sven D.</div><div class="crew-rank-val">IOF 91</div><div class="crew-rank-pos">7</div></div>
-        <div class="crew-seat"><div class="crew-rank crew-rank-muted">3</div><div class="crew-rank-name">Tim V.</div><div class="crew-rank-val">IOF 87</div><div class="crew-rank-pos crew-rank-pos-muted">6</div></div>
-        <div class="crew-seat"><div class="crew-rank crew-rank-muted">4</div><div class="crew-rank-name">Joris M.</div><div class="crew-rank-val">IOF 85</div><div class="crew-rank-pos crew-rank-pos-muted">5</div></div>
-      </div>
-      <div class="boat-visual">
-        <span class="boat-label" data-nl="Boeg" data-en="Bow">Boeg</span>
-        <div class="boat-pos">1</div><div class="boat-pos">2</div><div class="boat-pos">3</div><div class="boat-pos">4</div>
-        <div class="boat-pos boat-pos-active">5</div><div class="boat-pos boat-pos-active">6</div><div class="boat-pos boat-pos-active">7</div><div class="boat-pos boat-pos-active">Sl</div>
-        <span class="boat-label" data-nl="Stuur" data-en="Cox">Stuur</span>
+      <div class="vc-header" data-nl="Boat Positioning — 8+" data-en="Boat Positioning — 8+">Boat Positioning — 8+</div>
+      <!-- Boat shape with positions -->
+      <div style="padding:16px 12px;">
+        <!-- Top row: SB rowers -->
+        <div style="display:flex;justify-content:space-around;margin-bottom:8px;">
+          <div style="text-align:center;font-size:10px;">
+            <div style="width:28px;height:28px;border-radius:50%;background:#ef4444;color:white;font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center;margin:0 auto 2px;">62</div>
+            <div style="font-weight:600;color:var(--text-h);font-size:10px;">Stephan B.</div>
+            <div style="color:var(--text-muted);font-size:9px;">EWpS: 518</div>
+          </div>
+          <div style="text-align:center;font-size:10px;">
+            <div style="width:28px;height:28px;border-radius:50%;background:#f59e0b;color:white;font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center;margin:0 auto 2px;">60</div>
+            <div style="font-weight:600;color:var(--text-h);font-size:10px;">Jan Peter</div>
+            <div style="color:var(--text-muted);font-size:9px;">EWpS: 456</div>
+          </div>
+          <div style="text-align:center;font-size:10px;">
+            <div style="width:28px;height:28px;border-radius:50%;background:#10b981;color:white;font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center;margin:0 auto 2px;">41</div>
+            <div style="font-weight:600;color:var(--text-h);font-size:10px;">Sven R.</div>
+            <div style="color:var(--text-muted);font-size:9px;">EWpS: 464</div>
+          </div>
+          <div style="text-align:center;font-size:10px;">
+            <div style="width:28px;height:28px;border-radius:50%;background:#f59e0b;color:white;font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center;margin:0 auto 2px;">48</div>
+            <div style="font-weight:600;color:var(--text-h);font-size:10px;">Huibert B.</div>
+            <div style="color:var(--text-muted);font-size:9px;">EWpS: 479</div>
+          </div>
+        </div>
+        <!-- Boat shape -->
+        <div style="display:flex;align-items:center;gap:0;margin:10px 0;">
+          <span style="font-size:9px;color:var(--text-muted);font-weight:600;margin-right:6px;">Stern</span>
+          <div style="flex:1;height:20px;background:linear-gradient(90deg,#e0f0ed,#c8e6df);border-radius:10px 2px 2px 10px;display:flex;align-items:center;justify-content:space-around;position:relative;">
+            <span style="font-size:8px;font-weight:700;color:var(--accent);">Cox</span>
+            <span style="font-size:8px;font-weight:700;color:#ef4444;">Slag</span>
+            <span style="font-size:8px;font-weight:600;color:var(--text-muted);">7</span>
+            <span style="font-size:8px;font-weight:600;color:var(--text-muted);">6</span>
+            <span style="font-size:8px;font-weight:600;color:var(--text-muted);">5</span>
+            <span style="font-size:8px;font-weight:600;color:var(--text-muted);">4</span>
+            <span style="font-size:8px;font-weight:600;color:var(--text-muted);">3</span>
+            <span style="font-size:8px;font-weight:600;color:var(--text-muted);">2</span>
+            <span style="font-size:8px;font-weight:700;color:var(--accent);">Boeg</span>
+          </div>
+          <span style="font-size:9px;color:var(--text-muted);font-weight:600;margin-left:6px;">Bow</span>
+        </div>
+        <!-- Bottom row: BB rowers -->
+        <div style="display:flex;justify-content:space-around;margin-top:8px;">
+          <div style="text-align:center;font-size:10px;">
+            <div style="color:var(--text-muted);font-size:9px;">EWpS: 567</div>
+            <div style="font-weight:600;color:var(--text-h);font-size:10px;">Hans K.</div>
+            <div style="width:28px;height:28px;border-radius:50%;background:#10b981;color:white;font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center;margin:2px auto 0;">57</div>
+          </div>
+          <div style="text-align:center;font-size:10px;">
+            <div style="color:var(--text-muted);font-size:9px;">EWpS: 467</div>
+            <div style="font-weight:600;color:var(--text-h);font-size:10px;">Lex R.</div>
+            <div style="width:28px;height:28px;border-radius:50%;background:#10b981;color:white;font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center;margin:2px auto 0;">32</div>
+          </div>
+          <div style="text-align:center;font-size:10px;">
+            <div style="color:var(--text-muted);font-size:9px;">EWpS: 497</div>
+            <div style="font-weight:600;color:var(--text-h);font-size:10px;">Jan L.</div>
+            <div style="width:28px;height:28px;border-radius:50%;background:#f59e0b;color:white;font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center;margin:2px auto 0;">49</div>
+          </div>
+          <div style="text-align:center;font-size:10px;">
+            <div style="color:var(--text-muted);font-size:9px;">EWpS: 514</div>
+            <div style="font-weight:600;color:var(--text-h);font-size:10px;">Lars P.</div>
+            <div style="width:28px;height:28px;border-radius:50%;background:#f59e0b;color:white;font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center;margin:2px auto 0;">44</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
