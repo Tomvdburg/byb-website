@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hoe het werkt — Beat Your Best</title>
+  <title data-nl="Hoe het werkt — Beat Your Best" data-en="How it works — Beat Your Best">Hoe het werkt — Beat Your Best</title>
   <meta name="description" content="Hoe Beat Your Best werkt: koppel je RP3 of Concept2, analyseer je workouts en ontvang persoonlijke coaching.">
   <link rel="icon" href="/assets/favicon.ico">
   <link rel="stylesheet" href="style.css">
@@ -11,249 +11,287 @@
 <body>
 
 <nav class="nav">
-  <a href="index.html" class="nav-logo">
-    <div class="nav-logo-box">BEAT<br>YOUR<br>BEST</div>
-    <span class="nav-logo-text">Beat Your Best</span>
-  </a>
-  <div class="nav-links">
-    <a href="how-it-works.html">Hoe het werkt</a>
-    <a href="how-it-works.html#analyses">Analyses</a>
-    <a href="pricing.html">Abonnementen</a>
-    <a href="about.html">Over ons</a>
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Beat Your Best"></a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+  <div class="nav-links" id="nav-links">
+    <a href="how-it-works.html" data-nl="Hoe het werkt" data-en="How it works">Hoe het werkt</a>
+    <a href="how-it-works.html#analyses" data-nl="Analyses" data-en="Analyses">Analyses</a>
+    <a href="pricing.html" data-nl="Abonnementen" data-en="Pricing">Abonnementen</a>
+    <a href="about.html" data-nl="Over ons" data-en="About us">Over ons</a>
   </div>
-  <a href="https://my.beatyourbest.org" class="btn-portal">Naar het portaal →</a>
+  <div class="nav-controls">
+    <button class="nav-toggle-btn" id="lang-toggle">EN</button>
+    <button class="nav-toggle-btn" id="theme-toggle" aria-label="Thema wisselen"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+    <a href="https://my.beatyourbest.org" class="btn-portal" data-nl="Naar het portaal →" data-en="Go to portal →">Naar het portaal →</a>
+  </div>
 </nav>
 
 <div class="page-header">
-  <div class="sec-pill">Hoe het werkt</div>
-  <h1>Van workout naar inzicht</h1>
-  <p>BYB analyseert elke slag van je training en vertaalt die naar concrete coaching. Zo werkt het in drie stappen.</p>
+  <div class="sec-pill" data-nl="Hoe het werkt" data-en="How it works">Hoe het werkt</div>
+  <h1 data-nl="Van workout naar inzicht" data-en="From workout to insight">Van workout naar inzicht</h1>
+  <p data-nl="BYB analyseert elke slag van je training en vertaalt die naar concrete coaching. Zo werkt het in drie stappen." data-en="BYB analyses every stroke of your training and translates it into concrete coaching. Here's how it works in three steps.">BYB analyseert elke slag van je training en vertaalt die naar concrete coaching. Zo werkt het in drie stappen.</p>
 </div>
 
 <!-- Drie stappen -->
-<section class="section-white">
+<section class="section-card">
   <div class="sec-center">
-    <div class="sec-pill">Aan de slag</div>
-    <h2 class="sec-title">In drie stappen aan de slag</h2>
-    <p class="sec-sub">Koppel je ergometer, analyseer je workouts en ontvang persoonlijke inzichten.</p>
+    <div class="sec-pill" data-nl="Aan de slag" data-en="Getting started">Aan de slag</div>
+    <h2 class="sec-title" data-nl="In drie stappen aan de slag" data-en="Get started in three steps">In drie stappen aan de slag</h2>
   </div>
-
   <div class="steps-grid">
     <div class="step-card">
       <div class="step-num">1</div>
-      <h3 class="step-title">Koppel je ergometer</h3>
-      <p class="step-body">Verbind je RP3 of Concept2 account met BYB via een veilige OAuth-koppeling. Je workouts worden daarna automatisch gesynchroniseerd — je hoeft nooit handmatig iets te uploaden.</p>
+      <h3 class="step-title" data-nl="Koppel je ergometer" data-en="Connect your ergometer">Koppel je ergometer</h3>
+      <p class="step-body" data-nl="Verbind je RP3 of Concept2 account via een veilige OAuth-koppeling. Je workouts worden daarna automatisch gesynchroniseerd." data-en="Connect your RP3 or Concept2 account via a secure OAuth connection. Your workouts are then automatically synchronised.">Verbind je RP3 of Concept2 account via een veilige OAuth-koppeling. Je workouts worden daarna automatisch gesynchroniseerd.</p>
     </div>
     <div class="step-card">
       <div class="step-num">2</div>
-      <h3 class="step-title">Analyseer een workout</h3>
-      <p class="step-body">Kies een workout uit je overzicht en vraag een analyse aan. BYB herkent automatisch het type training (Steady State, Interval, HIIT of Ergotest) en past de analyse daarop aan.</p>
+      <h3 class="step-title" data-nl="Analyseer een workout" data-en="Analyse a workout">Analyseer een workout</h3>
+      <p class="step-body" data-nl="Kies een workout uit je overzicht en vraag een analyse aan. BYB herkent automatisch het type training en past de analyse daarop aan." data-en="Choose a workout from your overview and request an analysis. BYB automatically recognises the training type and adapts the analysis accordingly.">Kies een workout uit je overzicht en vraag een analyse aan. BYB herkent automatisch het type training en past de analyse daarop aan.</p>
     </div>
     <div class="step-card">
       <div class="step-num">3</div>
-      <h3 class="step-title">Ontvang inzichten</h3>
-      <p class="step-body">Je krijgt een volledig rapport met je roeiersprofiel, coaching adviezen, vergelijking met streefwaarden en progressie over tijd. Concreet en direct toepasbaar.</p>
+      <h3 class="step-title" data-nl="Ontvang inzichten" data-en="Receive insights">Ontvang inzichten</h3>
+      <p class="step-body" data-nl="Je krijgt een volledig rapport met je roeiersprofiel, coaching adviezen, vergelijking met streefwaarden en progressie over tijd." data-en="You receive a full report with your rowing profile, coaching advice, comparison with benchmarks and progression over time.">Je krijgt een volledig rapport met je roeiersprofiel, coaching adviezen, vergelijking met streefwaarden en progressie over tijd.</p>
     </div>
   </div>
 </section>
 
-<!-- Analyses -->
+<!-- Coach switch -->
 <section class="section" id="analyses">
   <div class="sec-center">
-    <div class="sec-pill">Analyses</div>
-    <h2 class="sec-title">Vier analyses, één platform</h2>
-    <p class="sec-sub">Elke analyse beantwoordt een andere vraag over jouw techniek en prestatie.</p>
+    <div class="sec-pill" data-nl="Voor wie" data-en="For whom">Voor wie</div>
+    <h2 class="sec-title" data-nl="Zelf Coach of Crew Coach?" data-en="Zelf Coach or Crew Coach?">Zelf Coach of Crew Coach?</h2>
+    <p class="sec-sub" data-nl="Kies hieronder welk onderdeel van BYB je wil verkennen." data-en="Choose below which part of BYB you'd like to explore.">Kies hieronder welk onderdeel van BYB je wil verkennen.</p>
+
+    <div class="coach-switch" id="coach-switch">
+      <button class="coach-switch-btn active" id="btn-zelf" onclick="switchCoach('zelf')" data-nl="Zelf Coach" data-en="Zelf Coach">Zelf Coach</button>
+      <button class="coach-switch-btn" id="btn-crew" onclick="switchCoach('crew')" data-nl="Crew Coach" data-en="Crew Coach">Crew Coach</button>
+    </div>
   </div>
 
-  <div class="analysis-list">
+  <!-- ZELF COACH PANEL -->
+  <div class="coach-panel active" id="panel-zelf">
+    <div class="sec-center" style="margin-bottom:32px">
+      <p class="sec-sub" data-nl="Voor individuele roeiers die hun techniek willen begrijpen en hun training willen verbeteren." data-en="For individual rowers who want to understand their technique and improve their training.">Voor individuele roeiers die hun techniek willen begrijpen en hun training willen verbeteren.</p>
+    </div>
 
-    <div class="anal-row">
-      <div class="anal-row-left">
-        <span class="anal-tag anal-tag-ss">Steady State</span>
-        <h3 class="anal-row-title">Technische stabiliteit bij lage intensiteit</h3>
-        <p class="anal-row-body">Analyse van je krachtcurve, consistentie en vermoeidheidspatroon over een volledige duurtraining. BYB laat zien welke parameter het eerst verslechtert bij vermoeidheid en wat je daar aan kunt doen.</p>
-        <ul class="feat-list">
-          <li><span class="fl-dot">→</span>Krachtcurve analyse (R² kwaliteit pre-peak en post-peak)</li>
-          <li><span class="fl-dot">→</span>IOF score (Intensity Output Factor)</li>
-          <li><span class="fl-dot">→</span>Herkenning van jouw roeiersprofiel (1 van 7)</li>
-          <li><span class="fl-dot">→</span>QFC correlatie (compensatiemechanismen)</li>
-          <li><span class="fl-dot">→</span>Vergelijking met streefwaarden voor jouw leeftijd en niveau</li>
-        </ul>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:48px">
+      <div class="aud-card">
+        <div class="aud-tag" data-nl="Workouts" data-en="Workouts">Workouts</div>
+        <div class="aud-title" data-nl="Overzicht van al je trainingen" data-en="Overview of all your trainings">Overzicht van al je trainingen</div>
+        <div class="aud-body" data-nl="Al je RP3 en Concept2 workouts op één plek. Filter op trainingstype en vraag met één klik een analyse aan." data-en="All your RP3 and Concept2 workouts in one place. Filter by training type and request an analysis with one click.">Al je RP3 en Concept2 workouts op één plek. Filter op trainingstype en vraag met één klik een analyse aan.</div>
       </div>
-      <div class="anal-row-right">
-        <div class="anal-stat-card">
-          <div class="asc-label">Minimale duur</div>
-          <div class="asc-val">10 min</div>
-        </div>
-        <div class="anal-stat-card">
-          <div class="asc-label">Intensiteit</div>
-          <div class="asc-val">UT2 – UT1</div>
-        </div>
-        <div class="anal-stat-card">
-          <div class="asc-label">Ergometers</div>
-          <div class="asc-val">RP3 &amp; C2</div>
-        </div>
+      <div class="aud-card">
+        <div class="aud-tag" data-nl="Rapporten" data-en="Reports">Rapporten</div>
+        <div class="aud-title" data-nl="Gedetailleerde analyserapporten" data-en="Detailed analysis reports">Gedetailleerde analyserapporten</div>
+        <div class="aud-body" data-nl="Elk rapport toont vermogen, intensiteit, IOF score, herkend profiel en trendanalyse. Interactief en uitklapbaar." data-en="Each report shows power, intensity, IOF score, identified profile and trend analysis. Interactive and expandable.">Elk rapport toont vermogen, intensiteit, IOF score, herkend profiel en trendanalyse. Interactief en uitklapbaar.</div>
+      </div>
+      <div class="aud-card">
+        <div class="aud-tag" data-nl="Progressie" data-en="Progression">Progressie</div>
+        <div class="aud-title" data-nl="Zie of je training effect heeft" data-en="See whether your training works">Zie of je training effect heeft</div>
+        <div class="aud-body" data-nl="Vergelijk workouts over tijd, bekijk je trainingsvolume per intensiteitszone en volg je persoonlijke records." data-en="Compare workouts over time, view your training volume per intensity zone and track your personal records.">Vergelijk workouts over tijd, bekijk je trainingsvolume per intensiteitszone en volg je persoonlijke records.</div>
+      </div>
+      <div class="aud-card">
+        <div class="aud-tag" data-nl="Coaching" data-en="Coaching">Coaching</div>
+        <div class="aud-title" data-nl="Persoonlijke coaching adviezen" data-en="Personal coaching advice">Persoonlijke coaching adviezen</div>
+        <div class="aud-body" data-nl="Je roeiersprofiel, terugkerende bevindingen, raceplan per wedstrijdafstand en concrete tips per trainingstype." data-en="Your rowing profile, recurring findings, race plan per competition distance and concrete tips per training type.">Je roeiersprofiel, terugkerende bevindingen, raceplan per wedstrijdafstand en concrete tips per trainingstype.</div>
       </div>
     </div>
 
-    <div class="anal-divider"></div>
-
-    <div class="anal-row">
-      <div class="anal-row-left">
-        <span class="anal-tag anal-tag-il">Interval Lang</span>
-        <h3 class="anal-row-title">Herstelpatronen bij langere intervals</h3>
-        <p class="anal-row-body">Per-blok analyse van vermogen, techniek en herstelkwaliteit. Zie hoe je prestaties veranderen naarmate de training vordert en blokken zich opstapelen.</p>
-        <ul class="feat-list">
-          <li><span class="fl-dot">→</span>Automatische blokdetectie (werk- en rustperiodes)</li>
-          <li><span class="fl-dot">→</span>Per-blok analyse: vermogen, kracht, techniek, consistentie</li>
-          <li><span class="fl-dot">→</span>Cross-blok vergelijking: hoe veranderen je prestaties per blok?</li>
-          <li><span class="fl-dot">→</span>Fade-patroon detectie (geleidelijk, cliff, early, late)</li>
-          <li><span class="fl-dot">→</span>Herstelkwaliteit tussen blokken</li>
-        </ul>
+    <!-- Analyses Zelf Coach -->
+    <div class="sec-center">
+      <div class="sec-pill" data-nl="Analyses" data-en="Analyses">Analyses</div>
+      <h3 class="sec-title" data-nl="Vier analyses beschikbaar" data-en="Four analyses available">Vier analyses beschikbaar</h3>
+    </div>
+    <div class="analysis-list">
+      <div class="anal-row">
+        <div class="anal-row-left">
+          <span class="anal-tag anal-tag-ss">Steady State</span>
+          <h4 class="anal-row-title" data-nl="Technische stabiliteit bij lage intensiteit" data-en="Technical stability at low intensity">Technische stabiliteit bij lage intensiteit</h4>
+          <p class="anal-row-body" data-nl="Analyse van je krachtcurve, consistentie en vermoeidheidspatroon over een volledige duurtraining. Welke parameter verslechtert het eerst bij vermoeidheid?" data-en="Analysis of your force curve, consistency and fatigue pattern over a complete endurance training. Which parameter deteriorates first under fatigue?">Analyse van je krachtcurve, consistentie en vermoeidheidspatroon over een volledige duurtraining. Welke parameter verslechtert het eerst bij vermoeidheid?</p>
+          <ul class="feat-list">
+            <li><span class="fl-dot">→</span><span data-nl="Krachtcurve analyse (R² kwaliteit pre-peak en post-peak)" data-en="Force curve analysis (R² quality pre-peak and post-peak)">Krachtcurve analyse (R² kwaliteit pre-peak en post-peak)</span></li>
+            <li><span class="fl-dot">→</span><span data-nl="IOF score en QFC correlatie" data-en="IOF score and QFC correlation">IOF score en QFC correlatie</span></li>
+            <li><span class="fl-dot">→</span><span data-nl="Herkenning van jouw roeiersprofiel (1 van 7)" data-en="Identification of your rowing profile (1 of 7)">Herkenning van jouw roeiersprofiel (1 van 7)</span></li>
+            <li><span class="fl-dot">→</span><span data-nl="Vergelijking met streefwaarden voor jouw leeftijd en niveau" data-en="Comparison with benchmarks for your age and level">Vergelijking met streefwaarden voor jouw leeftijd en niveau</span></li>
+          </ul>
+        </div>
+        <div class="anal-row-right">
+          <div class="anal-stat-card"><div class="asc-label" data-nl="Min. duur" data-en="Min. duration">Min. duur</div><div class="asc-val">10 min</div></div>
+          <div class="anal-stat-card"><div class="asc-label" data-nl="Intensiteit" data-en="Intensity">Intensiteit</div><div class="asc-val">UT2 – UT1</div></div>
+          <div class="anal-stat-card"><div class="asc-label" data-nl="Ergometers" data-en="Ergometers">Ergometers</div><div class="asc-val">RP3 &amp; C2</div></div>
+        </div>
       </div>
-      <div class="anal-row-right">
-        <div class="anal-stat-card">
-          <div class="asc-label">Blokken</div>
-          <div class="asc-val">2 – 5</div>
+      <div class="anal-divider"></div>
+      <div class="anal-row">
+        <div class="anal-row-left">
+          <span class="anal-tag anal-tag-il" data-nl="Interval Lang" data-en="Long Interval">Interval Lang</span>
+          <h4 class="anal-row-title" data-nl="Herstelpatronen bij langere intervals" data-en="Recovery patterns in longer intervals">Herstelpatronen bij langere intervals</h4>
+          <p class="anal-row-body" data-nl="Per-blok analyse van vermogen, techniek en herstelkwaliteit. Hoe veranderen je prestaties naarmate de workout vordert?" data-en="Per-block analysis of power, technique and recovery quality. How do your performances change as the workout progresses?">Per-blok analyse van vermogen, techniek en herstelkwaliteit. Hoe veranderen je prestaties naarmate de workout vordert?</p>
+          <ul class="feat-list">
+            <li><span class="fl-dot">→</span><span data-nl="Automatische blokdetectie (werk- en rustperiodes)" data-en="Automatic block detection (work and rest periods)">Automatische blokdetectie (werk- en rustperiodes)</span></li>
+            <li><span class="fl-dot">→</span><span data-nl="Cross-blok vergelijking en fade-patroon detectie" data-en="Cross-block comparison and fade pattern detection">Cross-blok vergelijking en fade-patroon detectie</span></li>
+            <li><span class="fl-dot">→</span><span data-nl="Herstelkwaliteit tussen blokken" data-en="Recovery quality between blocks">Herstelkwaliteit tussen blokken</span></li>
+          </ul>
         </div>
-        <div class="anal-stat-card">
-          <div class="asc-label">Bloklengte</div>
-          <div class="asc-val">3 – 10 min</div>
+        <div class="anal-row-right">
+          <div class="anal-stat-card"><div class="asc-label" data-nl="Blokken" data-en="Blocks">Blokken</div><div class="asc-val">2 – 5</div></div>
+          <div class="anal-stat-card"><div class="asc-label" data-nl="Bloklengte" data-en="Block length">Bloklengte</div><div class="asc-val">3 – 10 min</div></div>
+          <div class="anal-stat-card"><div class="asc-label" data-nl="Intensiteit" data-en="Intensity">Intensiteit</div><div class="asc-val">UT1 – AT</div></div>
         </div>
-        <div class="anal-stat-card">
-          <div class="asc-label">Intensiteit</div>
-          <div class="asc-val">UT1 – AT</div>
+      </div>
+      <div class="anal-divider"></div>
+      <div class="anal-row">
+        <div class="anal-row-left">
+          <span class="anal-tag anal-tag-hi">HIIT</span>
+          <h4 class="anal-row-title" data-nl="Maximale output bij korte intervals" data-en="Maximum output in short intervals">Maximale output bij korte intervals</h4>
+          <p class="anal-row-body" data-nl="Breakdown point detectie en peak power verloop bij explosieve blokken. Op welk moment zakt je techniek in?" data-en="Breakdown point detection and peak power progression in explosive blocks. At which point does your technique collapse?">Breakdown point detectie en peak power verloop bij explosieve blokken. Op welk moment zakt je techniek in?</p>
+          <ul class="feat-list">
+            <li><span class="fl-dot">→</span><span data-nl="Breakdown point detectie" data-en="Breakdown point detection">Breakdown point detectie</span></li>
+            <li><span class="fl-dot">→</span><span data-nl="Peak power verloop per blok" data-en="Peak power progression per block">Peak power verloop per blok</span></li>
+            <li><span class="fl-dot">→</span><span data-nl="Halftime analyse (eerste vs tweede helft)" data-en="Halftime analysis (first vs second half)">Halftime analyse (eerste vs tweede helft)</span></li>
+          </ul>
+        </div>
+        <div class="anal-row-right">
+          <div class="anal-stat-card"><div class="asc-label" data-nl="Blokken" data-en="Blocks">Blokken</div><div class="asc-val">8 – 20</div></div>
+          <div class="anal-stat-card"><div class="asc-label" data-nl="Bloklengte" data-en="Block length">Bloklengte</div><div class="asc-val">30s – 2 min</div></div>
+          <div class="anal-stat-card"><div class="asc-label" data-nl="Intensiteit" data-en="Intensity">Intensiteit</div><div class="asc-val">AT – AZ</div></div>
+        </div>
+      </div>
+      <div class="anal-divider"></div>
+      <div class="anal-row">
+        <div class="anal-row-left">
+          <span class="anal-tag anal-tag-et" data-nl="Ergotest" data-en="Erg test">Ergotest</span>
+          <h4 class="anal-row-title" data-nl="Pacing strategie en raceplan" data-en="Pacing strategy and race plan">Pacing strategie en raceplan</h4>
+          <p class="anal-row-body" data-nl="Analyse van pacing, power distributie en kwetsbare momenten. Automatisch raceplan met per-fase doelwaarden voor Start, Settle, Base, Build en Sprint." data-en="Analysis of pacing, power distribution and vulnerable moments. Automatic race plan with per-phase targets for Start, Settle, Base, Build and Sprint.">Analyse van pacing, power distributie en kwetsbare momenten. Automatisch raceplan met per-fase doelwaarden voor Start, Settle, Base, Build en Sprint.</p>
+          <ul class="feat-list">
+            <li><span class="fl-dot">→</span><span data-nl="Pacing analyse (negatieve split, even split, fade)" data-en="Pacing analysis (negative split, even split, fade)">Pacing analyse (negatieve split, even split, fade)</span></li>
+            <li><span class="fl-dot">→</span><span data-nl="Automatisch raceplan per wedstrijdafstand" data-en="Automatic race plan per competition distance">Automatisch raceplan per wedstrijdafstand</span></li>
+            <li><span class="fl-dot">→</span><span data-nl="Breakdown preventie en mentale voorbereiding" data-en="Breakdown prevention and mental preparation">Breakdown preventie en mentale voorbereiding</span></li>
+          </ul>
+        </div>
+        <div class="anal-row-right">
+          <div class="anal-stat-card"><div class="asc-label" data-nl="Afstanden" data-en="Distances">Afstanden</div><div class="asc-val">500m – 6km</div></div>
+          <div class="anal-stat-card"><div class="asc-label" data-nl="Of tijdtest" data-en="Or time test">Of tijdtest</div><div class="asc-val">20 – 60 min</div></div>
+          <div class="anal-stat-card"><div class="asc-label" data-nl="Intensiteit" data-en="Intensity">Intensiteit</div><div class="asc-val" data-nl="Maximaal" data-en="Maximum">Maximaal</div></div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="anal-divider"></div>
+  <!-- CREW COACH PANEL -->
+  <div class="coach-panel" id="panel-crew">
+    <div class="sec-center" style="margin-bottom:32px">
+      <p class="sec-sub" data-nl="Voor coaches die een of meerdere crews begeleiden en objectief de beste opstelling willen bepalen." data-en="For coaches who guide one or more crews and want to objectively determine the best line-up.">Voor coaches die een of meerdere crews begeleiden en objectief de beste opstelling willen bepalen.</p>
+    </div>
 
-    <div class="anal-row">
-      <div class="anal-row-left">
-        <span class="anal-tag anal-tag-hi">HIIT</span>
-        <h3 class="anal-row-title">Maximale output bij korte intervals</h3>
-        <p class="anal-row-body">Breakdown point detectie en peak power verloop bij explosieve blokken. Ontdek op welk moment je techniek het eerst inzakt en hoe je dat kunt voorkomen.</p>
-        <ul class="feat-list">
-          <li><span class="fl-dot">→</span>Breakdown point detectie (waar verlies je techniek?)</li>
-          <li><span class="fl-dot">→</span>Peak power verloop per blok</li>
-          <li><span class="fl-dot">→</span>Halftime analyse (eerste helft vs tweede helft)</li>
-          <li><span class="fl-dot">→</span>Explosiviteit vs controle analyse</li>
-          <li><span class="fl-dot">→</span>HIIT-specifieke coaching</li>
-        </ul>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:48px">
+      <div class="aud-card aud-card-featured">
+        <div class="aud-tag" data-nl="Crew Ranking" data-en="Crew Ranking">Crew Ranking</div>
+        <div class="aud-title" data-nl="Objectieve vergelijking van je roeiers" data-en="Objective comparison of your rowers">Objectieve vergelijking van je roeiers</div>
+        <div class="aud-body" data-nl="Rangschik je roeiers op techniek, kracht, efficiëntie of consistentie. Zie direct wie waar uitblinkt en onderbouw selectiebeslissingen met data." data-en="Rank your rowers on technique, strength, efficiency or consistency. See directly who excels where and back up selection decisions with data.">Rangschik je roeiers op techniek, kracht, efficiëntie of consistentie. Zie direct wie waar uitblinkt en onderbouw selectiebeslissingen met data.</div>
       </div>
-      <div class="anal-row-right">
-        <div class="anal-stat-card">
-          <div class="asc-label">Blokken</div>
-          <div class="asc-val">8 – 20</div>
-        </div>
-        <div class="anal-stat-card">
-          <div class="asc-label">Bloklengte</div>
-          <div class="asc-val">30 sec – 2 min</div>
-        </div>
-        <div class="anal-stat-card">
-          <div class="asc-label">Intensiteit</div>
-          <div class="asc-val">AT – AZ</div>
-        </div>
+      <div class="aud-card aud-card-featured">
+        <div class="aud-tag" data-nl="Boat Positioning" data-en="Boat Positioning">Boat Positioning</div>
+        <div class="aud-title" data-nl="Optimale bootopstelling berekenen" data-en="Calculate optimal boat line-up">Optimale bootopstelling berekenen</div>
+        <div class="aud-body" data-nl="BYB analyseert het kracht- en timingprofiel per roeier en suggereert de optimale positie. Vergelijk meerdere scenario's voor maximale bootsnelheid." data-en="BYB analyses the force and timing profile per rower and suggests the optimal position. Compare multiple scenarios for maximum boat speed.">BYB analyseert het kracht- en timingprofiel per roeier en suggereert de optimale positie. Vergelijk meerdere scenario's voor maximale bootsnelheid.</div>
+      </div>
+      <div class="aud-card">
+        <div class="aud-tag" data-nl="Opdrachten" data-en="Assignments">Opdrachten</div>
+        <div class="aud-title" data-nl="Trainingsopdrachten uitdelen" data-en="Assign training tasks">Trainingsopdrachten uitdelen</div>
+        <div class="aud-body" data-nl="Geef gerichte trainingsoppdrachten aan je crew. Houd bij wie wat heeft gedaan en koppel opdrachten aan specifieke trainingstypes." data-en="Give targeted training assignments to your crew. Track who has done what and link assignments to specific training types.">Geef gerichte trainingsoppdrachten aan je crew. Houd bij wie wat heeft gedaan en koppel opdrachten aan specifieke trainingstypes.</div>
+      </div>
+      <div class="aud-card">
+        <div class="aud-tag" data-nl="Boot Logboek" data-en="Boat Log">Boot Logboek</div>
+        <div class="aud-title" data-nl="Boot trainingen registreren" data-en="Record boat trainings">Boot trainingen registreren</div>
+        <div class="aud-body" data-nl="Log boottrainingen met datum, locatie, boottype en omstandigheden. Deelnemerslijst per training en trainingsblokken per sessie." data-en="Log boat trainings with date, location, boat type and conditions. Participant list per training and training blocks per session.">Log boottrainingen met datum, locatie, boottype en omstandigheden. Deelnemerslijst per training en trainingsblokken per sessie.</div>
       </div>
     </div>
 
-    <div class="anal-divider"></div>
-
-    <div class="anal-row">
-      <div class="anal-row-left">
-        <span class="anal-tag anal-tag-et">Ergotest</span>
-        <h3 class="anal-row-title">Pacing strategie en raceplan</h3>
-        <p class="anal-row-body">Analyse van je pacing, power distributie en kwetsbare momenten. Automatisch raceplan voor 500m tot 6000m met per-fase doelwaarden voor Start, Settle, Base, Build en Sprint.</p>
-        <ul class="feat-list">
-          <li><span class="fl-dot">→</span>Pacing analyse (negatieve split, even split, fade)</li>
-          <li><span class="fl-dot">→</span>Power distributie per fase</li>
-          <li><span class="fl-dot">→</span>Breakdown preventie advies</li>
-          <li><span class="fl-dot">→</span>Automatisch raceplan per wedstrijdafstand</li>
-          <li><span class="fl-dot">→</span>Mentale voorbereiding per fase</li>
-        </ul>
+    <!-- Boottypen -->
+    <div class="sec-center">
+      <div class="sec-pill" data-nl="Ondersteunde boten" data-en="Supported boats">Ondersteunde boten</div>
+      <h3 class="sec-title" data-nl="Alle gangbare boottypen" data-en="All common boat types">Alle gangbare boottypen</h3>
+      <p class="sec-sub" data-nl="Configureer elk boottype met de juiste posities, zijdevoorkeuren en gewichten." data-en="Configure each boat type with the correct positions, side preferences and weights.">Configureer elk boottype met de juiste posities, zijdevoorkeuren en gewichten.</p>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:32px">
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:14px 22px;text-align:center">
+        <div style="font-size:20px;font-weight:800;color:var(--accent)">8+</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:2px" data-nl="Acht-met-stuurman" data-en="Eight with coxswain">Acht-met-stuurman</div>
       </div>
-      <div class="anal-row-right">
-        <div class="anal-stat-card">
-          <div class="asc-label">Afstanden</div>
-          <div class="asc-val">500m – 6km</div>
-        </div>
-        <div class="anal-stat-card">
-          <div class="asc-label">Of tijdtest</div>
-          <div class="asc-val">20 – 60 min</div>
-        </div>
-        <div class="anal-stat-card">
-          <div class="asc-label">Intensiteit</div>
-          <div class="asc-val">Maximaal</div>
-        </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:14px 22px;text-align:center">
+        <div style="font-size:20px;font-weight:800;color:var(--accent)">4+</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:2px" data-nl="Vier-met-stuurman" data-en="Four with coxswain">Vier-met-stuurman</div>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:14px 22px;text-align:center">
+        <div style="font-size:20px;font-weight:800;color:var(--accent)">4-</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:2px" data-nl="Vier-zonder" data-en="Four without">Vier-zonder</div>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:14px 22px;text-align:center">
+        <div style="font-size:20px;font-weight:800;color:var(--accent)">4x</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:2px" data-nl="Vier-skiff" data-en="Quadruple scull">Vier-skiff</div>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:14px 22px;text-align:center">
+        <div style="font-size:20px;font-weight:800;color:var(--accent)">2-</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:2px" data-nl="Twee-zonder" data-en="Pair">Twee-zonder</div>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:14px 22px;text-align:center">
+        <div style="font-size:20px;font-weight:800;color:var(--accent)">2x</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:2px" data-nl="Twee-skiff" data-en="Double scull">Twee-skiff</div>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:14px 22px;text-align:center">
+        <div style="font-size:20px;font-weight:800;color:var(--accent)">1x</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:2px" data-nl="Skiff" data-en="Single scull">Skiff</div>
       </div>
     </div>
-
   </div>
 </section>
 
 <!-- 7 Profielen -->
-<section class="section-white">
+<section class="section-card">
   <div class="sec-center">
-    <div class="sec-pill">Roeiersprofielen</div>
-    <h2 class="sec-title">Welk type roeier ben jij?</h2>
-    <p class="sec-sub">BYB herkent automatisch één van 7 roeiersprofielen op basis van je krachtcurve, consistentie en vermoeidheidspatroon. Elk profiel krijgt specifieke coaching-adviezen.</p>
+    <div class="sec-pill" data-nl="Roeiersprofielen" data-en="Rowing profiles">Roeiersprofielen</div>
+    <h2 class="sec-title" data-nl="Welk type roeier ben jij?" data-en="Which type of rower are you?">Welk type roeier ben jij?</h2>
+    <p class="sec-sub" data-nl="BYB herkent automatisch één van 7 roeiersprofielen. Elk profiel krijgt specifieke coaching-adviezen." data-en="BYB automatically identifies one of 7 rowing profiles. Each profile receives specific coaching advice.">BYB herkent automatisch één van 7 roeiersprofielen. Elk profiel krijgt specifieke coaching-adviezen.</p>
   </div>
   <div class="profiles-grid">
-    <div class="profile-card"><div class="profile-code">ME</div><div class="profile-name">Mature Excellence</div><div class="profile-desc">Stabiel, efficiënt, minimale vermoeidheid. Het streefprofiel voor elke roeier.</div></div>
-    <div class="profile-card"><div class="profile-code">BA</div><div class="profile-name">Balanced Adapter</div><div class="profile-desc">Goede balans tussen kracht en techniek. Past zich goed aan bij wisselende belasting.</div></div>
-    <div class="profile-card"><div class="profile-code">KR</div><div class="profile-name">Kick &amp; Release</div><div class="profile-desc">Explosieve catch, verlies in de finish. Sterke aanvang maar moeite met de doordruk.</div></div>
-    <div class="profile-card"><div class="profile-code">SA</div><div class="profile-name">Statische Adaptie</div><div class="profile-desc">Zeer consistent, beperkte variatie. Stabiel maar weinig aanpassingsvermogen.</div></div>
-    <div class="profile-card"><div class="profile-code">FC</div><div class="profile-name">Force Compensator</div><div class="profile-desc">Kracht compenseert technisch verlies. Werkt op korte termijn, kost energie over langere stukken.</div></div>
-    <div class="profile-card"><div class="profile-code">TA</div><div class="profile-name">Technical Adapter</div><div class="profile-desc">Past techniek aan bij vermoeidheid. Slim maar verliest efficiëntie bij hoge intensiteit.</div></div>
-    <div class="profile-card"><div class="profile-code">KV</div><div class="profile-name">Klassieke Vermoeidheid</div><div class="profile-desc">Algehele degradatie onder belasting. Duidelijk startpunt voor gerichte training.</div></div>
+    <div class="profile-card"><div class="profile-code">ME</div><div class="profile-name">Mature Excellence</div><div class="profile-desc" data-nl="Stabiel, efficiënt, minimale vermoeidheid. Het streefprofiel." data-en="Stable, efficient, minimal fatigue. The target profile.">Stabiel, efficiënt, minimale vermoeidheid. Het streefprofiel.</div></div>
+    <div class="profile-card"><div class="profile-code">BA</div><div class="profile-name">Balanced Adapter</div><div class="profile-desc" data-nl="Goede balans tussen kracht en techniek. Past zich goed aan." data-en="Good balance between strength and technique. Adapts well.">Goede balans tussen kracht en techniek. Past zich goed aan.</div></div>
+    <div class="profile-card"><div class="profile-code">KR</div><div class="profile-name">Kick &amp; Release</div><div class="profile-desc" data-nl="Explosieve catch, verlies in de finish. Sterke aanvang." data-en="Explosive catch, loss in the finish. Strong start.">Explosieve catch, verlies in de finish. Sterke aanvang.</div></div>
+    <div class="profile-card"><div class="profile-code">SA</div><div class="profile-name">Statische Adaptie</div><div class="profile-desc" data-nl="Zeer consistent, beperkt aanpassingsvermogen." data-en="Very consistent, limited adaptability.">Zeer consistent, beperkt aanpassingsvermogen.</div></div>
+    <div class="profile-card"><div class="profile-code">FC</div><div class="profile-name">Force Compensator</div><div class="profile-desc" data-nl="Kracht compenseert technisch verlies. Kost energie over langere stukken." data-en="Strength compensates for technical loss. Costly over longer efforts.">Kracht compenseert technisch verlies. Kost energie over langere stukken.</div></div>
+    <div class="profile-card"><div class="profile-code">TA</div><div class="profile-name">Technical Adapter</div><div class="profile-desc" data-nl="Past techniek aan bij vermoeidheid. Verliest efficiëntie bij hoge intensiteit." data-en="Adapts technique under fatigue. Loses efficiency at high intensity.">Past techniek aan bij vermoeidheid. Verliest efficiëntie bij hoge intensiteit.</div></div>
+    <div class="profile-card"><div class="profile-code">KV</div><div class="profile-name" data-nl="Klassieke Vermoeidheid" data-en="Classic Fatigue">Klassieke Vermoeidheid</div><div class="profile-desc" data-nl="Algehele degradatie onder belasting. Duidelijk startpunt voor training." data-en="General degradation under load. A clear starting point for training.">Algehele degradatie onder belasting. Duidelijk startpunt voor training.</div></div>
   </div>
 </section>
 
 <div class="cta-block">
-  <h2 class="cta-title">Klaar om jouw profiel te ontdekken?</h2>
-  <p class="cta-sub">Maak een gratis account aan en analyseer je eerste workout vandaag nog.</p>
-  <a href="https://my.beatyourbest.org/register" class="btn-cta">Gratis starten</a>
-  <a href="pricing.html" class="btn-cta-ghost">Bekijk abonnementen</a>
+  <h2 class="cta-title" data-nl="Klaar om jouw profiel te ontdekken?" data-en="Ready to discover your profile?">Klaar om jouw profiel te ontdekken?</h2>
+  <p class="cta-sub" data-nl="Maak een gratis account aan en analyseer je eerste workout vandaag nog." data-en="Create a free account and analyse your first workout today.">Maak een gratis account aan en analyseer je eerste workout vandaag nog.</p>
+  <a href="https://my.beatyourbest.org/register" class="btn-cta" data-nl="Gratis starten" data-en="Start for free">Gratis starten</a>
+  <a href="pricing.html" class="btn-cta-ghost" data-nl="Bekijk abonnementen" data-en="View pricing">Bekijk abonnementen</a>
 </div>
 
 <footer class="footer">
   <div class="footer-logo">© 2026 Beat Your Best · Made in the Netherlands</div>
   <div class="footer-links">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Voorwaarden</a>
-    <a href="cookies.html">Cookies</a>
-    <a href="about.html#contact">Contact</a>
-    <a href="https://my.beatyourbest.org">Portaal</a>
+    <a href="privacy.html" data-nl="Privacy" data-en="Privacy">Privacy</a>
+    <a href="terms.html" data-nl="Voorwaarden" data-en="Terms">Voorwaarden</a>
+    <a href="cookies.html" data-nl="Cookies" data-en="Cookies">Cookies</a>
+    <a href="about.html#contact" data-nl="Contact" data-en="Contact">Contact</a>
+    <a href="https://my.beatyourbest.org">my.beatyourbest.org</a>
   </div>
 </footer>
 
-<style>
-.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:0}
-.step-card{background:#f5f7f6;border:1px solid #e2ebe8;border-radius:12px;padding:28px}
-.step-num{width:40px;height:40px;background:#2c9e8f;color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;margin-bottom:16px}
-.step-title{font-size:17px;font-weight:700;color:#0d1f1b;margin-bottom:10px}
-.step-body{font-size:14px;color:#4a6860;line-height:1.65}
-.analysis-list{display:flex;flex-direction:column}
-.anal-row{display:grid;grid-template-columns:1fr 280px;gap:40px;align-items:start;padding:40px 0}
-.anal-divider{border:none;border-top:1px solid #e2ebe8}
-.anal-tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;display:inline-block;margin-bottom:14px}
-.anal-tag-ss{background:#e8f7f3;color:#2c9e8f}
-.anal-tag-il{background:#e8f0f7;color:#3a6ea8}
-.anal-tag-hi{background:#f7ede8;color:#a84e3a}
-.anal-tag-et{background:#f0f7e8;color:#5a9a2e}
-.anal-row-title{font-size:20px;font-weight:700;color:#0d1f1b;margin-bottom:10px}
-.anal-row-body{font-size:14px;color:#4a6860;line-height:1.65;margin-bottom:16px}
-.anal-row-right{display:flex;flex-direction:column;gap:10px;padding-top:8px}
-.anal-stat-card{background:#f5f7f6;border:1px solid #e2ebe8;border-radius:10px;padding:14px 16px}
-.asc-label{font-size:11px;font-weight:600;color:#7a9990;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
-.asc-val{font-size:17px;font-weight:700;color:#0d1f1b}
-.profiles-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.profile-card{background:#f5f7f6;border:1px solid #e2ebe8;border-radius:12px;padding:20px}
-.profile-code{width:36px;height:36px;background:#e8f7f3;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#2c9e8f;margin-bottom:10px}
-.profile-name{font-size:14px;font-weight:700;color:#0d1f1b;margin-bottom:6px}
-.profile-desc{font-size:13px;color:#4a6860;line-height:1.5}
-</style>
-
+<script src="main.js"></script>
+<script>
+function switchCoach(type) {
+  document.getElementById('panel-zelf').classList.toggle('active', type === 'zelf');
+  document.getElementById('panel-crew').classList.toggle('active', type === 'crew');
+  document.getElementById('btn-zelf').classList.toggle('active', type === 'zelf');
+  document.getElementById('btn-crew').classList.toggle('active', type === 'crew');
+}
+</script>
 </body>
 </html>

@@ -1,171 +1,135 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Over ons — Beat Your Best</title>
-  <meta name="description" content="Het verhaal achter Beat Your Best. Gebouwd door roeiers, voor roeiers.">
+  <title data-nl="Over ons — Beat Your Best" data-en="About us — Beat Your Best">Over ons — Beat Your Best</title>
   <link rel="icon" href="/assets/favicon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <nav class="nav">
-  <a href="index.html" class="nav-logo">
-    <div class="nav-logo-box">BEAT<br>YOUR<br>BEST</div>
-    <span class="nav-logo-text">Beat Your Best</span>
-  </a>
-  <div class="nav-links">
-    <a href="how-it-works.html">Hoe het werkt</a>
-    <a href="how-it-works.html#analyses">Analyses</a>
-    <a href="pricing.html">Abonnementen</a>
-    <a href="about.html">Over ons</a>
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Beat Your Best"></a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+  <div class="nav-links" id="nav-links">
+    <a href="how-it-works.html" data-nl="Hoe het werkt" data-en="How it works">Hoe het werkt</a>
+    <a href="how-it-works.html#analyses" data-nl="Analyses" data-en="Analyses">Analyses</a>
+    <a href="pricing.html" data-nl="Abonnementen" data-en="Pricing">Abonnementen</a>
+    <a href="about.html" data-nl="Over ons" data-en="About us">Over ons</a>
   </div>
-  <a href="https://my.beatyourbest.org" class="btn-portal">Naar het portaal →</a>
+  <div class="nav-controls">
+    <button class="nav-toggle-btn" id="lang-toggle">EN</button>
+    <button class="nav-toggle-btn" id="theme-toggle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+    <a href="https://my.beatyourbest.org" class="btn-portal" data-nl="Naar het portaal →" data-en="Go to portal →">Naar het portaal →</a>
+  </div>
 </nav>
 
 <div class="page-header">
-  <div class="sec-pill">Over ons</div>
-  <h1>Gebouwd door roeiers, voor roeiers</h1>
-  <p>Beat Your Best ontstond uit een simpele vraag: waarom kunnen we zoveel data verzamelen op een ergometer, maar begrijpen we er zo weinig van?</p>
+  <div class="sec-pill" data-nl="Over ons" data-en="About us">Over ons</div>
+  <h1 data-nl="Gemaakt door roeiers, voor roeiers" data-en="Made by rowers, for rowers">Gemaakt door roeiers, voor roeiers</h1>
+  <p data-nl="Beat Your Best ontstond vanuit een simpele vraag: wat als je na elke training precies wist hoe je het deed — niet alleen wat, maar hoe?" data-en="Beat Your Best grew from a simple question: what if after every training you knew exactly how you performed — not just what, but how?">Beat Your Best ontstond vanuit een simpele vraag: wat als je na elke training precies wist hoe je het deed — niet alleen wat, maar hoe?</p>
 </div>
 
-<!-- Verhaal -->
-<section class="section-white">
-  <div class="about-story">
-    <div class="prose" style="padding:0;max-width:none">
-      <p><!-- AANPASSEN: het verhaal achter BYB -->
-        Beat Your Best is opgericht door Tom en Stephan, twee mensen met een passie voor roeien en data. Wat begon als een persoonlijk project om ergometerdata beter te begrijpen, groeide uit tot een volledig analyseplatform voor individuele roeiers, coaches en roeiverenigingen.
-      </p>
-      <p>
-        De gedachte is eenvoudig: de meeste roeiers weten wát ze hebben gedaan — 30 minuten op de ergometer, een 2k in 1:39 — maar bijna niemand kan vertellen hóé de prestatie tot stand is gekomen. Welke parameter verslechtert als eerste bij vermoeidheid? Hoe compenseer je bij vermoeidheid? Wat is jouw natuurlijke roeiersprofiel?
-      </p>
-      <p>
-        Beat Your Best geeft antwoord op die vragen. Niet met algemeenheden, maar met data die specifiek is voor jóu — jouw techniek, jouw vermoeidheidspatroon, jouw streefwaarden.
-      </p>
-    </div>
+<section class="section-card">
+  <div class="sec-center">
+    <div class="sec-pill" data-nl="Ons verhaal" data-en="Our story">Ons verhaal</div>
+    <h2 class="sec-title" data-nl="Waarom Beat Your Best?" data-en="Why Beat Your Best?">Waarom Beat Your Best?</h2>
+  </div>
+  <div style="max-width:720px;margin:0 auto">
+    <p style="font-size:16px;color:var(--text-body);line-height:1.75;margin-bottom:20px" data-nl="De meeste roeiers kunnen vertellen wát ze hebben gedaan: '30 minuten op de ergometer', '3×8 minuten', 'mijn 2k ging in 1:39'. Maar niemand kon antwoorden op de vraag: hoe ging het eigenlijk?" data-en="Most rowers can tell you what they did: '30 minutes on the erg', '3×8 minutes', 'my 2k was 1:39'. But nobody could answer the question: how did it actually go?">De meeste roeiers kunnen vertellen wát ze hebben gedaan: "30 minuten op de ergometer", "3×8 minuten", "mijn 2k ging in 1:39". Maar niemand kon antwoorden op de vraag: hoe ging het eigenlijk?</p>
+    <p style="font-size:16px;color:var(--text-body);line-height:1.75;margin-bottom:20px" data-nl="Wat gebeurt er in je krachtcurve als je moe wordt? Welke parameter verslechtert het eerst? Welk compensatiemechanisme gebruik jij automatisch? Beat Your Best geeft antwoord op die vragen — voor elke workout, voor elke roeier." data-en="What happens to your force curve when you get tired? Which parameter deteriorates first? What compensation mechanism do you use automatically? Beat Your Best answers those questions — for every workout, for every rower.">Wat gebeurt er in je krachtcurve als je moe wordt? Welke parameter verslechtert het eerst? Welk compensatiemechanisme gebruik jij automatisch? Beat Your Best geeft antwoord op die vragen — voor elke workout, voor elke roeier.</p>
+    <p style="font-size:16px;color:var(--text-body);line-height:1.75" data-nl="Het resultaat: roeiers die begrijpen hoe ze presteren en coaches die objectieve data hebben om de beste crew samen te stellen." data-en="The result: rowers who understand how they perform and coaches who have objective data to build the best crew.">Het resultaat: roeiers die begrijpen hoe ze presteren en coaches die objectieve data hebben om de beste crew samen te stellen.</p>
   </div>
 </section>
 
-<!-- Team -->
 <section class="section">
   <div class="sec-center">
-    <div class="sec-pill">Het team</div>
-    <h2 class="sec-title">Wie zit erachter</h2>
+    <div class="sec-pill" data-nl="Het team" data-en="The team">Het team</div>
+    <h2 class="sec-title" data-nl="Wie zit hierachter?" data-en="Who's behind this?">Wie zit hierachter?</h2>
   </div>
   <div class="team-grid">
     <div class="team-card">
-      <div class="team-avatar">TH</div><!-- AANPASSEN: initialen -->
-      <div class="team-name">Tom <!-- AANPASSEN: achternaam --></div>
-      <div class="team-role">Co-founder · Product &amp; Design</div>
-      <p class="team-bio">
-        <!-- AANPASSEN: korte bio Tom -->
-        Tom is verantwoordelijk voor de productvisie, UX en analyse-logica van BYB. Daarnaast is hij Global Digital Workplace Leader bij Fagron. Roeit al jaren en wil data begrijpelijk maken voor elke roeier.
-      </p>
+      <div class="team-avatar">T</div>
+      <div class="team-name">Tom van der Burg</div>
+      <div class="team-role" data-nl="Co-founder · Product &amp; Design" data-en="Co-founder · Product &amp; Design">Co-founder · Product &amp; Design</div>
+      <p class="team-bio" data-nl="Verantwoordelijk voor product, UX en de analyse-logica achter de rapporten. Combineert roeikennnis met een achtergrond in digitale transformatie." data-en="Responsible for product, UX and the analysis logic behind the reports. Combines rowing knowledge with a background in digital transformation.">Verantwoordelijk voor product, UX en de analyse-logica achter de rapporten. Combineert roeikennnis met een achtergrond in digitale transformatie.</p>
     </div>
     <div class="team-card">
-      <div class="team-avatar">SB</div><!-- AANPASSEN: initialen -->
-      <div class="team-name">Stephan <!-- AANPASSEN: achternaam --></div>
-      <div class="team-role">Co-founder · Techniek &amp; Backend</div>
-      <p class="team-bio">
-        <!-- AANPASSEN: korte bio Stephan -->
-        Stephan bouwt de technische infrastructuur van BYB: van de analysemodules en API-koppelingen tot de deployment op AWS. Hij heeft directe contacten bij RP3 en zorgt dat de data betrouwbaar binnenkomt.
-      </p>
+      <div class="team-avatar">S</div>
+      <div class="team-name">Stephan</div>
+      <div class="team-role" data-nl="Co-founder · Engineering" data-en="Co-founder · Engineering">Co-founder · Engineering</div>
+      <p class="team-bio" data-nl="Verantwoordelijk voor de backend, de RP3 en Concept2 API-koppelingen en de deployments op AWS. Bouwt de infrastructuur die de analyses mogelijk maakt." data-en="Responsible for the backend, the RP3 and Concept2 API connections and the deployments on AWS. Builds the infrastructure that makes the analyses possible.">Verantwoordelijk voor de backend, de RP3 en Concept2 API-koppelingen en de deployments op AWS. Bouwt de infrastructuur die de analyses mogelijk maakt.</p>
     </div>
   </div>
 </section>
 
-<!-- Waardepropositie -->
-<section class="section-white">
+<section class="section-card">
   <div class="sec-center">
-    <div class="sec-pill">Onze aanpak</div>
-    <h2 class="sec-title">Wat ons anders maakt</h2>
-    <p class="sec-sub">BYB is niet zomaar een dashboard met splits en watt. Hier zijn de principes die ons onderscheiden.</p>
+    <div class="sec-pill" data-nl="Waar we voor staan" data-en="What we stand for">Waar we voor staan</div>
+    <h2 class="sec-title" data-nl="Onze waarden" data-en="Our values">Onze waarden</h2>
   </div>
   <div class="values-grid">
     <div class="value-card">
       <div class="value-icon">→</div>
-      <div class="value-title">Slag-voor-slag analyse</div>
-      <div class="value-body">Niet alleen gemiddelden, maar elke haal wordt geanalyseerd. Zo zien we patronen die in gemiddeldes verdwijnen.</div>
+      <div class="value-title" data-nl="Data die klopt" data-en="Data that's accurate">Data die klopt</div>
+      <p class="value-body" data-nl="We gebruiken alleen bewezen methodes. Streefwaarden komen uit de database, drempelwaarden zijn per roeier instelbaar, en we hardcoden nooit iets dat dynamisch moet zijn." data-en="We only use proven methods. Target values come from the database, thresholds are configurable per rower, and we never hardcode anything that should be dynamic.">We gebruiken alleen bewezen methodes. Streefwaarden komen uit de database, drempelwaarden zijn per roeier instelbaar, en we hardcoden nooit iets dat dynamisch moet zijn.</p>
     </div>
     <div class="value-card">
-      <div class="value-icon">→</div>
-      <div class="value-title">Profielherkenning</div>
-      <div class="value-body">7 roeiersprofielen met gerichte coaching. Geen generieke tips — adviezen die precies bij jouw techniek en vermoeidheidspatroon passen.</div>
+      <div class="value-icon">↑</div>
+      <div class="value-title" data-nl="Bruikbaar advies" data-en="Actionable advice">Bruikbaar advies</div>
+      <p class="value-body" data-nl="Coaching adviezen zijn kort, concreet en toepasbaar. Geen vage observaties, maar specifieke aandachtspunten die je direct mee kunt nemen in je training." data-en="Coaching advice is short, concrete and actionable. No vague observations, but specific points of attention you can take directly into your training.">Coaching adviezen zijn kort, concreet en toepasbaar. Geen vage observaties, maar specifieke aandachtspunten die je direct mee kunt nemen in je training.</p>
     </div>
     <div class="value-card">
-      <div class="value-icon">→</div>
-      <div class="value-title">Objectieve crew selectie</div>
-      <div class="value-body">Data-gedreven beslissingen voor coaches. Geen gevoel, maar meetbare prestaties als basis voor bootopstelling en selectie.</div>
+      <div class="value-icon">◎</div>
+      <div class="value-title" data-nl="Privacy by design" data-en="Privacy by design">Privacy by design</div>
+      <p class="value-body" data-nl="Jouw workout data is van jou. We delen geen data met derden en volgen strikt de AVG. Alle data staat op Europese servers." data-en="Your workout data is yours. We don't share data with third parties and strictly follow GDPR. All data is stored on European servers.">Jouw workout data is van jou. We delen geen data met derden en volgen strikt de AVG. Alle data staat op Europese servers.</p>
     </div>
     <div class="value-card">
-      <div class="value-icon">→</div>
-      <div class="value-title">Wetenschappelijk onderbouwd</div>
-      <div class="value-body">Gebaseerd op roeiwetenschappelijk onderzoek van Biorow en World Rowing. Niet zelfverzonnen — gevalideerd.</div>
+      <div class="value-icon">⚡</div>
+      <div class="value-title" data-nl="Continu verbeteren" data-en="Continuous improvement">Continu verbeteren</div>
+      <p class="value-body" data-nl="Beat Your Best is een levend product. We bouwen actief door aan nieuwe analysetypen, betere visualisaties en uitbreiding naar meer ergometers en boottypen." data-en="Beat Your Best is a living product. We actively build new analysis types, better visualisations and expansion to more ergometers and boat types.">Beat Your Best is een levend product. We bouwen actief door aan nieuwe analysetypen, betere visualisaties en uitbreiding naar meer ergometers en boottypen.</p>
     </div>
   </div>
 </section>
 
-<!-- Contact -->
 <section class="section" id="contact">
   <div class="sec-center">
-    <div class="sec-pill">Contact</div>
-    <h2 class="sec-title">Vragen of interesse?</h2>
-    <p class="sec-sub">Heb je vragen over het platform, interesse in een clubabonnement, of wil je gewoon kennismaken? Stuur ons een bericht.</p>
+    <div class="sec-pill" data-nl="Contact" data-en="Contact">Contact</div>
+    <h2 class="sec-title" data-nl="Neem contact op" data-en="Get in touch">Neem contact op</h2>
+    <p class="sec-sub" data-nl="Vragen, feedback of interesse in een clubabonnement? Stuur ons een bericht." data-en="Questions, feedback or interested in a club subscription? Send us a message.">Vragen, feedback of interesse in een clubabonnement? Stuur ons een bericht.</p>
   </div>
   <div class="contact-block">
     <div class="contact-item">
-      <div class="contact-label">E-mail</div>
-      <a href="mailto:info@beatyourbest.org" class="contact-val">info@beatyourbest.org</a>
+      <div class="contact-label" data-nl="E-mail" data-en="Email">E-mail</div>
+      <a class="contact-val" href="mailto:info@beatyourbest.org">info@beatyourbest.org</a>
     </div>
     <div class="contact-item">
-      <div class="contact-label">Portaal</div>
-      <a href="https://my.beatyourbest.org" class="contact-val">my.beatyourbest.org</a>
+      <div class="contact-label" data-nl="Portaal" data-en="Portal">Portaal</div>
+      <a class="contact-val" href="https://my.beatyourbest.org">my.beatyourbest.org</a>
     </div>
     <div class="contact-item">
-      <div class="contact-label">Gevestigd in</div>
-      <div class="contact-val">Nederland</div>
+      <div class="contact-label" data-nl="Gevestigd in" data-en="Based in">Gevestigd in</div>
+      <span class="contact-val" style="color:var(--text-h)">Nederland 🇳🇱</span>
     </div>
   </div>
 </section>
 
 <div class="cta-block">
-  <h2 class="cta-title">Klaar om te beginnen?</h2>
-  <p class="cta-sub">Maak een gratis account aan en analyseer je eerste workout vandaag nog.</p>
-  <a href="https://my.beatyourbest.org/register" class="btn-cta">Gratis starten</a>
-  <a href="pricing.html" class="btn-cta-ghost">Bekijk abonnementen</a>
+  <h2 class="cta-title" data-nl="Probeer Beat Your Best gratis" data-en="Try Beat Your Best for free">Probeer Beat Your Best gratis</h2>
+  <p class="cta-sub" data-nl="Eerste maand gratis. Geen creditcard nodig." data-en="First month free. No credit card needed.">Eerste maand gratis. Geen creditcard nodig.</p>
+  <a href="https://my.beatyourbest.org/register" class="btn-cta" data-nl="Maak een gratis account" data-en="Create a free account">Maak een gratis account</a>
 </div>
 
 <footer class="footer">
   <div class="footer-logo">© 2026 Beat Your Best · Made in the Netherlands</div>
   <div class="footer-links">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Voorwaarden</a>
-    <a href="cookies.html">Cookies</a>
-    <a href="about.html#contact">Contact</a>
-    <a href="https://my.beatyourbest.org">Portaal</a>
+    <a href="privacy.html" data-nl="Privacy" data-en="Privacy">Privacy</a>
+    <a href="terms.html" data-nl="Voorwaarden" data-en="Terms">Voorwaarden</a>
+    <a href="cookies.html" data-nl="Cookies" data-en="Cookies">Cookies</a>
+    <a href="about.html#contact" data-nl="Contact" data-en="Contact">Contact</a>
+    <a href="https://my.beatyourbest.org">my.beatyourbest.org</a>
   </div>
 </footer>
-
-<style>
-.about-story{max-width:720px;margin:0 auto}
-.about-story p{font-size:16px;color:#4a6860;line-height:1.75;margin-bottom:20px}
-.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:800px;margin:0 auto}
-.team-card{background:#fff;border:1px solid #e2ebe8;border-radius:14px;padding:32px}
-.team-avatar{width:56px;height:56px;background:#e8f7f3;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#2c9e8f;margin-bottom:16px}
-.team-name{font-size:20px;font-weight:700;color:#0d1f1b;margin-bottom:4px}
-.team-role{font-size:13px;color:#2c9e8f;font-weight:600;margin-bottom:14px}
-.team-bio{font-size:14px;color:#4a6860;line-height:1.65}
-.values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:800px;margin:0 auto}
-.value-card{background:#f5f7f6;border:1px solid #e2ebe8;border-radius:12px;padding:24px}
-.value-icon{font-size:20px;color:#2c9e8f;margin-bottom:10px;font-weight:700}
-.value-title{font-size:16px;font-weight:700;color:#0d1f1b;margin-bottom:8px}
-.value-body{font-size:14px;color:#4a6860;line-height:1.6}
-.contact-block{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-top:0}
-.contact-item{background:#fff;border:1px solid #e2ebe8;border-radius:12px;padding:24px 32px;text-align:center;min-width:180px}
-.contact-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#7a9990;margin-bottom:8px}
-.contact-val{font-size:16px;font-weight:600;color:#2c9e8f;text-decoration:none;display:block}
-</style>
-
+<script src="main.js"></script>
 </body>
 </html>

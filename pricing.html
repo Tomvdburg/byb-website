@@ -1,160 +1,121 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abonnementen — Beat Your Best</title>
-  <meta name="description" content="Kies het abonnement dat bij jou past. Zelf Coach voor individuele roeiers, Crew Coach voor coaches, Club voor roeiverenigingen.">
+  <title data-nl="Abonnementen — Beat Your Best" data-en="Pricing — Beat Your Best">Abonnementen — Beat Your Best</title>
   <link rel="icon" href="/assets/favicon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <nav class="nav">
-  <a href="index.html" class="nav-logo">
-    <div class="nav-logo-box">BEAT<br>YOUR<br>BEST</div>
-    <span class="nav-logo-text">Beat Your Best</span>
-  </a>
-  <div class="nav-links">
-    <a href="how-it-works.html">Hoe het werkt</a>
-    <a href="how-it-works.html#analyses">Analyses</a>
-    <a href="pricing.html">Abonnementen</a>
-    <a href="about.html">Over ons</a>
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Beat Your Best"></a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+  <div class="nav-links" id="nav-links">
+    <a href="how-it-works.html" data-nl="Hoe het werkt" data-en="How it works">Hoe het werkt</a>
+    <a href="how-it-works.html#analyses" data-nl="Analyses" data-en="Analyses">Analyses</a>
+    <a href="pricing.html" data-nl="Abonnementen" data-en="Pricing">Abonnementen</a>
+    <a href="about.html" data-nl="Over ons" data-en="About us">Over ons</a>
   </div>
-  <a href="https://my.beatyourbest.org" class="btn-portal">Naar het portaal →</a>
+  <div class="nav-controls">
+    <button class="nav-toggle-btn" id="lang-toggle">EN</button>
+    <button class="nav-toggle-btn" id="theme-toggle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+    <a href="https://my.beatyourbest.org" class="btn-portal" data-nl="Naar het portaal →" data-en="Go to portal →">Naar het portaal →</a>
+  </div>
 </nav>
 
 <div class="page-header">
-  <div class="sec-pill">Abonnementen</div>
-  <h1>Kies jouw abonnement</h1>
-  <p>Begin met een gratis proefmaand. Geen creditcard nodig. Daarna kies je het abonnement dat bij jou past.</p>
+  <div class="sec-pill" data-nl="Abonnementen" data-en="Pricing">Abonnementen</div>
+  <h1 data-nl="Kies jouw abonnement" data-en="Choose your plan">Kies jouw abonnement</h1>
+  <p data-nl="Begin met een gratis proefmaand. Geen creditcard nodig. Daarna kies je het abonnement dat bij jou past." data-en="Start with a free trial month. No credit card needed. Then choose the plan that suits you.">Begin met een gratis proefmaand. Geen creditcard nodig. Daarna kies je het abonnement dat bij jou past.</p>
 </div>
 
-<!-- Prijskaarten -->
-<section class="section-white">
+<section class="section-card">
   <div class="pricing-grid">
-
-    <!-- Zelf Coach -->
     <div class="price-card">
-      <div class="price-for">Individuele roeier</div>
+      <div class="price-for" data-nl="Individuele roeier" data-en="Individual rower">Individuele roeier</div>
       <div class="price-name">Zelf Coach</div>
-      <div class="price-tagline">Analyseer je eigen workouts en volg je progressie</div>
-      <div class="price-amount">€XX <span>/ maand</span></div><!-- PRIJS PLACEHOLDER -->
-      <div class="price-period">of €XX per jaar (2 maanden gratis)</div><!-- PRIJS PLACEHOLDER -->
+      <div class="price-tagline" data-nl="Analyseer je eigen workouts en volg je progressie" data-en="Analyse your own workouts and track your progression">Analyseer je eigen workouts en volg je progressie</div>
+      <div class="price-amount">€XX <span>/ <span data-nl="maand" data-en="month">maand</span></span></div><!-- PRIJS PLACEHOLDER -->
+      <div class="price-period" data-nl="of €XX per jaar (2 maanden gratis)" data-en="or €XX per year (2 months free)">of €XX per jaar (2 maanden gratis)</div><!-- PRIJS PLACEHOLDER -->
       <hr class="price-divider">
       <ul class="price-features">
-        <li><span class="pf-check">✓</span>Steady State, Interval &amp; Ergotest analyses</li>
-        <li><span class="pf-check">✓</span>Progressie tracking over tijd</li>
-        <li><span class="pf-check">✓</span>Vergelijking met streefwaarden</li>
-        <li><span class="pf-check">✓</span>Roeiersprofiel herkenning (7 typen)</li>
-        <li><span class="pf-check">✓</span>Coaching adviezen per trainingstype</li>
-        <li><span class="pf-check">✓</span>Raceplan per wedstrijdafstand</li>
-        <li><span class="pf-check">✓</span>RP3 &amp; Concept2 koppeling</li>
+        <li><span class="pf-check">✓</span><span data-nl="Steady State, Interval &amp; Ergotest analyses" data-en="Steady State, Interval &amp; Ergotest analyses">Steady State, Interval &amp; Ergotest analyses</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Progressie tracking over tijd" data-en="Progression tracking over time">Progressie tracking over tijd</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Vergelijking met streefwaarden" data-en="Comparison with benchmarks">Vergelijking met streefwaarden</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Roeiersprofiel herkenning (7 typen)" data-en="Rowing profile identification (7 types)">Roeiersprofiel herkenning (7 typen)</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Raceplan per wedstrijdafstand" data-en="Race plan per competition distance">Raceplan per wedstrijdafstand</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="RP3 &amp; Concept2 koppeling" data-en="RP3 &amp; Concept2 integration">RP3 &amp; Concept2 koppeling</span></li>
       </ul>
-      <a href="https://my.beatyourbest.org/register" class="btn-price btn-price-outline">Start gratis proefmaand</a>
+      <a href="https://my.beatyourbest.org/register" class="btn-price btn-price-outline" data-nl="Start gratis proefmaand" data-en="Start free trial">Start gratis proefmaand</a>
     </div>
-
-    <!-- Crew Coach -->
     <div class="price-card price-card-featured">
-      <div class="price-popular">Meest gekozen</div>
-      <div class="price-for">Coach</div>
+      <div class="price-popular" data-nl="Meest gekozen" data-en="Most popular">Meest gekozen</div>
+      <div class="price-for" data-nl="Coach" data-en="Coach">Coach</div>
       <div class="price-name">Crew Coach</div>
-      <div class="price-tagline">Begeleid je crew en maak data-gedreven selecties</div>
-      <div class="price-amount">€XX <span>/ maand</span></div><!-- PRIJS PLACEHOLDER -->
-      <div class="price-period">of €XX per jaar · tot 3 crews</div><!-- PRIJS PLACEHOLDER -->
+      <div class="price-tagline" data-nl="Begeleid je crew en maak data-gedreven selecties" data-en="Guide your crew and make data-driven selections">Begeleid je crew en maak data-gedreven selecties</div>
+      <div class="price-amount">€XX <span>/ <span data-nl="maand" data-en="month">maand</span></span></div><!-- PRIJS PLACEHOLDER -->
+      <div class="price-period" data-nl="of €XX per jaar · tot 3 crews" data-en="or €XX per year · up to 3 crews">of €XX per jaar · tot 3 crews</div><!-- PRIJS PLACEHOLDER -->
       <hr class="price-divider">
       <ul class="price-features">
-        <li><span class="pf-check">✓</span>Alles van Zelf Coach voor al je atleten</li>
-        <li><span class="pf-check">✓</span>Crew ranking op techniek, kracht &amp; efficiëntie</li>
-        <li><span class="pf-check">✓</span>Bootopstelling berekenen (Boat Positioning)</li>
-        <li><span class="pf-check">✓</span>Scenario's vergelijken voor selectie</li>
-        <li><span class="pf-check">✓</span>Trainingsopdrachten uitdelen en bijhouden</li>
-        <li><span class="pf-check">✓</span>Boot trainingslogboek</li>
-        <li><span class="pf-check">✓</span>Meerdere boottypen configureren</li>
+        <li><span class="pf-check">✓</span><span data-nl="Alles van Zelf Coach voor je atleten" data-en="Everything from Zelf Coach for your athletes">Alles van Zelf Coach voor je atleten</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Crew ranking &amp; bootopstelling" data-en="Crew ranking &amp; boat positioning">Crew ranking &amp; bootopstelling</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Trainingsopdrachten uitdelen en bijhouden" data-en="Assign and track training tasks">Trainingsopdrachten uitdelen en bijhouden</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Boot trainingslogboek" data-en="Boat training log">Boot trainingslogboek</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Meerdere boottypen configureren" data-en="Configure multiple boat types">Meerdere boottypen configureren</span></li>
       </ul>
-      <a href="https://my.beatyourbest.org/register" class="btn-price btn-price-solid">Start gratis proefmaand</a>
+      <a href="https://my.beatyourbest.org/register" class="btn-price btn-price-solid" data-nl="Start gratis proefmaand" data-en="Start free trial">Start gratis proefmaand</a>
     </div>
-
-    <!-- Club -->
     <div class="price-card">
-      <div class="price-for">Roeivereniging</div>
+      <div class="price-for" data-nl="Roeivereniging" data-en="Rowing club">Roeivereniging</div>
       <div class="price-name">Club</div>
-      <div class="price-tagline">Geef je hele vereniging toegang via een centraal abonnement</div>
-      <div class="price-amount price-amount-sm">Op aanvraag</div>
-      <div class="price-period">Tarief op basis van ledenaantal</div>
+      <div class="price-tagline" data-nl="Geef je hele vereniging toegang via een centraal abonnement" data-en="Give your entire club access via a central subscription">Geef je hele vereniging toegang via een centraal abonnement</div>
+      <div class="price-amount price-amount-sm" data-nl="Op aanvraag" data-en="On request">Op aanvraag</div>
+      <div class="price-period" data-nl="Tarief op basis van ledenaantal" data-en="Pricing based on member count">Tarief op basis van ledenaantal</div>
       <hr class="price-divider">
       <ul class="price-features">
-        <li><span class="pf-check">✓</span>Gereduceerd tarief per lid</li>
-        <li><span class="pf-check">✓</span>Uitnodigingscodes per team of groep</li>
-        <li><span class="pf-check">✓</span>Club dashboard met ledenlijst en overzicht</li>
-        <li><span class="pf-check">✓</span>Meerdere coaches mogelijk</li>
-        <li><span class="pf-check">✓</span>Centrale facturatie (geen Stripe per lid)</li>
-        <li><span class="pf-check">✓</span>Rolbeheer: admin, coach, lid</li>
+        <li><span class="pf-check">✓</span><span data-nl="Gereduceerd tarief per lid" data-en="Reduced rate per member">Gereduceerd tarief per lid</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Uitnodigingscodes per team of groep" data-en="Invitation codes per team or group">Uitnodigingscodes per team of groep</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Club dashboard &amp; ledenlijst" data-en="Club dashboard &amp; member list">Club dashboard &amp; ledenlijst</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Meerdere coaches mogelijk" data-en="Multiple coaches possible">Meerdere coaches mogelijk</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Centrale facturatie (geen Stripe per lid)" data-en="Central invoicing (no Stripe per member)">Centrale facturatie (geen Stripe per lid)</span></li>
       </ul>
-      <a href="mailto:info@beatyourbest.org" class="btn-price btn-price-outline">Neem contact op</a>
+      <a href="mailto:info@beatyourbest.org" class="btn-price btn-price-outline" data-nl="Neem contact op" data-en="Contact us">Neem contact op</a>
     </div>
-
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="section">
   <div class="sec-center">
-    <div class="sec-pill">Veelgestelde vragen</div>
-    <h2 class="sec-title">Vragen over abonnementen</h2>
+    <div class="sec-pill" data-nl="Veelgestelde vragen" data-en="FAQ">Veelgestelde vragen</div>
+    <h2 class="sec-title" data-nl="Vragen over abonnementen" data-en="Questions about pricing">Vragen over abonnementen</h2>
   </div>
   <div class="faq-list">
-    <div class="faq-item">
-      <div class="faq-q">Hoe werkt de gratis proefmaand?</div>
-      <div class="faq-a">Na registratie heb je één maand gratis toegang tot alle functies van Zelf Coach. Er is geen creditcard nodig om te starten. Aan het einde van de proefperiode kun je kiezen of je wil doorgaan met een betaald abonnement.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Kan ik op elk moment opzeggen?</div>
-      <div class="faq-a">Ja. Je kunt je abonnement op elk moment opzeggen via je profielpagina in het portaal. Je behoudt toegang tot het einde van de betaalde periode.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Welke ergometers worden ondersteund?</div>
-      <div class="faq-a">Beat Your Best werkt met de RP3 Rowing Machine en de Concept2 ergometer. Beide via een directe OAuth-koppeling met het apparaatportaal — je hoeft geen bestanden handmatig te uploaden.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Wat is het verschil tussen Zelf Coach en Crew Coach?</div>
-      <div class="faq-a">Zelf Coach is voor individuele roeiers die hun eigen workouts willen analyseren. Crew Coach voegt daar een complete coachlaag aan toe: je beheert een of meerdere crews, kunt objectief rangschikken, de beste bootopstelling berekenen en trainingsopdrachten uitdelen.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Hoe werkt een clubabonnement?</div>
-      <div class="faq-a">De club betaalt een centraal abonnement op basis van het ledenaantal. BYB genereert uitnodigingscodes die de club-admin verdeelt onder leden en coaches. Leden krijgen zo toegang zonder zelf een abonnement af te sluiten.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Is mijn data veilig?</div>
-      <div class="faq-a">Ja. BYB is GDPR-compliant, data wordt opgeslagen in een beveiligde PostgreSQL-database en bestanden op AWS S3. Je behoudt te allen tijde het eigenaarschap over je eigen data en kunt die altijd laten verwijderen.</div>
-    </div>
+    <div class="faq-item"><div class="faq-q" data-nl="Hoe werkt de gratis proefmaand?" data-en="How does the free trial month work?">Hoe werkt de gratis proefmaand?</div><div class="faq-a" data-nl="Na registratie heb je één maand gratis toegang tot alle functies. Geen creditcard nodig. Aan het einde kun je kiezen of je doorgaat." data-en="After registration you have one month of free access to all features. No credit card needed. At the end you can choose whether to continue.">Na registratie heb je één maand gratis toegang tot alle functies. Geen creditcard nodig. Aan het einde kun je kiezen of je doorgaat.</div></div>
+    <div class="faq-item"><div class="faq-q" data-nl="Kan ik op elk moment opzeggen?" data-en="Can I cancel at any time?">Kan ik op elk moment opzeggen?</div><div class="faq-a" data-nl="Ja. Je kunt je abonnement op elk moment opzeggen via je profielpagina in het portaal. Je behoudt toegang tot het einde van de betaalde periode." data-en="Yes. You can cancel your subscription at any time via your profile page in the portal. You retain access until the end of the paid period.">Ja. Je kunt je abonnement op elk moment opzeggen via je profielpagina in het portaal. Je behoudt toegang tot het einde van de betaalde periode.</div></div>
+    <div class="faq-item"><div class="faq-q" data-nl="Welke ergometers worden ondersteund?" data-en="Which ergometers are supported?">Welke ergometers worden ondersteund?</div><div class="faq-a" data-nl="Beat Your Best werkt met de RP3 Rowing Machine en de Concept2 ergometer, beide via een directe OAuth-koppeling." data-en="Beat Your Best works with the RP3 Rowing Machine and the Concept2 ergometer, both via a direct OAuth connection.">Beat Your Best werkt met de RP3 Rowing Machine en de Concept2 ergometer, beide via een directe OAuth-koppeling.</div></div>
+    <div class="faq-item"><div class="faq-q" data-nl="Wat is het verschil tussen Zelf Coach en Crew Coach?" data-en="What is the difference between Zelf Coach and Crew Coach?">Wat is het verschil tussen Zelf Coach en Crew Coach?</div><div class="faq-a" data-nl="Zelf Coach is voor individuele roeiers. Crew Coach voegt een complete coachlaag toe: crew beheer, ranking, bootopstelling en trainingsopdrachten." data-en="Zelf Coach is for individual rowers. Crew Coach adds a complete coaching layer: crew management, ranking, boat positioning and training assignments.">Zelf Coach is voor individuele roeiers. Crew Coach voegt een complete coachlaag toe: crew beheer, ranking, bootopstelling en trainingsopdrachten.</div></div>
+    <div class="faq-item"><div class="faq-q" data-nl="Hoe werkt een clubabonnement?" data-en="How does a club subscription work?">Hoe werkt een clubabonnement?</div><div class="faq-a" data-nl="De club betaalt een centraal abonnement op basis van het ledenaantal. BYB genereert uitnodigingscodes die de club-admin verdeelt onder leden en coaches." data-en="The club pays a central subscription based on member count. BYB generates invitation codes that the club admin distributes to members and coaches.">De club betaalt een centraal abonnement op basis van het ledenaantal. BYB genereert uitnodigingscodes die de club-admin verdeelt onder leden en coaches.</div></div>
   </div>
 </section>
 
 <div class="cta-block">
-  <h2 class="cta-title">Begin vandaag nog gratis</h2>
-  <p class="cta-sub">Geen creditcard. Geen verplichtingen. Gewoon analyseren.</p>
-  <a href="https://my.beatyourbest.org/register" class="btn-cta">Gratis proefmaand starten</a>
-  <a href="mailto:info@beatyourbest.org" class="btn-cta-ghost">Contact voor clubs</a>
+  <h2 class="cta-title" data-nl="Begin vandaag nog gratis" data-en="Start for free today">Begin vandaag nog gratis</h2>
+  <p class="cta-sub" data-nl="Geen creditcard. Geen verplichtingen. Gewoon analyseren." data-en="No credit card. No obligations. Just analyse.">Geen creditcard. Geen verplichtingen. Gewoon analyseren.</p>
+  <a href="https://my.beatyourbest.org/register" class="btn-cta" data-nl="Gratis proefmaand starten" data-en="Start free trial">Gratis proefmaand starten</a>
+  <a href="mailto:info@beatyourbest.org" class="btn-cta-ghost" data-nl="Contact voor clubs" data-en="Contact for clubs">Contact voor clubs</a>
 </div>
 
 <footer class="footer">
   <div class="footer-logo">© 2026 Beat Your Best · Made in the Netherlands</div>
   <div class="footer-links">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Voorwaarden</a>
-    <a href="cookies.html">Cookies</a>
-    <a href="about.html#contact">Contact</a>
-    <a href="https://my.beatyourbest.org">Portaal</a>
+    <a href="privacy.html" data-nl="Privacy" data-en="Privacy">Privacy</a>
+    <a href="terms.html" data-nl="Voorwaarden" data-en="Terms">Voorwaarden</a>
+    <a href="cookies.html" data-nl="Cookies" data-en="Cookies">Cookies</a>
+    <a href="about.html#contact" data-nl="Contact" data-en="Contact">Contact</a>
+    <a href="https://my.beatyourbest.org">my.beatyourbest.org</a>
   </div>
 </footer>
-
-<style>
-.faq-list{max-width:720px;margin:0 auto}
-.faq-item{background:#fff;border:1px solid #e2ebe8;border-radius:12px;padding:24px 28px;margin-bottom:12px}
-.faq-q{font-size:16px;font-weight:700;color:#0d1f1b;margin-bottom:10px}
-.faq-a{font-size:14px;color:#4a6860;line-height:1.7}
-</style>
-
+<script src="main.js"></script>
 </body>
 </html>

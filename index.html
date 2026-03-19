@@ -1,378 +1,249 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beat Your Best — Analyseer je roeiprestaties</title>
   <meta name="description" content="Beat Your Best analyseert je RP3 en Concept2 workouts. Ontvang persoonlijke coaching, volg je progressie en verbeter je roeitechniek.">
-  <meta property="og:title" content="Beat Your Best">
-  <meta property="og:description" content="Analyseer je roeiprestaties en word beter. Voor RP3 en Concept2.">
-  <meta property="og:image" content="https://beatyourbest.org/assets/og-image.png">
-  <meta property="og:url" content="https://beatyourbest.org">
   <link rel="icon" href="/assets/favicon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ================================================
-     NAVIGATIE
-     Aanpassen: links in .nav-links en de portal URL
-     ================================================ -->
 <nav class="nav">
-  <div class="nav-logo">
-    <div class="nav-logo-box">BEAT<br>YOUR<br>BEST</div>
-    <span class="nav-logo-text">Beat Your Best</span>
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Beat Your Best"></a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+  <div class="nav-links" id="nav-links">
+    <a href="how-it-works.html" data-nl="Hoe het werkt" data-en="How it works">Hoe het werkt</a>
+    <a href="how-it-works.html#analyses" data-nl="Analyses" data-en="Analyses">Analyses</a>
+    <a href="pricing.html" data-nl="Abonnementen" data-en="Pricing">Abonnementen</a>
+    <a href="about.html" data-nl="Over ons" data-en="About us">Over ons</a>
   </div>
-  <div class="nav-links">
-    <a href="how-it-works.html">Hoe het werkt</a>
-    <a href="how-it-works.html#analyses">Analyses</a>
-    <a href="pricing.html">Abonnementen</a>
-    <a href="about.html">Over ons</a>
+  <div class="nav-controls">
+    <button class="nav-toggle-btn" id="lang-toggle">EN</button>
+    <button class="nav-toggle-btn" id="theme-toggle" aria-label="Thema wisselen"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+    <a href="https://my.beatyourbest.org" class="btn-portal" data-nl="Naar het portaal →" data-en="Go to portal →">Naar het portaal →</a>
   </div>
-  <a href="https://my.beatyourbest.org" class="btn-portal">Naar het portaal →</a>
 </nav>
 
-<!-- ================================================
-     HERO SECTIE
-     Aanpassen: hero-title, hero-body, trust-items
-     Login card wordt automatisch doorgestuurd naar portaal
-     ================================================ -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-eyebrow">
-      <span class="hero-eyebrow-dot"></span>
-      RP3 &amp; Concept2 analyse
-    </div>
-    <h1 class="hero-title">
-      Analyseer je<br>roeiprestaties<br>en word <em>beter</em>
-    </h1>
-    <p class="hero-body">
-      Beat Your Best analyseert je RP3 en Concept2 workouts. Ontvang persoonlijke coaching, volg je progressie en verbeter je roeitechniek.
-    </p>
+    <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span><span data-nl="RP3 &amp; Concept2 analyse" data-en="RP3 &amp; Concept2 analysis">RP3 &amp; Concept2 analyse</span></div>
+    <h1 class="hero-title"><span data-nl="Analyseer je roeiprestaties en word" data-en="Analyse your rowing performance and get">Analyseer je roeiprestaties en word</span> <em data-nl="beter" data-en="better">beter</em></h1>
+    <p class="hero-body" data-nl="Beat Your Best analyseert je RP3 en Concept2 workouts. Ontvang persoonlijke coaching, volg je progressie en verbeter je roeitechniek." data-en="Beat Your Best analyses your RP3 and Concept2 workouts. Receive personal coaching, track your progression and improve your technique.">Beat Your Best analyseert je RP3 en Concept2 workouts. Ontvang persoonlijke coaching, volg je progressie en verbeter je roeitechniek.</p>
     <div class="hero-actions">
-      <a href="https://my.beatyourbest.org/register" class="btn-hero">Gratis starten</a>
-      <a href="how-it-works.html" class="btn-hero-ghost">Hoe het werkt</a>
+      <a href="https://my.beatyourbest.org/register" class="btn-hero" data-nl="Gratis starten" data-en="Start for free">Gratis starten</a>
+      <a href="how-it-works.html" class="btn-hero-ghost" data-nl="Hoe het werkt" data-en="How it works">Hoe het werkt</a>
     </div>
     <div class="hero-trust">
-      <div class="trust-item">
-        <div class="trust-check">✓</div>
-        Eerste maand gratis
-      </div>
-      <div class="trust-item">
-        <div class="trust-check">✓</div>
-        Geen creditcard nodig
-      </div>
-      <div class="trust-item">
-        <div class="trust-check">✓</div>
-        GDPR-compliant
-      </div>
+      <div class="trust-item"><div class="trust-check">✓</div><span data-nl="Eerste maand gratis" data-en="First month free">Eerste maand gratis</span></div>
+      <div class="trust-item"><div class="trust-check">✓</div><span data-nl="Geen creditcard nodig" data-en="No credit card needed">Geen creditcard nodig</span></div>
+      <div class="trust-item"><div class="trust-check">✓</div><span>GDPR-compliant</span></div>
     </div>
   </div>
 
-  <!-- Login card — stuurt door naar portaal -->
-  <div class="login-card">
-    <div class="login-title">Welkom</div>
-    <div class="login-sub">Log in om het beste uit jezelf te halen</div>
-    <form action="https://my.beatyourbest.org/login" method="GET">
-      <label class="form-label">E-mail</label>
-      <input type="email" class="form-input" placeholder="jouw@email.com" name="email">
-      <label class="form-label">Wachtwoord</label>
-      <input type="password" class="form-input" placeholder="••••••••••" name="password">
-      <button type="submit" class="btn-login">Log in</button>
-    </form>
-    <div class="login-divider">of log in met</div>
-    <a href="https://my.beatyourbest.org/login/google" class="social-btn">
-      <svg width="16" height="16" viewBox="0 0 24 24">
-        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-      </svg>
-      Inloggen met Google
-    </a>
-    <a href="https://my.beatyourbest.org/login/strava" class="social-btn social-btn-strava">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="#fff">
-        <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598 2.522-5.598H16.31L10.999 0 5.689 8.429h3.065"/>
-      </svg>
-      Inloggen met Strava
-    </a>
-    <div class="login-footer">
-      Nog geen account? <a href="https://my.beatyourbest.org/register">Registreer</a>
-      &nbsp;·&nbsp;
-      <a href="https://my.beatyourbest.org/forgot-password">Wachtwoord vergeten?</a>
+  <div class="hero-mockups">
+    <div class="mockup-card">
+      <div class="mockup-bar">
+        <div class="mockup-dot"></div><div class="mockup-dot"></div><div class="mockup-dot"></div>
+        <span class="mockup-url">my.beatyourbest.org</span>
+      </div>
+      <div class="mockup-body">
+        <div style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px" data-nl="Recente workouts" data-en="Recent workouts">Recente workouts</div>
+        <div class="mockup-row"><span class="mock-badge mock-badge-ss">Steady State</span><span class="mock-title">Duurtraining 45 min</span><span class="mock-split">2:04/500m</span><span class="mock-iof">87</span></div>
+        <div class="mockup-row"><span class="mock-badge mock-badge-il">Interval</span><span class="mock-title">4×8 min UT1</span><span class="mock-split">1:58/500m</span><span class="mock-iof">91</span></div>
+        <div class="mockup-row"><span class="mock-badge mock-badge-et">Ergotest</span><span class="mock-title">2000m test</span><span class="mock-split">1:44/500m</span><span class="mock-iof">96</span></div>
+        <div class="mockup-stats">
+          <div class="mock-stat"><div class="mock-stat-val">FC</div><div class="mock-stat-lbl" data-nl="Profiel" data-en="Profile">Profiel</div></div>
+          <div class="mock-stat"><div class="mock-stat-val">87%</div><div class="mock-stat-lbl">R² kwal.</div></div>
+          <div class="mock-stat"><div class="mock-stat-val">+12%</div><div class="mock-stat-lbl" data-nl="Progressie" data-en="Progress">Progressie</div></div>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div class="mockup-small">
+        <div class="ms-header" data-nl="Progressie 8 wkn" data-en="Progress 8 wks">Progressie 8 wkn</div>
+        <div class="ms-row"><div class="ms-name">Peak Force</div><div class="ms-bar-bg"><div class="ms-bar-prev" style="width:68%"></div><div class="ms-bar-now" style="width:78%"></div></div></div>
+        <div class="ms-row"><div class="ms-name">R² Pre-Peak</div><div class="ms-bar-bg"><div class="ms-bar-prev" style="width:74%"></div><div class="ms-bar-now" style="width:88%"></div></div></div>
+        <div class="ms-row"><div class="ms-name">Haallengte</div><div class="ms-bar-bg"><div class="ms-bar-prev" style="width:80%"></div><div class="ms-bar-now" style="width:85%"></div></div></div>
+      </div>
+      <div class="mockup-small">
+        <div class="ms-header" data-nl="Crew ranking" data-en="Crew ranking">Crew ranking</div>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;align-items:center;gap:8px"><div style="width:18px;font-size:11px;font-weight:800;color:var(--accent)">#1</div><div style="flex:1;font-size:12px;font-weight:600;color:var(--text-h)">Lars B.</div><div style="font-size:11px;color:var(--accent);font-weight:700">94</div></div>
+          <div style="display:flex;align-items:center;gap:8px"><div style="width:18px;font-size:11px;font-weight:800;color:var(--accent)">#2</div><div style="flex:1;font-size:12px;font-weight:600;color:var(--text-h)">Sven D.</div><div style="font-size:11px;color:var(--accent);font-weight:700">91</div></div>
+          <div style="display:flex;align-items:center;gap:8px"><div style="width:18px;font-size:11px;color:var(--text-muted)">#3</div><div style="flex:1;font-size:12px;color:var(--text-body)">Tim V.</div><div style="font-size:11px;color:var(--text-muted)">87</div></div>
+          <div style="display:flex;align-items:center;gap:8px"><div style="width:18px;font-size:11px;color:var(--text-muted)">#4</div><div style="flex:1;font-size:12px;color:var(--text-body)">Joris M.</div><div style="font-size:11px;color:var(--text-muted)">85</div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ================================================
-     FEATURES SECTIE
-     Drie kernvoordelen: Progressie, Coaching, Crew
-     Aanpassen: feat-title, feat-body, feat-list items
-     ================================================ -->
-<section class="section-white">
+<section class="section-card">
   <div class="sec-center">
-    <div class="sec-pill">Wat je krijgt</div>
-    <h2 class="sec-title">Drie dingen die je nergens anders vindt</h2>
-    <p class="sec-sub">BYB gaat verder dan splits en watt. Hier zijn de drie inzichten die het verschil maken.</p>
+    <div class="sec-pill" data-nl="Wat je krijgt" data-en="What you get">Wat je krijgt</div>
+    <h2 class="sec-title" data-nl="Drie dingen die je nergens anders vindt" data-en="Three things you won't find anywhere else">Drie dingen die je nergens anders vindt</h2>
+    <p class="sec-sub" data-nl="BYB gaat verder dan splits en watt. Hier zijn de drie inzichten die het verschil maken." data-en="BYB goes beyond splits and watts. Here are the three insights that make the difference.">BYB gaat verder dan splits en watt. Hier zijn de drie inzichten die het verschil maken.</p>
   </div>
 
-  <!-- Feature 1: Progressie -->
   <div class="feature-block">
-    <div class="feature-text">
-      <div class="feat-label">Progressie</div>
-      <h3 class="feat-title">Zie precies of je training werkt</h3>
-      <p class="feat-body">
-        BYB vergelijkt al je analyses over tijd. Je ziet per parameter of je vooruitgaat — niet op gevoel, maar op data. Welke zone train je het meest? Waar word je sterker?
-      </p>
+    <div>
+      <div class="feat-label" data-nl="Progressie" data-en="Progression">Progressie</div>
+      <h3 class="feat-title" data-nl="Zie precies of je training werkt" data-en="See exactly whether your training works">Zie precies of je training werkt</h3>
+      <p class="feat-body" data-nl="BYB vergelijkt al je analyses over tijd. Je ziet per parameter of je vooruitgaat — niet op gevoel, maar op data." data-en="BYB compares all your analyses over time. You see per parameter whether you're improving — not by feel, but by data.">BYB vergelijkt al je analyses over tijd. Je ziet per parameter of je vooruitgaat — niet op gevoel, maar op data.</p>
       <ul class="feat-list">
-        <li><span class="fl-dot">→</span>Trends per kernparameter over weken en maanden</li>
-        <li><span class="fl-dot">→</span>Vergelijk twee workouts of twee periodes naast elkaar</li>
-        <li><span class="fl-dot">→</span>Trainingsvolume per intensiteitszone (laag / midden / hoog)</li>
-        <li><span class="fl-dot">→</span>Persoonlijke records bijgehouden over tijd</li>
+        <li><span class="fl-dot">→</span><span data-nl="Trends per kernparameter over weken en maanden" data-en="Trends per key parameter over weeks and months">Trends per kernparameter over weken en maanden</span></li>
+        <li><span class="fl-dot">→</span><span data-nl="Vergelijk twee workouts of twee periodes naast elkaar" data-en="Compare two workouts or two periods side by side">Vergelijk twee workouts of twee periodes naast elkaar</span></li>
+        <li><span class="fl-dot">→</span><span data-nl="Trainingsvolume per intensiteitszone" data-en="Training volume per intensity zone">Trainingsvolume per intensiteitszone</span></li>
+        <li><span class="fl-dot">→</span><span data-nl="Persoonlijke records bijgehouden over tijd" data-en="Personal records tracked over time">Persoonlijke records bijgehouden over tijd</span></li>
       </ul>
     </div>
     <div class="visual-card">
-      <div class="vc-header">Progressie — afgelopen 8 weken</div>
-      <div class="prog-row">
-        <div class="prog-name">Peak Force</div>
-        <div class="prog-bar-bg"><div class="prog-bar prog-bar-prev" style="width:68%"></div></div>
-        <div class="prog-val prog-val-prev">68%</div>
-      </div>
-      <div class="prog-row">
-        <div class="prog-name">&nbsp;</div>
-        <div class="prog-bar-bg"><div class="prog-bar" style="width:78%"></div></div>
-        <div class="prog-val">78%</div>
-      </div>
+      <div class="vc-header" data-nl="Progressie — afgelopen 8 weken" data-en="Progression — last 8 weeks">Progressie — afgelopen 8 weken</div>
+      <div class="prog-row"><div class="prog-name">Peak Force</div><div class="prog-bar-bg"><div class="prog-bar prog-bar-prev" style="width:68%"></div></div><div class="prog-val prog-val-prev">68%</div></div>
+      <div class="prog-row"><div class="prog-name">&nbsp;</div><div class="prog-bar-bg"><div class="prog-bar" style="width:78%"></div></div><div class="prog-val">78%</div></div>
       <div class="prog-spacer"></div>
-      <div class="prog-row">
-        <div class="prog-name">R² Pre-Peak</div>
-        <div class="prog-bar-bg"><div class="prog-bar prog-bar-prev" style="width:74%"></div></div>
-        <div class="prog-val prog-val-prev">74%</div>
-      </div>
-      <div class="prog-row">
-        <div class="prog-name">&nbsp;</div>
-        <div class="prog-bar-bg"><div class="prog-bar" style="width:88%"></div></div>
-        <div class="prog-val">88%</div>
-      </div>
+      <div class="prog-row"><div class="prog-name">R² Pre-Peak</div><div class="prog-bar-bg"><div class="prog-bar prog-bar-prev" style="width:74%"></div></div><div class="prog-val prog-val-prev">74%</div></div>
+      <div class="prog-row"><div class="prog-name">&nbsp;</div><div class="prog-bar-bg"><div class="prog-bar" style="width:88%"></div></div><div class="prog-val">88%</div></div>
       <div class="prog-spacer"></div>
-      <div class="prog-row">
-        <div class="prog-name">Haallengte</div>
-        <div class="prog-bar-bg"><div class="prog-bar prog-bar-prev" style="width:80%"></div></div>
-        <div class="prog-val prog-val-prev">80%</div>
-      </div>
-      <div class="prog-row">
-        <div class="prog-name">&nbsp;</div>
-        <div class="prog-bar-bg"><div class="prog-bar" style="width:85%"></div></div>
-        <div class="prog-val">85%</div>
-      </div>
+      <div class="prog-row"><div class="prog-name">Haallengte</div><div class="prog-bar-bg"><div class="prog-bar prog-bar-prev" style="width:80%"></div></div><div class="prog-val prog-val-prev">80%</div></div>
+      <div class="prog-row"><div class="prog-name">&nbsp;</div><div class="prog-bar-bg"><div class="prog-bar" style="width:85%"></div></div><div class="prog-val">85%</div></div>
       <div class="prog-legend">
-        <div class="leg-item"><div class="leg-dot leg-dot-prev"></div><div class="leg-label">8 weken geleden</div></div>
-        <div class="leg-item"><div class="leg-dot"></div><div class="leg-label">Nu</div></div>
+        <div class="leg-item"><div class="leg-dot leg-dot-prev"></div><div class="leg-label" data-nl="8 weken geleden" data-en="8 weeks ago">8 weken geleden</div></div>
+        <div class="leg-item"><div class="leg-dot"></div><div class="leg-label" data-nl="Nu" data-en="Now">Nu</div></div>
       </div>
     </div>
   </div>
 
-  <!-- Feature 2: Coaching -->
   <div class="feature-block feature-block-reverse">
-    <div class="feature-text">
-      <div class="feat-label">Persoonlijke coaching</div>
-      <h3 class="feat-title">Coaching op basis van jouw profiel</h3>
-      <p class="feat-body">
-        BYB herkent automatisch jouw roeiersprofiel — één van 7 typen — en geeft gerichte adviezen op basis van jouw specifieke techniek, vermoeidheidspatroon en streefwaarden. Geen generieke tips, maar inzichten die precies bij jou passen.
-      </p>
+    <div>
+      <div class="feat-label" data-nl="Persoonlijke coaching" data-en="Personal coaching">Persoonlijke coaching</div>
+      <h3 class="feat-title" data-nl="Coaching op basis van jouw profiel" data-en="Coaching based on your profile">Coaching op basis van jouw profiel</h3>
+      <p class="feat-body" data-nl="BYB herkent automatisch jouw roeiersprofiel — één van 7 typen — en geeft gerichte adviezen op basis van jouw techniek en vermoeidheidspatroon." data-en="BYB automatically identifies your rowing profile — one of 7 types — and gives targeted advice based on your technique and fatigue pattern.">BYB herkent automatisch jouw roeiersprofiel — één van 7 typen — en geeft gerichte adviezen op basis van jouw techniek en vermoeidheidspatroon.</p>
       <ul class="feat-list">
-        <li><span class="fl-dot">→</span>Herkenning van 7 roeiersprofielen (van Kick &amp; Release tot Mature Excellence)</li>
-        <li><span class="fl-dot">→</span>Terugkerende patronen geprioriteerd op urgentie</li>
-        <li><span class="fl-dot">→</span>Raceplan per wedstrijdafstand met per-fase doelwaarden</li>
-        <li><span class="fl-dot">→</span>Advies per trainingstype: Steady State, Interval, HIIT</li>
+        <li><span class="fl-dot">→</span><span data-nl="7 roeiersprofielen met gerichte coaching" data-en="7 rowing profiles with targeted coaching">7 roeiersprofielen met gerichte coaching</span></li>
+        <li><span class="fl-dot">→</span><span data-nl="Terugkerende patronen geprioriteerd op urgentie" data-en="Recurring patterns prioritised by urgency">Terugkerende patronen geprioriteerd op urgentie</span></li>
+        <li><span class="fl-dot">→</span><span data-nl="Raceplan per wedstrijdafstand met per-fase doelwaarden" data-en="Race plan per distance with per-phase targets">Raceplan per wedstrijdafstand met per-fase doelwaarden</span></li>
+        <li><span class="fl-dot">→</span><span data-nl="Advies per trainingstype: Steady State, Interval, HIIT" data-en="Advice per training type: Steady State, Interval, HIIT">Advies per trainingstype: Steady State, Interval, HIIT</span></li>
       </ul>
     </div>
     <div class="visual-card">
-      <div class="vc-header">Coaching — jouw bevindingen</div>
+      <div class="vc-header" data-nl="Coaching — jouw bevindingen" data-en="Coaching — your findings">Coaching — jouw bevindingen</div>
       <div class="coach-pill-row">
-        <div class="coach-pill">
-          <div class="cp-icon cp-icon-warn">!</div>
-          <div>
-            <div class="cp-title">rPFP consequent te laag</div>
-            <div class="cp-body">Je force curve piekt te vroeg. Dit kost je post-peak kwaliteit en leidt tot een onvolledige doordruk.</div>
-            <span class="cp-tag cp-tag-warn">Aandachtspunt</span>
-          </div>
-        </div>
-        <div class="coach-pill">
-          <div class="cp-icon">→</div>
-          <div>
-            <div class="cp-title">Profiel: Force Compensator</div>
-            <div class="cp-body">Je compenseert technisch verlies met extra kracht. Werkt op korte termijn, maar kost energie bij langere stukken.</div>
-            <span class="cp-tag">Profiel herkend</span>
-          </div>
-        </div>
-        <div class="coach-pill">
-          <div class="cp-icon">↑</div>
-          <div>
-            <div class="cp-title">Peak Force verbeterd +12%</div>
-            <div class="cp-body">Je maximale trekkracht nam de afgelopen 6 weken significant toe. Goed resultaat van je krachtblok.</div>
-            <span class="cp-tag">Progressie</span>
-          </div>
-        </div>
+        <div class="coach-pill"><div class="cp-icon cp-icon-warn">!</div><div><div class="cp-title" data-nl="rPFP consequent te laag" data-en="rPFP consistently too low">rPFP consequent te laag</div><div class="cp-body" data-nl="Je force curve piekt te vroeg. Dit kost je post-peak kwaliteit." data-en="Your force curve peaks too early, costing post-peak quality.">Je force curve piekt te vroeg. Dit kost je post-peak kwaliteit.</div><span class="cp-tag cp-tag-warn" data-nl="Aandachtspunt" data-en="Action point">Aandachtspunt</span></div></div>
+        <div class="coach-pill"><div class="cp-icon">→</div><div><div class="cp-title" data-nl="Profiel: Force Compensator" data-en="Profile: Force Compensator">Profiel: Force Compensator</div><div class="cp-body" data-nl="Je compenseert technisch verlies met extra kracht." data-en="You compensate for technical loss with extra power.">Je compenseert technisch verlies met extra kracht.</div><span class="cp-tag" data-nl="Profiel herkend" data-en="Profile identified">Profiel herkend</span></div></div>
+        <div class="coach-pill"><div class="cp-icon">↑</div><div><div class="cp-title" data-nl="Peak Force verbeterd +12%" data-en="Peak Force improved +12%">Peak Force verbeterd +12%</div><div class="cp-body" data-nl="Je trekkracht nam de afgelopen 6 weken significant toe." data-en="Your pulling force increased significantly over 6 weeks.">Je trekkracht nam de afgelopen 6 weken significant toe.</div><span class="cp-tag" data-nl="Progressie" data-en="Progression">Progressie</span></div></div>
       </div>
     </div>
   </div>
 
-  <!-- Feature 3: Crew Coach -->
   <div class="feature-block">
-    <div class="feature-text">
+    <div>
       <div class="feat-label">Crew Coach</div>
-      <h3 class="feat-title">De beste crew objectief samenstellen</h3>
-      <p class="feat-body">
-        Als coach heb je data over al je roeiers. BYB vergelijkt ze op techniek, kracht en efficiëntie en berekent de optimale bootopstelling op basis van hun energetisch profiel.
-      </p>
+      <h3 class="feat-title" data-nl="De beste crew objectief samenstellen" data-en="Objectively build the best crew">De beste crew objectief samenstellen</h3>
+      <p class="feat-body" data-nl="Als coach heb je data over al je roeiers. BYB vergelijkt ze op techniek, kracht en efficiëntie en berekent de optimale bootopstelling." data-en="As a coach you have data on all your rowers. BYB compares them on technique, strength and efficiency and calculates the optimal boat line-up.">Als coach heb je data over al je roeiers. BYB vergelijkt ze op techniek, kracht en efficiëntie en berekent de optimale bootopstelling.</p>
       <ul class="feat-list">
-        <li><span class="fl-dot">→</span>Objectieve crew ranking op meerdere parameters</li>
-        <li><span class="fl-dot">→</span>Boat positioning: welke roeier past het best op welke positie?</li>
-        <li><span class="fl-dot">→</span>Vergelijk scenario's met verschillende opstellingen</li>
-        <li><span class="fl-dot">→</span>Trainingsopdrachten uitdelen en compliance bijhouden</li>
+        <li><span class="fl-dot">→</span><span data-nl="Objectieve crew ranking op meerdere parameters" data-en="Objective crew ranking on multiple parameters">Objectieve crew ranking op meerdere parameters</span></li>
+        <li><span class="fl-dot">→</span><span data-nl="Boat positioning: welke roeier past op welke positie?" data-en="Boat positioning: which rower fits which position?">Boat positioning: welke roeier past op welke positie?</span></li>
+        <li><span class="fl-dot">→</span><span data-nl="Vergelijk scenario's met verschillende opstellingen" data-en="Compare scenarios with different line-ups">Vergelijk scenario's met verschillende opstellingen</span></li>
+        <li><span class="fl-dot">→</span><span data-nl="Trainingsopdrachten uitdelen en bijhouden" data-en="Assign and track training tasks">Trainingsopdrachten uitdelen en bijhouden</span></li>
       </ul>
     </div>
     <div class="visual-card">
-      <div class="vc-header">Crew ranking — 8+ selectie</div>
+      <div class="vc-header" data-nl="Crew ranking — 8+ selectie" data-en="Crew ranking — 8+ selection">Crew ranking — 8+ selectie</div>
       <div class="crew-grid">
-        <div class="crew-seat crew-seat-top">
-          <div class="crew-rank">1</div>
-          <div class="crew-rank-name">Lars B.</div>
-          <div class="crew-rank-val">IOF 94</div>
-          <div class="crew-rank-pos">Slag</div>
-        </div>
-        <div class="crew-seat crew-seat-top">
-          <div class="crew-rank">2</div>
-          <div class="crew-rank-name">Sven D.</div>
-          <div class="crew-rank-val">IOF 91</div>
-          <div class="crew-rank-pos">7</div>
-        </div>
-        <div class="crew-seat">
-          <div class="crew-rank crew-rank-muted">3</div>
-          <div class="crew-rank-name">Tim V.</div>
-          <div class="crew-rank-val">IOF 87</div>
-          <div class="crew-rank-pos crew-rank-pos-muted">6</div>
-        </div>
-        <div class="crew-seat">
-          <div class="crew-rank crew-rank-muted">4</div>
-          <div class="crew-rank-name">Joris M.</div>
-          <div class="crew-rank-val">IOF 85</div>
-          <div class="crew-rank-pos crew-rank-pos-muted">5</div>
-        </div>
+        <div class="crew-seat crew-seat-top"><div class="crew-rank">1</div><div class="crew-rank-name">Lars B.</div><div class="crew-rank-val">IOF 94</div><div class="crew-rank-pos" data-nl="Slag" data-en="Stroke">Slag</div></div>
+        <div class="crew-seat crew-seat-top"><div class="crew-rank">2</div><div class="crew-rank-name">Sven D.</div><div class="crew-rank-val">IOF 91</div><div class="crew-rank-pos">7</div></div>
+        <div class="crew-seat"><div class="crew-rank crew-rank-muted">3</div><div class="crew-rank-name">Tim V.</div><div class="crew-rank-val">IOF 87</div><div class="crew-rank-pos crew-rank-pos-muted">6</div></div>
+        <div class="crew-seat"><div class="crew-rank crew-rank-muted">4</div><div class="crew-rank-name">Joris M.</div><div class="crew-rank-val">IOF 85</div><div class="crew-rank-pos crew-rank-pos-muted">5</div></div>
       </div>
       <div class="boat-visual">
-        <span class="boat-label">Boeg</span>
-        <div class="boat-pos">1</div>
-        <div class="boat-pos">2</div>
-        <div class="boat-pos">3</div>
-        <div class="boat-pos">4</div>
-        <div class="boat-pos boat-pos-active">5</div>
-        <div class="boat-pos boat-pos-active">6</div>
-        <div class="boat-pos boat-pos-active">7</div>
-        <div class="boat-pos boat-pos-active">Sl</div>
-        <span class="boat-label">Stuur</span>
+        <span class="boat-label" data-nl="Boeg" data-en="Bow">Boeg</span>
+        <div class="boat-pos">1</div><div class="boat-pos">2</div><div class="boat-pos">3</div><div class="boat-pos">4</div>
+        <div class="boat-pos boat-pos-active">5</div><div class="boat-pos boat-pos-active">6</div><div class="boat-pos boat-pos-active">7</div><div class="boat-pos boat-pos-active">Sl</div>
+        <span class="boat-label" data-nl="Stuur" data-en="Cox">Stuur</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================================================
-     ABONNEMENTEN
-     Aanpassen: prijzen, features per plan
-     Zoek op "PRIJS PLACEHOLDER" voor alle bedragen
-     ================================================ -->
 <section class="section" id="abonnementen">
   <div class="sec-center">
-    <div class="sec-pill">Abonnementen</div>
-    <h2 class="sec-title">Kies jouw abonnement</h2>
-    <p class="sec-sub">Begin met een gratis proefmaand. Geen creditcard nodig. Daarna kies je het abonnement dat bij jou past.</p>
+    <div class="sec-pill" data-nl="Abonnementen" data-en="Pricing">Abonnementen</div>
+    <h2 class="sec-title" data-nl="Kies jouw abonnement" data-en="Choose your plan">Kies jouw abonnement</h2>
+    <p class="sec-sub" data-nl="Begin met een gratis proefmaand. Geen creditcard nodig." data-en="Start with a free trial month. No credit card needed.">Begin met een gratis proefmaand. Geen creditcard nodig.</p>
   </div>
   <div class="pricing-grid">
-
-    <!-- Zelf Coach -->
     <div class="price-card">
-      <div class="price-for">Individuele roeier</div>
+      <div class="price-for" data-nl="Individuele roeier" data-en="Individual rower">Individuele roeier</div>
       <div class="price-name">Zelf Coach</div>
-      <div class="price-tagline">Analyseer je eigen workouts en volg je progressie</div>
-      <div class="price-amount">€XX <span>/ maand</span></div><!-- PRIJS PLACEHOLDER -->
-      <div class="price-period">of €XX per jaar (2 maanden gratis)</div><!-- PRIJS PLACEHOLDER -->
+      <div class="price-tagline" data-nl="Analyseer je eigen workouts en volg je progressie" data-en="Analyse your own workouts and track your progression">Analyseer je eigen workouts en volg je progressie</div>
+      <div class="price-amount">€XX <span>/ <span data-nl="maand" data-en="month">maand</span></span></div><!-- PRIJS PLACEHOLDER -->
+      <div class="price-period" data-nl="of €XX per jaar (2 maanden gratis)" data-en="or €XX per year (2 months free)">of €XX per jaar (2 maanden gratis)</div><!-- PRIJS PLACEHOLDER -->
       <hr class="price-divider">
       <ul class="price-features">
-        <li><span class="pf-check">✓</span>Steady State, Interval &amp; Ergotest analyses</li>
-        <li><span class="pf-check">✓</span>Progressie tracking</li>
-        <li><span class="pf-check">✓</span>Vergelijking met streefwaarden</li>
-        <li><span class="pf-check">✓</span>Roeiersprofiel herkenning (7 typen)</li>
-        <li><span class="pf-check">✓</span>RP3 &amp; Concept2 koppeling</li>
+        <li><span class="pf-check">✓</span><span data-nl="Steady State, Interval &amp; Ergotest analyses" data-en="Steady State, Interval &amp; Ergotest analyses">Steady State, Interval &amp; Ergotest analyses</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Progressie tracking" data-en="Progression tracking">Progressie tracking</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Roeiersprofiel herkenning (7 typen)" data-en="Rowing profile identification (7 types)">Roeiersprofiel herkenning (7 typen)</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="RP3 &amp; Concept2 koppeling" data-en="RP3 &amp; Concept2 integration">RP3 &amp; Concept2 koppeling</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Raceplan per wedstrijdafstand" data-en="Race plan per competition distance">Raceplan per wedstrijdafstand</span></li>
       </ul>
-      <a href="https://my.beatyourbest.org/register" class="btn-price btn-price-outline">Start gratis proefmaand</a>
+      <a href="https://my.beatyourbest.org/register" class="btn-price btn-price-outline" data-nl="Start gratis proefmaand" data-en="Start free trial">Start gratis proefmaand</a>
     </div>
-
-    <!-- Crew Coach (featured) -->
     <div class="price-card price-card-featured">
-      <div class="price-popular">Meest gekozen</div>
-      <div class="price-for">Coach</div>
+      <div class="price-popular" data-nl="Meest gekozen" data-en="Most popular">Meest gekozen</div>
+      <div class="price-for" data-nl="Coach" data-en="Coach">Coach</div>
       <div class="price-name">Crew Coach</div>
-      <div class="price-tagline">Begeleid je crew en maak data-gedreven selecties</div>
-      <div class="price-amount">€XX <span>/ maand</span></div><!-- PRIJS PLACEHOLDER -->
-      <div class="price-period">of €XX per jaar · tot 3 crews</div><!-- PRIJS PLACEHOLDER -->
+      <div class="price-tagline" data-nl="Begeleid je crew en maak data-gedreven selecties" data-en="Guide your crew and make data-driven selections">Begeleid je crew en maak data-gedreven selecties</div>
+      <div class="price-amount">€XX <span>/ <span data-nl="maand" data-en="month">maand</span></span></div><!-- PRIJS PLACEHOLDER -->
+      <div class="price-period" data-nl="of €XX per jaar · tot 3 crews" data-en="or €XX per year · up to 3 crews">of €XX per jaar · tot 3 crews</div><!-- PRIJS PLACEHOLDER -->
       <hr class="price-divider">
       <ul class="price-features">
-        <li><span class="pf-check">✓</span>Alles van Zelf Coach voor je atleten</li>
-        <li><span class="pf-check">✓</span>Crew ranking &amp; bootopstelling</li>
-        <li><span class="pf-check">✓</span>Trainingsopdrachten uitdelen</li>
-        <li><span class="pf-check">✓</span>Boot trainingslogboek</li>
-        <li><span class="pf-check">✓</span>Meerdere boottypen configureren</li>
+        <li><span class="pf-check">✓</span><span data-nl="Alles van Zelf Coach voor je atleten" data-en="Everything from Zelf Coach for your athletes">Alles van Zelf Coach voor je atleten</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Crew ranking &amp; bootopstelling" data-en="Crew ranking &amp; boat positioning">Crew ranking &amp; bootopstelling</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Trainingsopdrachten uitdelen" data-en="Assign training tasks">Trainingsopdrachten uitdelen</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Boot trainingslogboek" data-en="Boat training log">Boot trainingslogboek</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Meerdere boottypen configureren" data-en="Configure multiple boat types">Meerdere boottypen configureren</span></li>
       </ul>
-      <a href="https://my.beatyourbest.org/register" class="btn-price btn-price-solid">Start gratis proefmaand</a>
+      <a href="https://my.beatyourbest.org/register" class="btn-price btn-price-solid" data-nl="Start gratis proefmaand" data-en="Start free trial">Start gratis proefmaand</a>
     </div>
-
-    <!-- Club -->
     <div class="price-card">
-      <div class="price-for">Roeivereniging</div>
+      <div class="price-for" data-nl="Roeivereniging" data-en="Rowing club">Roeivereniging</div>
       <div class="price-name">Club</div>
-      <div class="price-tagline">Geef je hele vereniging toegang via een centraal abonnement</div>
-      <div class="price-amount price-amount-sm">Op aanvraag</div>
-      <div class="price-period">Tarief op basis van ledenaantal</div>
+      <div class="price-tagline" data-nl="Centraal abonnement voor je hele vereniging" data-en="Central subscription for your entire club">Centraal abonnement voor je hele vereniging</div>
+      <div class="price-amount price-amount-sm" data-nl="Op aanvraag" data-en="On request">Op aanvraag</div>
+      <div class="price-period" data-nl="Tarief op basis van ledenaantal" data-en="Pricing based on member count">Tarief op basis van ledenaantal</div>
       <hr class="price-divider">
       <ul class="price-features">
-        <li><span class="pf-check">✓</span>Gereduceerd tarief per lid</li>
-        <li><span class="pf-check">✓</span>Uitnodigingscodes per team</li>
-        <li><span class="pf-check">✓</span>Club dashboard &amp; ledenlijst</li>
-        <li><span class="pf-check">✓</span>Meerdere coaches mogelijk</li>
-        <li><span class="pf-check">✓</span>Centrale facturatie</li>
+        <li><span class="pf-check">✓</span><span data-nl="Gereduceerd tarief per lid" data-en="Reduced rate per member">Gereduceerd tarief per lid</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Uitnodigingscodes per team" data-en="Invitation codes per team">Uitnodigingscodes per team</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Club dashboard &amp; ledenlijst" data-en="Club dashboard &amp; member list">Club dashboard &amp; ledenlijst</span></li>
+        <li><span class="pf-check">✓</span><span data-nl="Centrale facturatie" data-en="Central invoicing">Centrale facturatie</span></li>
       </ul>
-      <a href="mailto:info@beatyourbest.org" class="btn-price btn-price-outline">Neem contact op</a>
+      <a href="mailto:info@beatyourbest.org" class="btn-price btn-price-outline" data-nl="Neem contact op" data-en="Contact us">Neem contact op</a>
     </div>
-
   </div>
 </section>
 
-<!-- ================================================
-     CALL TO ACTION
-     Aanpassen: cta-title, cta-sub
-     ================================================ -->
 <div class="cta-block">
-  <h2 class="cta-title">Klaar om je techniek te begrijpen?</h2>
-  <p class="cta-sub">Maak een gratis account aan en analyseer je eerste workout vandaag nog.</p>
-  <a href="https://my.beatyourbest.org/register" class="btn-cta">Gratis starten</a>
-  <a href="https://my.beatyourbest.org" class="btn-cta-ghost">Naar het portaal</a>
+  <h2 class="cta-title" data-nl="Klaar om je techniek te begrijpen?" data-en="Ready to understand your technique?">Klaar om je techniek te begrijpen?</h2>
+  <p class="cta-sub" data-nl="Maak een gratis account aan en analyseer je eerste workout vandaag nog." data-en="Create a free account and analyse your first workout today.">Maak een gratis account aan en analyseer je eerste workout vandaag nog.</p>
+  <a href="https://my.beatyourbest.org/register" class="btn-cta" data-nl="Gratis starten" data-en="Start for free">Gratis starten</a>
+  <a href="https://my.beatyourbest.org" class="btn-cta-ghost" data-nl="Naar het portaal" data-en="Go to portal">Naar het portaal</a>
 </div>
 
-<!-- ================================================
-     FOOTER
-     Aanpassen: links, jaar, contactadres
-     ================================================ -->
 <footer class="footer">
   <div class="footer-logo">© 2026 Beat Your Best · Made in the Netherlands</div>
   <div class="footer-links">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Voorwaarden</a>
-    <a href="cookies.html">Cookies</a>
-    <a href="about.html#contact">Contact</a>
-    <a href="https://my.beatyourbest.org">Portaal</a>
+    <a href="privacy.html" data-nl="Privacy" data-en="Privacy">Privacy</a>
+    <a href="terms.html" data-nl="Voorwaarden" data-en="Terms">Voorwaarden</a>
+    <a href="cookies.html" data-nl="Cookies" data-en="Cookies">Cookies</a>
+    <a href="about.html#contact" data-nl="Contact" data-en="Contact">Contact</a>
+    <a href="https://my.beatyourbest.org">my.beatyourbest.org</a>
   </div>
 </footer>
 
+<script src="main.js"></script>
 </body>
 </html>
