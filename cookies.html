@@ -13,6 +13,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google Analytics (loaded after cookie consent) -->
+  <script>
+    window.bybGaId = 'G-0WB2DKKF03';
+    function bybLoadGA() {
+      if (window._gaLoaded) return;
+      window._gaLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.bybGaId;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', window.bybGaId, { anonymize_ip: true });
+    }
+    if (localStorage.getItem('byb-cookie-consent') === 'accepted') { bybLoadGA(); }
+  </script>
 </head>
 <body>
 
@@ -128,5 +147,37 @@
 </footer>
 
 <script src="main.js"></script>
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:10000;background:var(--bg-nav);color:#fff;padding:14px 20px;box-shadow:0 -4px 20px rgba(0,0,0,0.3);border-top:1px solid rgba(255,255,255,0.1);">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+    <div style="flex:1;min-width:200px;font-size:0.85rem;line-height:1.5;">
+      <span data-nl="We gebruiken cookies om het gebruik van de site te analyseren en te verbeteren." data-en="We use cookies to analyze and improve the site experience." id="cookie-text">We gebruiken cookies om het gebruik van de site te analyseren en te verbeteren.</span>
+      <a href="privacy.html" style="color:rgba(255,255,255,0.7);text-decoration:underline;margin-left:4px;" data-nl="Privacybeleid" data-en="Privacy policy" id="cookie-link">Privacybeleid</a>
+    </div>
+    <div style="display:flex;gap:8px;flex-shrink:0;">
+      <button onclick="bybCookieConsent('declined')" style="padding:6px 16px;border-radius:6px;font-size:0.8rem;font-weight:600;cursor:pointer;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);" data-nl="Weigeren" data-en="Decline" id="cookie-decline">Weigeren</button>
+      <button onclick="bybCookieConsent('accepted')" style="padding:6px 16px;border-radius:6px;font-size:0.8rem;font-weight:600;cursor:pointer;background:#089ba6;border:none;color:#fff;" data-nl="Accepteren" data-en="Accept" id="cookie-accept">Accepteren</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  if (!localStorage.getItem('byb-cookie-consent')) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
+  var lang = document.documentElement.getAttribute('data-lang') || localStorage.getItem('byb-lang') || 'nl';
+  if (lang === 'en') {
+    ['cookie-text','cookie-link','cookie-decline','cookie-accept'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el && el.dataset.en) el.textContent = el.dataset.en;
+    });
+  }
+})();
+function bybCookieConsent(choice) {
+  localStorage.setItem('byb-cookie-consent', choice);
+  document.getElementById('cookie-banner').style.display = 'none';
+  if (choice === 'accepted') bybLoadGA();
+}
+</script>
 </body>
 </html>
