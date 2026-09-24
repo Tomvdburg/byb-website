@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!-- Pilot document for RP3 dealers: reachable by link, kept out of search engines -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="How RP3 and Beat Your Best work together: RP3 measures every stroke, Beat Your Best tells you what it means.">
+  <title>RP3 × Beat Your Best</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  /* Single light theme on purpose: both brand logos carry dark lettering on a transparent ground. */
+  :root {
+    color-scheme: light;
+    --ground: #f4f7f6;
+    --paper: #ffffff;
+    --ink: #0f1f2b;
+    --ink-2: #3d4d58;
+    --muted: #5f6f79;
+    --line: #dbe3e4;
+    --rp3: #1fb8dd;        /* RP3 cyan */
+    --rp3-deep: #0a7e9c;
+    --byb: #9acb24;        /* BYB lime */
+    --byb-deep: #5c8a00;
+    --byb-blue: #1d6fc2;
+    --night: #0f1f2b;
+    --night-2: #1a2e3c;
+    --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font: 400 16px/1.55 var(--body);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding-inline: 20px; }
+  img { max-width: 100%; height: auto; display: block; }
+  h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.02; letter-spacing: -0.005em; }
+  h2 { font-size: clamp(34px, 5vw, 52px); font-weight: 700; }
+  h3 { font-size: 24px; font-weight: 700; }
+  p { margin: 0; }
+  .eyebrow {
+    font: 600 13px/1 var(--display);
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+  }
+  .lede { font-size: 18px; color: var(--ink-2); max-width: 62ch; }
+  section { padding-block: 72px; }
+  .sec-head { display: grid; gap: 14px; margin-bottom: 36px; }
+
+  /* ---------- Hero ---------- */
+  .hero { background: var(--paper); border-bottom: 1px solid var(--line); padding-block: 40px 56px; }
+  .logos { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .logos img { height: 44px; width: auto; }
+  .logos .x { font: 500 28px/1 var(--display); color: var(--muted); }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: center; margin-top: 44px; }
+  .hero h1 { font-size: clamp(46px, 7.4vw, 86px); font-weight: 800; text-transform: uppercase; }
+  .hero h1 .rp3 { color: var(--rp3-deep); }
+  .hero h1 .byb { background: linear-gradient(90deg, var(--byb-deep), var(--byb-blue)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero .lede { margin-top: 22px; }
+  .hero .confirm {
+    margin-top: 26px; max-width: 46ch; padding-left: 14px; border-left: 4px solid var(--rp3);
+    font: 600 21px/1.3 var(--body); color: var(--ink);
+  }
+  .hero-fig { position: relative; background: var(--ground); border: 1px solid var(--line); border-radius: 6px; padding: 18px; }
+  .hero-fig img { width: 100%; max-width: 340px; margin: 0 auto; background: #fff; }
+  .hero-fig figcaption { font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .tag {
+    display: inline-block; font: 600 12px/1 var(--display); letter-spacing: .1em; text-transform: uppercase;
+    padding: 6px 9px; border-radius: 3px;
+  }
+  .tag.rp3 { background: #e0f6fb; color: var(--rp3-deep); }
+  .tag.byb { background: #eef7d8; color: var(--byb-deep); }
+
+  /* ---------- One proposition: layers ---------- */
+  .chain { display: grid; grid-template-columns: 1fr 1fr 1.25fr; gap: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .link { padding: 28px 26px 30px; display: grid; gap: 12px; align-content: start; position: relative; }
+  .link + .link { border-left: 1px solid var(--line); }
+  .link .step { font: 700 64px/0.9 var(--display); color: var(--line); }
+  .link.l1 { border-top: 5px solid var(--rp3); }
+  .link.l2 { border-top: 5px solid var(--rp3-deep); }
+  .link.l3 { border-top: 5px solid var(--byb); }
+  .link .q { font: 700 26px/1.05 var(--display); }
+  .link ul { margin: 0; padding-left: 18px; color: var(--ink-2); font-size: 15px; display: grid; gap: 4px; }
+  .link .who { font-size: 13px; color: var(--muted); }
+  .chain-note { margin-top: 20px; font-size: 15px; color: var(--ink-2); max-width: 70ch; }
+
+  /* ---------- Split: what each does ---------- */
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .card { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 26px; display: grid; gap: 16px; align-content: start; }
+  .card .head { display: flex; align-items: center; gap: 12px; justify-content: space-between; }
+  .card .head img { height: 28px; width: auto; }
+  .ticks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .ticks li { display: grid; grid-template-columns: 22px 1fr; gap: 8px; font-size: 15.5px; color: var(--ink-2); }
+  .ticks li::before { content: ""; width: 10px; height: 10px; margin-top: 7px; border-radius: 2px; background: var(--rp3); }
+  .card.byb .ticks li::before { background: var(--byb); }
+  .ticks b { color: var(--ink); font-weight: 600; }
+  .together {
+    grid-column: 1 / -1; background: var(--night); color: #fff; border-radius: 6px; padding: 26px 28px;
+    display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center;
+  }
+  .together .plus { font: 800 64px/0.8 var(--display); background: linear-gradient(135deg, var(--rp3), var(--byb)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .together p { font-size: 18px; color: #dfe8ec; }
+  .together b { color: #fff; }
+
+  /* ---------- Portal vs BYB table ---------- */
+  .cmp-scroll { overflow-x: auto; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; }
+  .cmp { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 15px; }
+  .cmp th, .cmp td { text-align: left; vertical-align: top; padding: 14px 18px; border-bottom: 1px solid var(--line); }
+  .cmp thead th { background: var(--ground); padding-block: 12px; }
+  .cmp thead th:first-child { font: 600 13px/1 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .cmp tbody th { font: 700 19px/1.15 var(--display); width: 26%; }
+  .cmp td { width: 37%; color: var(--ink-2); padding-left: 38px; position: relative; }
+  .cmp tbody tr:last-child > * { border-bottom: 0; }
+  .cmp td:last-child { background: #f7fbef; color: var(--ink); }
+  /* Status marker: filled = does it, half = data only, empty = not its role */
+  .cmp td::before, .cmp-legend .k { content: ""; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--rp3-deep); }
+  .cmp td::before { position: absolute; left: 16px; top: 18px; }
+  .cmp td.yes::before, .cmp-legend .k.yes { background: var(--rp3-deep); }
+  .cmp td:last-child::before { border-color: var(--byb-deep); background: var(--byb-deep); }
+  .cmp td.part::before, .cmp-legend .k.part { background: linear-gradient(90deg, var(--rp3-deep) 50%, transparent 50%); }
+  .cmp td.no::before, .cmp-legend .k.no { background: transparent; }
+  /* Extra point inside one cell, with its own dot */
+  .cmp td .also { display: block; position: relative; margin-top: 10px; }
+  .cmp td .also::before { content: ""; position: absolute; left: -22px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--byb-deep); border: 2px solid var(--byb-deep); }
+  .cmp-legend { margin-top: 12px; font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
+  .cmp-legend .k { display: inline-block; margin-left: 10px; }
+  .cmp-legend .k:first-child { margin-left: 0; }
+
+  /* ---------- Connect steps ---------- */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: s; }
+  .stp { display: grid; gap: 10px; align-content: start; }
+  .stp .n { font: 700 15px/1 var(--mono); color: var(--byb-deep); }
+  .stp .icon { width: 56px; height: 56px; border-radius: 50%; background: var(--paper); border: 1px solid var(--line); display: grid; place-items: center; }
+  .stp .icon svg { width: 28px; height: 28px; }
+  .stp h3 { font-size: 22px; }
+  .stp p { color: var(--ink-2); font-size: 15px; }
+
+  /* ---------- Gallery ---------- */
+  .gallery { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+  .shot { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 16px; display: grid; gap: 12px; align-content: start; }
+  .shot .frame { background: #fff; border-radius: 4px; overflow: hidden; display: grid; place-items: center; }
+  .shot h3 { font-size: 20px; }
+  .shot p { font-size: 14.5px; color: var(--ink-2); }
+  .span-2 { grid-column: span 2; }
+  .span-3 { grid-column: span 3; }
+  .span-4 { grid-column: span 4; }
+
+  /* ---------- Bled proof (dark band, echoes the Bled analysis) ---------- */
+  .bled { background: var(--night); color: #e8eef1; }
+  .bled .eyebrow { color: var(--byb); }
+  .bled h2 { color: #fff; }
+  .bled .lede { color: #b9c7ce; }
+  .bled-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 44px; align-items: start; }
+  .tiers { display: grid; gap: 10px; }
+  .tier { display: grid; grid-template-columns: 150px 1fr 58px; gap: 12px; align-items: center; font-size: 14px; }
+  .tier .lbl { color: #b9c7ce; }
+  .tier .bar { height: 22px; background: var(--night-2); border-radius: 2px; overflow: hidden; }
+  .tier .bar i { display: block; height: 100%; background: #4b6070; }
+  .tier .val { font: 500 14px/1 var(--mono); text-align: right; color: #dfe8ec; font-variant-numeric: tabular-nums; }
+  .tier.top .lbl { color: #fff; font-weight: 600; }
+  .tier.top .bar i { background: var(--byb); }
+  .tier.top .val { color: var(--byb); }
+  .tiers-note { font-size: 12.5px; color: #8fa2ad; margin-top: 8px; }
+  .big-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #2c4252; border: 1px solid #2c4252; border-radius: 4px; overflow: hidden; }
+  .big-stats > div { background: var(--night-2); padding: 20px; display: grid; gap: 6px; }
+  .big-stats .num { font: 700 52px/0.9 var(--display); color: var(--byb); }
+  .big-stats .num small { font-size: 26px; }
+  .big-stats p { font-size: 14px; color: #b9c7ce; }
+  .claim { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; border-top: 1px solid #2c4252; padding-top: 36px; }
+  .claim h3 { font-size: clamp(28px, 3.8vw, 40px); color: #fff; }
+  .claim h3 em { font-style: normal; color: var(--byb); }
+  .claim .txt { display: grid; gap: 14px; color: #c9d5db; font-size: 16px; }
+  .claim .proof { border-left: 4px solid var(--byb); padding-left: 16px; font: 600 21px/1.35 var(--body); color: #fff; }
+  .claim .proof em { font-style: normal; color: var(--byb); }
+  .claim .src { font-size: 12.5px; color: #8fa2ad; }
+  .claim a { color: var(--byb); }
+
+  /* ---------- Pilot ---------- */
+  .pilot-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .who-card { background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 24px; display: grid; gap: 12px; align-content: start; }
+  .who-card .role { font: 600 13px/1 var(--display); letter-spacing: .12em; text-transform: uppercase; }
+  .who-card:nth-child(1) .role { color: var(--rp3-deep); }
+  .who-card:nth-child(2) .role { color: var(--byb-deep); }
+  .who-card:nth-child(3) .role { color: var(--byb-blue); }
+  .who-card h3 { font-size: 23px; }
+  .who-card p, .who-card li { font-size: 15px; color: var(--ink-2); }
+  .who-card ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+  .courses { margin-top: 20px; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 22px 24px; display: grid; grid-template-columns: 170px 1fr; gap: 24px; align-items: center; }
+  .courses img { width: 170px; }
+  .courses ul { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .courses li { font-size: 13.5px; border: 1px solid var(--line); border-radius: 3px; padding: 5px 9px; color: var(--ink-2); }
+
+  /* ---------- Footer ---------- */
+  footer { background: var(--paper); border-top: 1px solid var(--line); padding-block: 36px 44px; }
+  .foot { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .foot .logos img { height: 34px; }
+  .foot .links { display: grid; gap: 4px; font-size: 15px; }
+  .foot a { color: var(--byb-blue); font-weight: 500; text-decoration: none; }
+  .foot a:hover, .foot a:focus-visible { text-decoration: underline; }
+  a:focus-visible { outline: 2px solid var(--byb-blue); outline-offset: 2px; }
+
+  /* ---------- Responsive ---------- */
+  @media screen and (max-width: 880px) {
+    .hero-grid, .bled-grid, .claim { grid-template-columns: 1fr; }
+    .chain, .steps, .pilot-grid { grid-template-columns: 1fr; }
+    .link + .link { border-left: 0; border-top: 1px solid var(--line); }
+    .duo { grid-template-columns: 1fr; }
+    .gallery { grid-template-columns: 1fr 1fr; }
+    .span-2, .span-3, .span-4 { grid-column: span 1; }
+    .gallery .wide { grid-column: 1 / -1; }
+  }
+  @media screen and (max-width: 560px) {
+    section { padding-block: 52px; }
+    .gallery { grid-template-columns: 1fr; }
+    .together { grid-template-columns: 1fr; }
+    .tier { grid-template-columns: 104px 1fr 50px; font-size: 13px; }
+    .big-stats { grid-template-columns: 1fr; }
+    .courses { grid-template-columns: 1fr; }
+    .logos img { height: 36px; }
+  }
+  /* ---------- Language switch ---------- */
+  .lang { margin-left: auto; display: flex; gap: 6px; font: 600 14px/1 var(--display); letter-spacing: .1em; }
+  .lang a { color: var(--muted); text-decoration: none; padding: 6px 8px; border: 1px solid var(--line); border-radius: 3px; }
+  .lang a[aria-current="page"] { color: var(--ink); border-color: var(--ink); }
+  .lang a:hover, .lang a:focus-visible { color: var(--ink); }
+
+  /* ---------- Print / PDF: keep the desktop layout, scaled to A4 ---------- */
+  @page { size: A4; margin: 10mm; }
+  @media print {
+    :root { --ground: #ffffff; }
+    html { zoom: 0.6; }
+    footer { padding-block: 14px 0; }
+    .pilot { padding-bottom: 20px; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .lang { display: none; }
+    /* Gradient text renders with a stray box in PDF: use the solid brand colour */
+    .hero h1 .byb { background: none; color: var(--byb-deep); }
+    section { padding-block: 36px; }
+    .hero { padding-block: 24px 36px; }
+    .sec-head { break-after: avoid; }
+    .link, .card, .together, .cmp tr, .stp, .shot, .tiers, .big-stats, .claim, .who-card, .courses { break-inside: avoid; }
+    .cmp-scroll { overflow: visible; }
+  }
+</style>
+</head>
+<body>
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <div class="logos">
+      <img src="assets/rp3/rp3-logo.png" alt="RP3 Rowing">
+      <span class="x" aria-hidden="true">×</span>
+      <img src="assets/rp3/byb-logo.png" alt="Beat Your Best">
+      <nav class="lang" aria-label="Language"><a href="rp3.html" aria-current="page" lang="en">EN</a><a href="rp3-de.html" lang="de">DE</a></nav>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Pilot programme 2026 · for selected RP3 owners and clubs</p>
+        <h1 style="margin-top:14px"><span class="rp3">RP3 measures</span> every stroke.<br><span class="byb">Beat Your Best</span> tells you what it means.</h1>
+        <p class="confirm">You chose the RP3 for a reason: biomechanically, it is the best erg to train on if you want to row faster on the water.</p>
+        <p class="lede">Your RP3 already records the full force curve of every stroke you take. Beat Your Best turns that data into a coach: how you rowed, where you lose speed when it gets tough, and what to work on next.</p>
+      </div>
+      <figure class="hero-fig" style="margin:0">
+        <img src="assets/rp3/force-curve.png" alt="Force curve chart: your average stroke, your best 15% of strokes and a reference curve, over stroke length in cm">
+        <figcaption>One workout, thousands of strokes: your average stroke vs. your best strokes vs. the reference curve.</figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============ ONE CHAIN ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">One proposition, three links</p>
+      <h2>From the erg to your next session</h2>
+      <p class="lede">RP3 and Beat Your Best don't overlap. Each link does one job, and each one builds on the last.</p>
+    </div>
+    <div class="chain">
+      <div class="link l1">
+        <span class="tag rp3">RP3 Dynamic</span>
+        <p class="q">You row.</p>
+        <ul>
+          <li>Your best, most effective stroke</li>
+          <li>Moves like a boat</li>
+          <li>Every stroke captured in detail</li>
+        </ul>
+        <p class="who">The machine</p>
+      </div>
+      <div class="link l2">
+        <span class="tag rp3">RP3 Portal</span>
+        <p class="q">What you did.</p>
+        <ul>
+          <li>Every workout stored and synced</li>
+          <li>Your logbook: distance, split, time</li>
+          <li>Connects to Beat Your Best</li>
+        </ul>
+        <p class="who">Your data, safely kept</p>
+      </div>
+      <div class="link l3">
+        <span class="tag byb">Beat Your Best</span>
+        <p class="q">How you did it, and what to do next.</p>
+        <ul>
+          <li>Stroke quality, consistency, predictability</li>
+          <li>What fatigue does to your stroke</li>
+          <li>Your profile and focus point</li>
+          <li>Progression vs. intensity and goals</li>
+          <li>Crew rankings, boat positions, race plan</li>
+        </ul>
+        <p class="who">Your personal coach</p>
+      </div>
+    </div>
+    <p class="chain-note">Without the RP3 there is no stroke-level data to analyse. Without Beat Your Best most of that data is never used. Together they make the RP3 the most complete coaching tool on the market.</p>
+  </div>
+</section>
+
+<!-- ============ WHO DOES WHAT ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="duo">
+      <div class="card rp3">
+        <div class="head"><img src="assets/rp3/rp3-logo.png" alt="RP3"><span class="tag rp3">Captures</span></div>
+        <h3>The most detailed stroke data on any erg</h3>
+        <ul class="ticks">
+          <li><span><b>Dynamic feel</b> close to rowing on the water</span></li>
+          <li><span><b>Forceless change of direction</b>: train the exact movement that matters most</span></li>
+          <li><span><b>Full connected force curve</b> for every single stroke</span></li>
+          <li><span><b>The right sequence of movement</b>, trained stroke after stroke</span></li>
+          <li><span><b>Automatic sync</b> to your RP3 account</span></li>
+          <li><span><b>Crew data</b> to use for crew coaching</span></li>
+        </ul>
+      </div>
+      <div class="card byb">
+        <div class="head"><img src="assets/rp3/byb-logo.png" alt="Beat Your Best"><span class="tag byb">Explains</span></div>
+        <h3>Turns that data into coaching</h3>
+        <ul class="ticks">
+          <li><span><b>Automatic report</b> for every workout: steady state, intervals, ergo test</span></li>
+          <li><span><b>Stroke quality</b>: how repeatable and predictable your stroke is</span></li>
+          <li><span><b>Fatigue analysis</b>: what changes in your stroke when it gets hard</span></li>
+          <li><span><b>Progression</b>: the same workout type compared over weeks and months</span></li>
+          <li><span><b>Relevant, useful coaching</b>: one clear focus point and targets for your next sessions</span></li>
+          <li><span><b>Crew rankings</b> based on data, not on gut feeling</span></li>
+          <li><span><b>Crew coaching</b>: who needs attention, line-ups and boat positions</span></li>
+        </ul>
+      </div>
+      <div class="together">
+        <span class="plus" aria-hidden="true">+</span>
+        <p><b>Your RP3 already has the answers.</b> Beat Your Best asks the right questions of the data: not just <i>how far and how fast</i>, but <i>how well, how consistently, and what to change</i>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTAL VS BYB ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Where the portal stops and Beat Your Best starts</p>
+      <h2>The RP3 portal shows your data. Beat Your Best reads it for you.</h2>
+      <p class="lede">The RP3 portal is an excellent logbook with every stroke on record. But turning thousands of strokes into a conclusion is left to you. That is the work Beat Your Best does.</p>
+    </div>
+    <div class="cmp-scroll">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th scope="col">The question you ask</th>
+            <th scope="col"><span class="tag rp3">RP3 Portal</span></th>
+            <th scope="col"><span class="tag byb">Beat Your Best</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">What did I row?</th>
+            <td class="yes">Distance, time, split, rate, power: every workout logged</td>
+            <td class="yes">The same key metrics, as the starting point of the analysis</td>
+          </tr>
+          <tr>
+            <th scope="row">What does my stroke look like?</th>
+            <td class="yes">The force curve, stroke by stroke</td>
+            <td class="yes">Your average stroke vs. your best 15% vs. a reference curve</td>
+          </tr>
+          <tr>
+            <th scope="row">What kind of workout was this?</th>
+            <td class="part">You know, the portal just stores it</td>
+            <td class="yes">Recognised automatically: steady state, long or short intervals, ergo test<span class="also">Target and reference values</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Is my stroke consistent?</th>
+            <td class="part">The numbers are there, per stroke; you compare them yourself</td>
+            <td class="yes">Consistency and predictability scored for every workout</td>
+          </tr>
+          <tr>
+            <th scope="row">What happens when I get tired?</th>
+            <td class="part">Hidden in the data</td>
+            <td class="yes">Shows which part of your stroke breaks down first under fatigue<span class="also">Automatic recognition in one of the 7 rowing profiles</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Am I improving?</th>
+            <td class="part">A history of separate workouts</td>
+            <td class="yes">Like-for-like comparison: the same workout type over weeks and months</td>
+          </tr>
+          <tr>
+            <th scope="row">What should I work on next?</th>
+            <td class="no">Not what the portal is built for</td>
+            <td class="yes">One focus point, ergo targets and a race plan per distance<span class="also">Connects your different workout types to each other, with pacing advice</span></td>
+          </tr>
+          <tr>
+            <th scope="row">How is my crew doing?</th>
+            <td class="part">Workout data of the whole crew in one place</td>
+            <td class="yes">Who needs attention, crew force curves, coach tips, overviews, rankings, boat positions and race plan</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cmp-legend"><span class="k yes"></span>does it <span class="k part"></span>the data is there, the conclusion is up to you <span class="k no"></span>not its role</p>
+  </div>
+</section>
+
+<!-- ============ CONNECT ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Getting started</p>
+      <h2>Connected in one minute. Then just row.</h2>
+    </div>
+    <div class="steps">
+      <div class="stp">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0a7e9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></div>
+        <span class="n">STEP 1</span>
+        <h3>Link your RP3 account</h3>
+        <p>Log in once with your RP3 account from Beat Your Best. No exports, no file uploads.</p>
+      </div>
+      <div class="stp">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0a7e9c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18"/><path d="M6 17l3-7 4 3 5-8"/><circle cx="18" cy="5" r="1.5"/></svg></div>
+        <span class="n">STEP 2</span>
+        <h3>Row as you always do</h3>
+        <p>Train on your RP3. Your workout syncs to the RP3 portal like it always has.</p>
+      </div>
+      <div class="stp">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#5c8a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+        <span class="n">STEP 3</span>
+        <h3>Your report is waiting</h3>
+        <p>Beat Your Best recognises the workout type and builds your analysis automatically.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT YOU SEE ============ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">What you get after every workout</p>
+      <h2>From numbers to a clear next step</h2>
+    </div>
+    <div class="gallery">
+      <div class="shot span-2">
+        <div class="frame"><img src="assets/rp3/key-metrics.png" alt="Key metrics: 45 min, 11,292 m, 21.9 spm, 1:59.5 split, 191.2 W, 146.4 cm stroke length"></div>
+        <h3>What you did</h3>
+        <p>Distance, split, rate, power and stroke length at a glance.</p>
+      </div>
+      <div class="shot span-4">
+        <div class="frame"><img src="assets/rp3/fatigue.png" alt="Line chart of stroke predictability (R²) across a workout; one line drops sharply towards the end"></div>
+        <h3>How you did it</h3>
+        <p>How predictable your stroke stays over the session, and where it starts to break down under fatigue.</p>
+      </div>
+      <div class="shot span-3">
+        <div class="frame"><img src="assets/rp3/consistency.png" alt="Consistency challenge: 15 consecutive strokes at the same split (gold), 33 consecutive strokes at the same energy per stroke (silver)"></div>
+        <h3>How consistent you are</h3>
+        <p>The Consistency Challenge: how many strokes in a row can you hold exactly the same?</p>
+      </div>
+      <div class="shot span-3">
+        <div class="frame"><img src="assets/rp3/focus.png" alt="Your focus: primary, prevent degradation of stroke length; your stroke length decreases under fatigue"></div>
+        <h3>What to do next</h3>
+        <p>One focus point for your coming sessions, based on your own data.</p>
+      </div>
+      <div class="shot span-3 wide">
+        <div class="frame"><img src="assets/rp3/crew-force.png" alt="Crew force curve analysis: force curves of all crew members over stroke length"></div>
+        <h3>For clubs: the whole crew in one view</h3>
+        <p>Compare every rower's force curve, profile and training volume in the Crew Coach dashboard.</p>
+      </div>
+      <div class="shot span-3 wide">
+        <div class="frame"><img src="assets/rp3/boat.png" alt="Boat position calculation: eight rowers placed in a boat based on their energetic profile"></div>
+        <h3>For clubs: who sits where</h3>
+        <p>Boat positions and line-up alternatives, calculated from each rower's energetic profile.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLED PROOF ============ -->
+<section class="bled">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Proof from the water · World Rowing Masters Regatta, Bled 2026</p>
+      <h2>Only 8.3% of masters win consistently</h2>
+      <p class="lede">We analysed every official result from Bled 2026: 4,303 rowers and 6,245 timed boats. Two thirds of the field never won a heat. A small group won again and again.</p>
+    </div>
+    <div class="bled-grid">
+      <div>
+        <div class="tiers" role="img" aria-label="Share of rowers per result group at Bled 2026: won more than twice 8.3%, won once or twice 20.6%, front third but never won 3.9%, middle third 29.3%, back third 37.9%">
+          <div class="tier top"><span class="lbl">Won more than 2×</span><span class="bar"><i style="width:21.9%"></i></span><span class="val">8.3%</span></div>
+          <div class="tier"><span class="lbl">Won 1–2×</span><span class="bar"><i style="width:54.4%"></i></span><span class="val">20.6%</span></div>
+          <div class="tier"><span class="lbl">Front, never won</span><span class="bar"><i style="width:10.3%"></i></span><span class="val">3.9%</span></div>
+          <div class="tier"><span class="lbl">Middle of the field</span><span class="bar"><i style="width:77.3%"></i></span><span class="val">29.3%</span></div>
+          <div class="tier"><span class="lbl">Back of the field</span><span class="bar"><i style="width:100%"></i></span><span class="val">37.9%</span></div>
+        </div>
+        <p class="tiers-note">Share of all 4,303 rowers. Men and women are distributed almost identically.</p>
+      </div>
+      <div class="big-stats">
+        <div><span class="num">359</span><p>rowers won more than twice: on average 4.4 wins (men) and 4.1 (women)</p></div>
+        <div><span class="num">0.11<small>s</small></span><p>decided the men's H 8+ — margins are measured in strokes, not metres</p></div>
+        <div><span class="num">~1<small> in 4</small></span><p>of their wins was also the fastest time of the entire field (21% men, 26% women)</p></div>
+        <div><span class="num">67%</span><p>of all rowers never won a heat at all</p></div>
+      </div>
+    </div>
+    <div class="claim">
+      <h3>The gap to the top is not more metres. It's <em>better strokes</em>, held for longer.</h3>
+      <div class="txt">
+        <p>At this level everybody trains hard. What separates the top group is how well they keep their stroke together when it hurts: consistency, and knowing exactly what breaks down under fatigue.</p>
+        <p>That is precisely what RP3 measures and Beat Your Best analyses.</p>
+        <p class="proof">Top masters rowers in categories D, E and F already train on RP3 with Beat Your Best, and they win. <em>It works.</em></p>
+        <p class="src">Source: official RegattaCentral results, World Rowing Masters Regatta 2026. Full analysis: <a href="https://clublearning.nl/tools/bled-2026-in-cijfers">clublearning.nl/tools/bled-2026-in-cijfers</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PILOT ============ -->
+<section class="pilot">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">The pilot</p>
+      <h2>A small group, personally selected</h2>
+      <p class="lede">RP3 dealers in Germany, the United Kingdom and Australia each invite 5 to 10 of their most engaged RP3 customers, both individual rowers and clubs, to join the Beat Your Best pilot.</p>
+    </div>
+    <div class="pilot-grid">
+      <div class="who-card">
+        <span class="role">Your RP3 dealer</span>
+        <h3>Selects and invites you</h3>
+        <p>You already own an RP3, or your club does. Your dealer knows you train seriously and gets you in early.</p>
+      </div>
+      <div class="who-card">
+        <span class="role">Rower</span>
+        <h3>Self Coach</h3>
+        <ul>
+          <li>Automatic analysis of every workout</li>
+          <li>Your rowing profile and progress over time</li>
+          <li>A personal focus point, ergo targets and race plan</li>
+        </ul>
+      </div>
+      <div class="who-card">
+        <span class="role">Club or coach</span>
+        <h3>Crew Coach</h3>
+        <ul>
+          <li>All rowers of one or more crews in one dashboard</li>
+          <li>Who needs attention, and is the training paying off?</li>
+          <li>Crew force curves and boat position calculation</li>
+        </ul>
+      </div>
+    </div>
+    <div class="courses">
+      <img src="assets/rp3/clublearning-logo.png" alt="ClubLearning">
+      <div>
+        <p><b>Support with online courses.</b> Learn to read your own data and apply the data-driven coaching approach, at your own pace.</p>
+        <ul>
+          <li>Beat Your Best: Coaching with Data</li>
+          <li>Training with the RP3 Dynamic Rowing Machine</li>
+          <li>Rowing Technique</li>
+          <li>Better Training for Master Rowers</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="logos">
+      <img src="assets/rp3/rp3-logo.png" alt="RP3 Rowing">
+      <span class="x" aria-hidden="true">×</span>
+      <img src="assets/rp3/byb-logo.png" alt="Beat Your Best">
+    </div>
+    <div class="links">
+      <a href="https://beatyourbest.org">beatyourbest.org</a>
+      <a href="https://clublearning.nl">clublearning.nl</a>
+      <span style="font-size:13px;color:var(--muted)">Beat Your Best · part of Dutch Digital Sport Innovation (DDSI)</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
