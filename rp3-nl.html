@@ -220,6 +220,23 @@
     .span-2, .span-3, .span-4 { grid-column: span 1; }
     .gallery .wide { grid-column: 1 / -1; }
   }
+  /* Phone: the comparison table becomes stacked blocks, so nothing hides off to the right */
+  @media screen and (max-width: 700px) {
+    .cmp { min-width: 0; }
+    .cmp-scroll { overflow-x: visible; }
+    .cmp thead { display: none; }
+    .cmp, .cmp tbody, .cmp tr, .cmp th, .cmp td { display: block; width: auto; }
+    .cmp th, .cmp td { border-bottom: 0; }
+    .cmp tbody tr { border-bottom: 1px solid var(--line); }
+    .cmp tbody tr:last-child { border-bottom: 0; }
+    .cmp tbody th { width: auto; padding: 16px 16px 4px; }
+    .cmp td { padding: 30px 16px 12px 38px; }
+    .cmp td:last-child { padding-bottom: 16px; }
+    .cmp td::before { top: 34px; }
+    .cmp td::after { position: absolute; top: 12px; left: 16px; font: 600 11px/1 var(--display); letter-spacing: .1em; text-transform: uppercase; }
+    .cmp td:nth-of-type(1)::after { content: "RP3 Portal"; color: var(--rp3-deep); }
+    .cmp td:nth-of-type(2)::after { content: "Beat Your Best"; color: var(--byb-deep); }
+  }
   @media screen and (max-width: 560px) {
     section { padding-block: 52px; }
     .gallery { grid-template-columns: 1fr; }
