@@ -211,7 +211,7 @@
   a:focus-visible { outline: 2px solid var(--byb-blue); outline-offset: 2px; }
 
   /* ---------- Responsive ---------- */
-  @media (max-width: 880px) {
+  @media screen and (max-width: 880px) {
     .hero-grid, .bled-grid, .claim { grid-template-columns: 1fr; }
     .chain, .steps, .pilot-grid { grid-template-columns: 1fr; }
     .link + .link { border-left: 0; border-top: 1px solid var(--line); }
@@ -220,7 +220,7 @@
     .span-2, .span-3, .span-4 { grid-column: span 1; }
     .gallery .wide { grid-column: 1 / -1; }
   }
-  @media (max-width: 560px) {
+  @media screen and (max-width: 560px) {
     section { padding-block: 52px; }
     .gallery { grid-template-columns: 1fr; }
     .together { grid-template-columns: 1fr; }
@@ -228,6 +228,29 @@
     .big-stats { grid-template-columns: 1fr; }
     .courses { grid-template-columns: 1fr; }
     .logos img { height: 36px; }
+  }
+  /* ---------- Language switch ---------- */
+  .lang { margin-left: auto; display: flex; gap: 6px; font: 600 14px/1 var(--display); letter-spacing: .1em; }
+  .lang a { color: var(--muted); text-decoration: none; padding: 6px 8px; border: 1px solid var(--line); border-radius: 3px; }
+  .lang a[aria-current="page"] { color: var(--ink); border-color: var(--ink); }
+  .lang a:hover, .lang a:focus-visible { color: var(--ink); }
+
+  /* ---------- Print / PDF: keep the desktop layout, scaled to A4 ---------- */
+  @page { size: A4; margin: 10mm; }
+  @media print {
+    :root { --ground: #ffffff; }
+    html { zoom: 0.6; }
+    footer { padding-block: 14px 0; }
+    .pilot { padding-bottom: 20px; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .lang { display: none; }
+    /* Gradient text renders with a stray box in PDF: use the solid brand colour */
+    .hero h1 .byb { background: none; color: var(--byb-deep); }
+    section { padding-block: 36px; }
+    .hero { padding-block: 24px 36px; }
+    .sec-head { break-after: avoid; }
+    .link, .card, .together, .cmp tr, .stp, .shot, .tiers, .big-stats, .claim, .who-card, .courses { break-inside: avoid; }
+    .cmp-scroll { overflow: visible; }
   }
 </style>
 </head>
@@ -239,6 +262,7 @@
       <img src="assets/rp3/rp3-logo.png" alt="RP3 Rowing">
       <span class="x" aria-hidden="true">×</span>
       <img src="assets/rp3/byb-logo.png" alt="Beat Your Best">
+      <nav class="lang" aria-label="Language"><a href="rp3.html" aria-current="page" lang="en">EN</a><a href="rp3-de.html" lang="de">DE</a></nav>
     </div>
     <div class="hero-grid">
       <div>
@@ -515,7 +539,7 @@
 </section>
 
 <!-- ============ PILOT ============ -->
-<section>
+<section class="pilot">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">The pilot</p>
