@@ -220,6 +220,23 @@
     .span-2, .span-3, .span-4 { grid-column: span 1; }
     .gallery .wide { grid-column: 1 / -1; }
   }
+  /* Phone: the comparison table becomes stacked blocks, so nothing hides off to the right */
+  @media screen and (max-width: 700px) {
+    .cmp { min-width: 0; }
+    .cmp-scroll { overflow-x: visible; }
+    .cmp thead { display: none; }
+    .cmp, .cmp tbody, .cmp tr, .cmp th, .cmp td { display: block; width: auto; }
+    .cmp th, .cmp td { border-bottom: 0; }
+    .cmp tbody tr { border-bottom: 1px solid var(--line); }
+    .cmp tbody tr:last-child { border-bottom: 0; }
+    .cmp tbody th { width: auto; padding: 16px 16px 4px; }
+    .cmp td { padding: 30px 16px 12px 38px; }
+    .cmp td:last-child { padding-bottom: 16px; }
+    .cmp td::before { top: 34px; }
+    .cmp td::after { position: absolute; top: 12px; left: 16px; font: 600 11px/1 var(--display); letter-spacing: .1em; text-transform: uppercase; }
+    .cmp td:nth-of-type(1)::after { content: "RP3 Portal"; color: var(--rp3-deep); }
+    .cmp td:nth-of-type(2)::after { content: "Beat Your Best"; color: var(--byb-deep); }
+  }
   @media screen and (max-width: 560px) {
     section { padding-block: 52px; }
     .gallery { grid-template-columns: 1fr; }
@@ -229,6 +246,9 @@
     .courses { grid-template-columns: 1fr; }
     .logos img { height: 36px; }
   }
+  /* ---------- Note: app language availability (non-EN/NL versions) ---------- */
+  .lang-note { margin-top: 20px; padding: 14px 18px; background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--byb-blue); border-radius: 6px; font-size: 15px; color: var(--ink); }
+
   /* ---------- Language switch ---------- */
   .lang { margin-left: auto; display: flex; gap: 6px; font: 600 14px/1 var(--display); letter-spacing: .1em; }
   .lang a { color: var(--muted); text-decoration: none; padding: 6px 8px; border: 1px solid var(--line); border-radius: 3px; }
@@ -262,7 +282,7 @@
       <img src="assets/rp3/rp3-logo.png" alt="RP3 Rowing">
       <span class="x" aria-hidden="true">×</span>
       <img src="assets/rp3/byb-logo.png" alt="Beat Your Best">
-      <nav class="lang" aria-label="Sprache"><a href="rp3.html" lang="en">EN</a><a href="rp3-de.html" aria-current="page" lang="de">DE</a></nav>
+      <nav class="lang" aria-label="Sprache"><a href="rp3.html" lang="en">EN</a><a href="rp3-nl.html" lang="nl">NL</a><a href="rp3-de.html" aria-current="page" lang="de">DE</a><a href="rp3-fr.html" lang="fr">FR</a><a href="rp3-es.html" lang="es">ES</a></nav>
     </div>
     <div class="hero-grid">
       <div>
@@ -571,6 +591,7 @@
         </ul>
       </div>
     </div>
+    <p class="lang-note">Beat Your Best ist nur auf Niederländisch und Englisch verfügbar.</p>
     <div class="courses">
       <img src="assets/rp3/clublearning-logo.png" alt="ClubLearning">
       <div>
