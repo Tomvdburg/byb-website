@@ -30,6 +30,8 @@
       window.gtag = gtag;
       gtag('js', new Date());
       gtag('config', window.bybGaId, { anonymize_ip: true });
+      // Same measurement ID as my.beatyourbest.org, so one visit stays one session across both sites
+      gtag('config', 'G-TCD0EVD1Y3', { anonymize_ip: true });
     }
     if (localStorage.getItem('byb-cookie-consent') === 'accepted') { bybLoadGA(); }
   </script>
