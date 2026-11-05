@@ -29,6 +29,8 @@
       window.gtag = gtag;
       gtag('js', new Date());
       gtag('config', window.bybGaId, { anonymize_ip: true });
+      // Same measurement ID as my.beatyourbest.org, so one visit stays one session across both sites
+      gtag('config', 'G-TCD0EVD1Y3', { anonymize_ip: true });
     }
     if (localStorage.getItem('byb-cookie-consent') === 'accepted') { bybLoadGA(); }
   </script>
@@ -58,7 +60,7 @@
 </div>
 
 <div class="prose">
-  <p class="prose-updated" data-nl="Laatst bijgewerkt: 19 maart 2026" data-en="Last updated: 19 March 2026">Laatst bijgewerkt: 19 maart 2026</p>
+  <p class="prose-updated" data-nl="Laatst bijgewerkt: 4 november 2026" data-en="Last updated: 4 November 2026">Laatst bijgewerkt: 4 november 2026</p>
 
   <h2 data-nl="1. Wie zijn wij" data-en="1. Who we are">1. Wie zijn wij</h2>
   <p data-nl="Beat Your Best is een roeiprestatie-analyseplatform gevestigd in Nederland. Wij bieden atleten en coaches inzicht in hun roeiprestaties op basis van data van RP3- en Concept2-ergometers." data-en="Beat Your Best is a rowing performance analysis platform based in the Netherlands. We provide athletes and coaches with insight into their rowing performance based on data from RP3 and Concept2 ergometers.">Beat Your Best is een roeiprestatie-analyseplatform gevestigd in Nederland. Wij bieden atleten en coaches inzicht in hun roeiprestaties op basis van data van RP3- en Concept2-ergometers.</p>
@@ -101,6 +103,7 @@
   <ul>
     <li><span data-nl="IP-adres, browsertype en besturingssysteem" data-en="IP address, browser type and operating system">IP-adres, browsertype en besturingssysteem</span></li>
     <li><span data-nl="Sessie-informatie en taalvoorkeur" data-en="Session information and language preference">Sessie-informatie en taalvoorkeur</span></li>
+    <li><span data-nl="Gebruiksgegevens via Google Analytics, alleen met je toestemming: bezochte pagina's, gebruikte functies en een pseudoniem gebruikersnummer" data-en="Usage data via Google Analytics, only with your consent: pages visited, features used and a pseudonymous user number">Gebruiksgegevens via Google Analytics, alleen met je toestemming: bezochte pagina's, gebruikte functies en een pseudoniem gebruikersnummer</span></li>
   </ul>
 
   <h2 data-nl="3. Grondslag voor verwerking" data-en="3. Legal basis for processing">3. Grondslag voor verwerking</h2>
@@ -108,7 +111,7 @@
   <ul>
     <li><strong data-nl="Uitvoering van de overeenkomst (Art. 6 lid 1 sub b):" data-en="Performance of the contract (Art. 6(1)(b)):">Uitvoering van de overeenkomst (Art. 6 lid 1 sub b):</strong> <span data-nl="het aanmaken van je account, het leveren van analyses en het verwerken van betalingen." data-en="creating your account, providing analyses and processing payments.">het aanmaken van je account, het leveren van analyses en het verwerken van betalingen.</span></li>
     <li><strong data-nl="Gerechtvaardigd belang (Art. 6 lid 1 sub f):" data-en="Legitimate interest (Art. 6(1)(f)):">Gerechtvaardigd belang (Art. 6 lid 1 sub f):</strong> <span data-nl="het verbeteren van het Platform, het waarborgen van de beveiliging en het genereren van geanonimiseerde statistieken." data-en="improving the Platform, ensuring security and generating anonymised statistics.">het verbeteren van het Platform, het waarborgen van de beveiliging en het genereren van geanonimiseerde statistieken.</span></li>
-    <li><strong data-nl="Toestemming (Art. 6 lid 1 sub a):" data-en="Consent (Art. 6(1)(a)):">Toestemming (Art. 6 lid 1 sub a):</strong> <span data-nl="het koppelen van je account aan RP3, Concept2 of Google (via OAuth). Je kunt deze toestemming op elk moment intrekken." data-en="linking your account to RP3, Concept2 or Google (via OAuth). You can withdraw this consent at any time.">het koppelen van je account aan RP3, Concept2 of Google (via OAuth). Je kunt deze toestemming op elk moment intrekken.</span></li>
+    <li><strong data-nl="Toestemming (Art. 6 lid 1 sub a):" data-en="Consent (Art. 6(1)(a)):">Toestemming (Art. 6 lid 1 sub a):</strong> <span data-nl="het koppelen van je account aan RP3, Concept2 of Google (via OAuth) en het meten van het gebruik van het Platform (Google Analytics). Je kunt deze toestemming op elk moment intrekken." data-en="linking your account to RP3, Concept2 or Google (via OAuth) and measuring use of the Platform (Google Analytics). You can withdraw this consent at any time.">het koppelen van je account aan RP3, Concept2 of Google (via OAuth) en het meten van het gebruik van het Platform (Google Analytics). Je kunt deze toestemming op elk moment intrekken.</span></li>
   </ul>
 
   <h2 data-nl="4. Bewaartermijnen" data-en="4. Retention periods">4. Bewaartermijnen</h2>
@@ -117,6 +120,7 @@
     <li><strong data-nl="Accountgegevens:" data-en="Account data:">Accountgegevens:</strong> <span data-nl="zolang je account actief is. Na verwijdering van je account worden je gegevens binnen 30 dagen permanent verwijderd." data-en="as long as your account is active. After deletion of your account, your data is permanently removed within 30 days.">zolang je account actief is. Na verwijdering van je account worden je gegevens binnen 30 dagen permanent verwijderd.</span></li>
     <li><strong data-nl="Workout data en analyseresultaten:" data-en="Workout data and analysis results:">Workout data en analyseresultaten:</strong> <span data-nl="zolang je account actief is. Worden verwijderd bij accountverwijdering." data-en="as long as your account is active. Deleted upon account deletion.">zolang je account actief is. Worden verwijderd bij accountverwijdering.</span></li>
     <li><strong data-nl="Betalingsgegevens:" data-en="Payment data:">Betalingsgegevens:</strong> <span data-nl="bewaard door Stripe conform hun bewaarbeleid en wettelijke verplichtingen (fiscale bewaarplicht van 7 jaar)." data-en="retained by Stripe in accordance with their retention policy and legal obligations (fiscal retention period of 7 years).">bewaard door Stripe conform hun bewaarbeleid en wettelijke verplichtingen (fiscale bewaarplicht van 7 jaar).</span></li>
+    <li><strong data-nl="Gebruiksgegevens in Google Analytics:" data-en="Usage data in Google Analytics:">Gebruiksgegevens in Google Analytics:</strong> <span data-nl="14 maanden." data-en="14 months.">14 maanden.</span></li>
     <li><strong data-nl="Technische gegevens:" data-en="Technical data:">Technische gegevens:</strong> <span data-nl="maximaal 12 maanden." data-en="maximum 12 months.">maximaal 12 maanden.</span></li>
   </ul>
 
@@ -127,7 +131,7 @@
     <li><strong>Amazon Web Services (AWS)</strong> <span data-nl="(hosting en opslag) — onze servers en database draaien in een AWS-datacenter in de EU-regio (eu-west-1, Ierland)." data-en="(hosting and storage) — our servers and database run in an AWS data centre in the EU region (eu-west-1, Ireland).">— onze servers en database draaien in een AWS-datacenter in de EU-regio (eu-west-1, Ierland).</span></li>
     <li><strong>RP3 (Row Perfect 3)</strong> <span data-nl="(workout data) — wij ontvangen workout data via de RP3 OAuth API wanneer je je RP3-account koppelt." data-en="(workout data) — we receive workout data via the RP3 OAuth API when you connect your RP3 account.">— wij ontvangen workout data via de RP3 OAuth API wanneer je je RP3-account koppelt.</span></li>
     <li><strong>Concept2</strong> <span data-nl="(workout data) — wij ontvangen workout data via de Concept2 OAuth API (Logbook) wanneer je je Concept2-account koppelt." data-en="(workout data) — we receive workout data via the Concept2 OAuth API (Logbook) when you connect your Concept2 account.">— wij ontvangen workout data via de Concept2 OAuth API (Logbook) wanneer je je Concept2-account koppelt.</span></li>
-    <li><strong>Google</strong> <span data-nl="(authenticatie) — bij gebruik van Google OAuth voor inloggen. Wij ontvangen uitsluitend je naam en e-mailadres." data-en="(authentication) — when using Google OAuth for login. We only receive your name and email address.">— bij gebruik van Google OAuth voor inloggen. Wij ontvangen uitsluitend je naam en e-mailadres.</span></li>
+    <li><strong>Google</strong> <span data-nl="(authenticatie en gebruiksstatistieken) — bij gebruik van Google OAuth voor inloggen. Wij ontvangen uitsluitend je naam en e-mailadres. Alleen met je toestemming: gebruiksstatistieken via Google Analytics. Google kan gegevens verwerken buiten de EU, onder het EU-VS Data Privacy Framework." data-en="(authentication and usage statistics) — when using Google OAuth for login. We only receive your name and email address. Only with your consent: usage statistics via Google Analytics. Google may process data outside the EU, under the EU-US Data Privacy Framework.">(authenticatie en gebruiksstatistieken) — bij gebruik van Google OAuth voor inloggen. Wij ontvangen uitsluitend je naam en e-mailadres. Alleen met je toestemming: gebruiksstatistieken via Google Analytics. Google kan gegevens verwerken buiten de EU, onder het EU-VS Data Privacy Framework.</span></li>
   </ul>
   <p data-nl="Al deze partijen opereren binnen de EU/EER of onder een adequaatheidsbesluit. Er vindt geen doorgifte van persoonsgegevens plaats naar landen buiten de EU/EER zonder passende waarborgen." data-en="All these parties operate within the EU/EEA or under an adequacy decision. No transfer of personal data takes place to countries outside the EU/EEA without appropriate safeguards.">Al deze partijen opereren binnen de EU/EER of onder een adequaatheidsbesluit. Er vindt geen doorgifte van persoonsgegevens plaats naar landen buiten de EU/EER zonder passende waarborgen.</p>
 
@@ -154,7 +158,7 @@
   <p data-nl="Om gebruik te maken van je rechten, stuur een e-mail naar " data-en="To exercise your rights, send an email to ">Om gebruik te maken van je rechten, stuur een e-mail naar <a href="mailto:info@beatyourbest.org">info@beatyourbest.org</a>. <span data-nl="Wij reageren binnen 30 dagen op je verzoek." data-en="We will respond to your request within 30 days.">Wij reageren binnen 30 dagen op je verzoek.</span></p>
 
   <h2 data-nl="8. Cookies" data-en="8. Cookies">8. Cookies</h2>
-  <p data-nl="Wij gebruiken uitsluitend noodzakelijke en functionele cookies. Wij plaatsen geen tracking- of advertentiecookies. Voor volledige informatie, zie ons " data-en="We only use necessary and functional cookies. We do not place tracking or advertising cookies. For full information, see our ">Wij gebruiken uitsluitend noodzakelijke en functionele cookies. Wij plaatsen geen tracking- of advertentiecookies. Voor volledige informatie, zie ons <a href="cookies.html" data-nl="cookiebeleid" data-en="cookie policy">cookiebeleid</a>.</p>
+  <p data-nl="Het Platform maakt gebruik van cookies. Analytische cookies (Google Analytics) plaatsen wij alleen met je toestemming. Voor volledige informatie, zie ons " data-en="The Platform uses cookies. We only place analytical cookies (Google Analytics) with your consent. For full information, see our ">Het Platform maakt gebruik van cookies. Analytische cookies (Google Analytics) plaatsen wij alleen met je toestemming. Voor volledige informatie, zie ons <a href="cookies.html" data-nl="cookiebeleid" data-en="cookie policy">cookiebeleid</a>.</p>
 
   <h2 data-nl="9. Wijzigingen" data-en="9. Changes">9. Wijzigingen</h2>
   <p data-nl="Beat Your Best behoudt zich het recht voor dit privacybeleid te wijzigen. Wijzigingen worden bekendgemaakt via het Platform. De datum 'laatst bijgewerkt' bovenaan dit document wordt bij elke wijziging aangepast. Wij raden je aan dit privacybeleid regelmatig te raadplegen." data-en="Beat Your Best reserves the right to modify this privacy policy. Changes will be announced via the Platform. The 'last updated' date at the top of this document is adjusted with each change. We recommend that you consult this privacy policy regularly.">Beat Your Best behoudt zich het recht voor dit privacybeleid te wijzigen. Wijzigingen worden bekendgemaakt via het Platform. De datum 'laatst bijgewerkt' bovenaan dit document wordt bij elke wijziging aangepast. Wij raden je aan dit privacybeleid regelmatig te raadplegen.</p>
